@@ -1,0 +1,3988 @@
+openapi: 3.0.0
+info:
+  description: Evaluate returns and provide risk scores
+  title: EAD ECS
+  version: "1"
+servers:
+- description: SwaggerHub API Auto Mocking
+  url: https://virtserver.swaggerhub.com/arcsite/EADECS/1
+- url: https://example.io/v1
+security:
+- BasicAuth: []
+paths:
+  /evaluate:
+    post:
+      description: Returns a list of scores
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Welcome3'
+        description: Schema for the return
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/_evaluate_post_200_response'
+          description: Successfully returned an array of filter scores
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/_evaluate_post_400_response'
+          description: Invalid request
+      summary: Send return and get score
+      x-content-type: application/json
+      x-accepts: application/json
+components:
+  responses:
+    "400Error":
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/_evaluate_post_400_response'
+      description: Invalid request
+  schemas:
+    Welcome3:
+      additionalProperties: false
+      example:
+        Returns:
+        - Return:
+            returnVersion: returnVersion
+            ReturnHeader:
+              TaxPeriodEndDt: 2000-01-23
+              ReturnTs: 2000-01-23T04:56:07.000+00:00
+              BuildTS: 2000-01-23T04:56:07.000+00:00
+              TaxPeriodBeginDt: 2000-01-23
+              PreparerFirmGrp:
+                PreparerFirmName:
+                  BusinessNameLine1Txt: BusinessNameLine1Txt
+                PreparerUSAddress:
+                  ZIPCd: null
+                  CityNm: CityNm
+                  StateAbbreviationCd: StateAbbreviationCd
+                  AddressLine1Txt: AddressLine1Txt
+                PreparerFirmEIN: 0
+              TaxYr: 6
+              PreparerPersonGrp:
+                SelfEmployedInd: SelfEmployedInd
+                PreparerPersonNm: PreparerPersonNm
+                PhoneNum: 1
+                PTIN: PTIN
+                PreparationDt: 2000-01-23
+              BusinessOfficerGrp:
+                PersonNm: PersonNm
+                PersonTitleTxt: PersonTitleTxt
+                DiscussWithPaidPreparerInd: true
+                PhoneNum: 5
+                SignatureDt: 2000-01-23
+              binaryAttachmentCnt: 5
+              ReturnTypeCd: 2
+              FilingSecurityInformation:
+                FederalOriginalSubmissionId: null
+                AtSubmissionCreationDeviceId: AtSubmissionCreationDeviceId
+                FederalOriginalSubmissionIdDt: 2000-01-23
+                FilingLicenseTypeCd: FilingLicenseTypeCd
+                IPAddress:
+                  IPv4AddressTxt: IPv4AddressTxt
+                AtSubmissionFilingDeviceId: AtSubmissionFilingDeviceId
+              Filer:
+                BusinessName:
+                  BusinessNameLine1Txt: BusinessNameLine1Txt
+                PhoneNum: 7
+                BusinessNameControlTxt: BusinessNameControlTxt
+                EIN: null
+                USAddress:
+                  ZIPCd: null
+                  CityNm: CityNm
+                  StateAbbreviationCd: StateAbbreviationCd
+                  AddressLine1Txt: AddressLine1Txt
+                InCareOfNm: InCareOfNm
+            xmlns: https://openapi-generator.tech
+            ReturnData:
+              IRS990ScheduleO:
+                softwareId: 9
+                documentId: documentId
+                SupplementalInformationDetail:
+                - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+                  ExplanationTxt: ExplanationTxt
+                - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+                  ExplanationTxt: ExplanationTxt
+                ContributorInformationGrp:
+                  TotalContributionsAmt: TotalContributionsAmt
+                  ContributorNum: ContributorNum
+                  ContributorBusinessName:
+                    BusinessNameLine1: BusinessNameLine1
+                  ContributorUSAddress:
+                    AddressLine2: AddressLine2
+                    AddressLine1: AddressLine1
+                    ZIPCode: ZIPCode
+                    State: State
+                    City: City
+                softwareVersionNum: softwareVersionNum
+                FundraisingEventInformationGrp:
+                  OtherDirectExpensesEvent1Amt: 3
+                  OtherDirectExpensesEvent2Amt: 2
+                  GrossReceiptsEvent2Amt: 4
+                  GrossReceiptsEvent1Amt: 7
+                  GrossRevenueTotalEventsAmt: 1
+                  NetIncomeSummaryAmt: 1
+                  OthDirectExpnssOtherEventsAmt: 1
+                  GrossReceiptsTotalAmt: 6
+                  OthDirectExpnssTotalEventsAmt: 7
+                  DirectExpenseSummaryEventsAmt: 1
+                  GrossRevenueOtherEventsAmt: 4
+                  GrossRevenueEvent1Amt: 5
+                  GrossRevenueEvent2Amt: 9
+                  Event2Nm: Event2Nm
+                  Event1Nm: Event1Nm
+                  GrossReceiptsOtherEventsAmt: 9
+                  OtherEventsTotalCnt: 6
+              IRS990ScheduleB:
+                softwareId: 9
+                documentId: documentId
+                SupplementalInformationDetail:
+                - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+                  ExplanationTxt: ExplanationTxt
+                - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+                  ExplanationTxt: ExplanationTxt
+                ContributorInformationGrp:
+                  TotalContributionsAmt: TotalContributionsAmt
+                  ContributorNum: ContributorNum
+                  ContributorBusinessName:
+                    BusinessNameLine1: BusinessNameLine1
+                  ContributorUSAddress:
+                    AddressLine2: AddressLine2
+                    AddressLine1: AddressLine1
+                    ZIPCode: ZIPCode
+                    State: State
+                    City: City
+                softwareVersionNum: softwareVersionNum
+                FundraisingEventInformationGrp:
+                  OtherDirectExpensesEvent1Amt: 3
+                  OtherDirectExpensesEvent2Amt: 2
+                  GrossReceiptsEvent2Amt: 4
+                  GrossReceiptsEvent1Amt: 7
+                  GrossRevenueTotalEventsAmt: 1
+                  NetIncomeSummaryAmt: 1
+                  OthDirectExpnssOtherEventsAmt: 1
+                  GrossReceiptsTotalAmt: 6
+                  OthDirectExpnssTotalEventsAmt: 7
+                  DirectExpenseSummaryEventsAmt: 1
+                  GrossRevenueOtherEventsAmt: 4
+                  GrossRevenueEvent1Amt: 5
+                  GrossRevenueEvent2Amt: 9
+                  Event2Nm: Event2Nm
+                  Event1Nm: Event1Nm
+                  GrossReceiptsOtherEventsAmt: 9
+                  OtherEventsTotalCnt: 6
+              IRS990ScheduleA:
+                SupportedOrgInformationGrp:
+                  GoverningDocumentListedInd: true
+                  SupportAmt: 8
+                  EIN: EIN
+                  OrganizationTypeCd: 9
+                  OtherSupportAmt: 6
+                  SupportedOrganizationName:
+                    BusinessNameLine1Txt: BusinessNameLine1Txt
+                MajorityDirTrstSupportedOrgInd: true
+                SupportingOrgType1Ind: SupportingOrgType1Ind
+                SupportedOrganizationsTotalCnt: 3
+                Form990ScheduleAPartVIGrp:
+                  FormAndLineReferenceDesc: FormAndLineReferenceDesc
+                  ExplanationTxt: ExplanationTxt
+                OtherSupportSumAmt: 6
+                SupportSumAmt: 1
+                Form990SchAType1SuprtOrgGrp:
+                  OperateBenefitNonSuprtOrgInd: true
+                  PowerAppointMajorityDirTrstInd: true
+                ChurchInd: ChurchInd
+                softwareId: 2
+                SupportedOrganizationsCnt: 6
+                SupportingOrganization509a3Ind: SupportingOrganization509a3Ind
+                Form990SchASupportingOrgGrp:
+                  key: true
+                IRSWrittenDeterminationInd: IRSWrittenDeterminationInd
+                documentId: documentId
+                softwareVersionNum: softwareVersionNum
+              IRS990ScheduleG:
+                softwareId: 9
+                documentId: documentId
+                SupplementalInformationDetail:
+                - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+                  ExplanationTxt: ExplanationTxt
+                - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+                  ExplanationTxt: ExplanationTxt
+                ContributorInformationGrp:
+                  TotalContributionsAmt: TotalContributionsAmt
+                  ContributorNum: ContributorNum
+                  ContributorBusinessName:
+                    BusinessNameLine1: BusinessNameLine1
+                  ContributorUSAddress:
+                    AddressLine2: AddressLine2
+                    AddressLine1: AddressLine1
+                    ZIPCode: ZIPCode
+                    State: State
+                    City: City
+                softwareVersionNum: softwareVersionNum
+                FundraisingEventInformationGrp:
+                  OtherDirectExpensesEvent1Amt: 3
+                  OtherDirectExpensesEvent2Amt: 2
+                  GrossReceiptsEvent2Amt: 4
+                  GrossReceiptsEvent1Amt: 7
+                  GrossRevenueTotalEventsAmt: 1
+                  NetIncomeSummaryAmt: 1
+                  OthDirectExpnssOtherEventsAmt: 1
+                  GrossReceiptsTotalAmt: 6
+                  OthDirectExpnssTotalEventsAmt: 7
+                  DirectExpenseSummaryEventsAmt: 1
+                  GrossRevenueOtherEventsAmt: 4
+                  GrossRevenueEvent1Amt: 5
+                  GrossRevenueEvent2Amt: 9
+                  Event2Nm: Event2Nm
+                  Event1Nm: Event1Nm
+                  GrossReceiptsOtherEventsAmt: 9
+                  OtherEventsTotalCnt: 6
+              documentCnt: 6
+              IRS990:
+                ChangeToOrgDocumentsInd: true
+                ExpenseAmt: 5
+                FundraisingAmt: 6
+                TotalAssetsGrp:
+                  EOYAmt: 3
+                  BOYAmt: 3
+                TotalGrossUBIAmt: 7
+                ReportLandBuildingEquipmentInd: true
+                RelatedEntityInd: true
+                RelatedOrganizationCtrlEntInd: true
+                PoliciesReferenceChaptersInd: true
+                InfoInScheduleOPartIIIInd: InfoInScheduleOPartIIIInd
+                MoreThan5000KToIndividualsInd: true
+                GrantsToOrganizationsInd: null
+                WhistleblowerPolicyInd: true
+                InvestmentInJointVentureInd: true
+                UnrelatedBusIncmOverLimitInd: true
+                PYRevenuesLessExpensesAmt: 0
+                CashNonInterestBearingGrp:
+                  EOYAmt: 3
+                  BOYAmt: 3
+                referenceDocumentId: referenceDocumentId
+                VotingMembersGoverningBodyCnt: 7
+                ReportOtherAssetsInd: true
+                FeesForServicesAccountingGrp:
+                  ProgramServicesAmt: 6
+                  TotalAmt: 0
+                CompensationProcessCEOInd: true
+                SignificantNewProgramSrvcInd: true
+                ScheduleORequiredInd: true
+                OrgDoesNotFollowFASB117Ind: OrgDoesNotFollowFASB117Ind
+                ProfessionalFundraisingInd: null
+                TotalAssetsBOYAmt: 4
+                OperateHospitalInd: true
+                NetIncmFromFundraisingEvtGrp:
+                  TotalRevenueColumnAmt: 8
+                CYProgramServiceRevenueAmt: 7
+                PYGrantsAndSimilarPaidAmt: 3
+                DisregardedEntityInd: true
+                TotalFunctionalExpensesGrp:
+                  ProgramServicesAmt: 3
+                  FundraisingAmt: 7
+                  TotalAmt: 5
+                  ManagementAndGeneralAmt: 3
+                FeesForServicesManagementGrp:
+                  TotalAmt: 3
+                  ManagementAndGeneralAmt: 2
+                TaxablePartyNotificationInd: true
+                NondeductibleContributionsInd: true
+                ForeignActivitiesInd: true
+                OfficeExpensesGrp:
+                  ProgramServicesAmt: 6
+                  TotalAmt: 0
+                TotalNetAssetsFundBalanceGrp:
+                  EOYAmt: 3
+                  BOYAmt: 3
+                AuditCommitteeInd: true
+                softwareVersionNum: softwareVersionNum
+                InfoInScheduleOPartXIIInd: InfoInScheduleOPartXIIInd
+                ForeignFinancialAccountInd: true
+                TotalContributionsAmt: 4
+                CYTotalExpensesAmt: 0
+                CYSalariesCompEmpBnftPaidAmt: 6
+                BusinessRlnWith35CtrlEntInd: true
+                GroupReturnForAffiliatesInd: true
+                CYOtherExpensesAmt: 4
+                TotalCompGreaterThan150KInd: true
+                InvestmentIncomeGrp:
+                  TotalRevenueColumnAmt: 1
+                  RelatedOrExemptFuncIncomeAmt: 4
+                ScheduleBRequiredInd: null
+                CYBenefitsPaidToMembersAmt: 7
+                TrnsfrExmptNonChrtblRltdOrgInd: true
+                PYExcessBenefitTransInd: true
+                FederalGrantAuditRequiredInd: true
+                RevenueAmt: 9
+                ProhibitedTaxShelterTransInd: true
+                ConservationEasementsInd: true
+                EngagedInExcessBenefitTransInd: true
+                ActivityOrMissionDesc: ActivityOrMissionDesc
+                GrantsToIndividualsInd: null
+                InfoInScheduleOPartXIInd: InfoInScheduleOPartXIInd
+                EmployeeCnt: 0
+                GrantsToDomesticOrgsGrp:
+                  ProgramServicesAmt: 6
+                  TotalAmt: 0
+                ProgSrvcAccomActy2Grp:
+                  ExpenseAmt: 9
+                  Desc: Desc
+                  RevenueAmt: 0
+                BusinessRlnWithFamMemInd: true
+                GrossReceiptsAmt: 7
+                ForeignOfficeInd: true
+                PYOtherExpensesAmt: 5
+                CompensationFromOtherSrcsInd: true
+                InfoInScheduleOPartIXInd: InfoInScheduleOPartIXInd
+                TypeOfOrganizationAssocInd: TypeOfOrganizationAssocInd
+                PYContributionsGrantsAmt: 4
+                FormationYr: 6
+                MaterialDiversionOrMisuseInd: true
+                AcctCompileOrReviewBasisGrp:
+                  SeparateBasisFinclStmtInd: SeparateBasisFinclStmtInd
+                PYTotalExpensesAmt: 8
+                NoDonorRestrictionNetAssetsGrp:
+                  EOYAmt: 3
+                  BOYAmt: 3
+                softwareId: 4
+                LoanOutstandingInd: true
+                DonorRstrOrQuasiEndowmentsInd: true
+                MembersOrStockholdersInd: true
+                CollectionsOfArtInd: true
+                DeductibleNonCashContriInd: true
+                InfoInScheduleOPartVIIIInd: InfoInScheduleOPartVIIIInd
+                MethodOfAccountingCashInd: MethodOfAccountingCashInd
+                VotingMembersIndependentCnt: 3
+                InfoInScheduleOPartXInd: InfoInScheduleOPartXInd
+                IRPDocumentW2GCnt: 0
+                AnnualDisclosureCoveredPrsnInd: true
+                DecisionsSubjectToApprovaInd: true
+                Form990PartVIISectionAGrp: null
+                MinutesOfGoverningBodyInd: true
+                StatesWhereCopyOfReturnIsFldCd: StatesWhereCopyOfReturnIsFldCd
+                DescribedInSection501c3Ind:
+                  referenceDocumentId: referenceDocumentId
+                  content: true
+                TotalLiabilitiesEOYAmt: 2
+                ReportOtherLiabilitiesInd: true
+                AllOtherContributionsAmt: 1
+                ReportInvestmentsOtherSecInd: true
+                MinutesOfCommitteesInd: true
+                LobbyingActivitiesInd: true
+                BusinessRlnWithOrgMemInd: true
+                IndoorTanningServicesInd: true
+                Desc: Desc
+                PYInvestmentIncomeAmt: 8
+                IndependentVotingMemberCnt: 6
+                CYRevenuesLessExpensesAmt: 4
+                SubjectToProxyTaxInd: true
+                TerminateOperationsInd: true
+                MoreThan5000KToOrgInd: true
+                ConflictOfInterestPolicyInd: true
+                CompensationProcessOtherInd: true
+                TotalAssetsEOYAmt: 8
+                FundraisingActivitiesInd: null
+                TotalRevenueGrp:
+                  TotalRevenueColumnAmt: 1
+                  RelatedOrExemptFuncIncomeAmt: 4
+                SchoolOperatingInd: true
+                OtherExpensesGrp:
+                  Desc: Desc
+                  ProgramServicesAmt: 3
+                  TotalAmt: 8
+                TypeOfOrganizationCorpInd: TypeOfOrganizationCorpInd
+                NetAssetsOrFundBalancesEOYAmt: 9
+                GrantToRelatedPersonInd: true
+                WebsiteAddressTxt: WebsiteAddressTxt
+                NetAssetsOrFundBalancesBOYAmt: 1
+                CYContributionsGrantsAmt: 3
+                AllOtherExpensesGrp:
+                  ProgramServicesAmt: 6
+                  TotalAmt: 0
+                FamilyOrBusinessRlnInd: true
+                PrincipalOfficerNm: PrincipalOfficerNm
+                CapStkTrPrinCurrentFundsGrp:
+                  EOYAmt: 3
+                  BOYAmt: 3
+                CYTotalProfFndrsngExpnsAmt: 9
+                TotLiabNetAssetsFundBalanceGrp:
+                  EOYAmt: 3
+                  BOYAmt: 3
+                RegularMonitoringEnfrcInd: true
+                LegalDomicileStateCd: LegalDomicileStateCd
+                OrganizationFollowsFASB117Ind: OrganizationFollowsFASB117Ind
+                GamingActivitiesInd: null
+                ReconcilationRevenueExpnssAmt: 8
+                TotalLiabilitiesGrp:
+                  EOYAmt: 3
+                  BOYAmt: 3
+                CYInvestmentIncomeAmt: 0
+                InfoInScheduleOPartVIInd: InfoInScheduleOPartVIInd
+                PartialLiquidationInd: true
+                GoverningBodyVotingMembersCnt: 5
+                PYTotalRevenueAmt: 5
+                SignificantChangeInd: true
+                SubjectToExcsTaxNetInvstIncInd: true
+                FormerOfcrEmployeesListedInd: true
+                CYGrantsAndSimilarPaidAmt: 8
+                MissionDesc: MissionDesc
+                DonorAdvisedFundInd: true
+                OfficerMailingAddressInd: true
+                NoListedPersonsCompensatedInd: NoListedPersonsCompensatedInd
+                FSAuditedInd: true
+                Organization501c3Ind: Organization501c3Ind
+                Form990TFiledInd: true
+                IRPDocumentCnt: 7
+                SubjToTaxRmnrtnExPrchtPymtInd: true
+                ScheduleJRequiredInd: true
+                PoliticalCampaignActyInd: true
+                DelegationOfMgmtDutiesInd: true
+                IncludeFIN48FootnoteInd: true
+                BackupWthldComplianceInd: true
+                DeductibleArtContributionInd: true
+                BooksInCareOfDetail:
+                  PersonNm: PersonNm
+                  BusinessName:
+                    BusinessNameLine1Txt: BusinessNameLine1Txt
+                  PhoneNum: 3
+                  USAddress:
+                    ZIPCd: null
+                    CityNm: CityNm
+                    StateAbbreviationCd: StateAbbreviationCd
+                    AddressLine1Txt: AddressLine1Txt
+                CYTotalRevenueAmt: 3
+                CYOtherRevenueAmt: 9
+                ReportProgramRelatedInvstInd: true
+                CreditCounselingInd: true
+                PrincipalOfcrBusinessName:
+                  BusinessNameLine1Txt: BusinessNameLine1Txt
+                IndependentAuditFinclStmtInd: true
+                TotalEmployeeCnt: 5
+                TaxExemptBondsInd: true
+                ActivitiesConductedPrtshpInd: true
+                TotalProgramServiceExpensesAmt: 7
+                AccountantCompileOrReviewInd: true
+                Form990ProvidedToGvrnBodyInd: true
+                DocumentRetentionPolicyInd: true
+                LocalChaptersInd: true
+                documentId: documentId
+                CYTotalFundraisingExpenseAmt: 0
+                ConsolidatedAuditFinclStmtInd: true
+                USAddress:
+                  ZIPCd: null
+                  CityNm: CityNm
+                  StateAbbreviationCd: StateAbbreviationCd
+                  AddressLine1Txt: AddressLine1Txt
+                ElectionOfBoardMembersInd: true
+                ProgSrvcAccomActy3Grp:
+                  ExpenseAmt: 9
+                  Desc: Desc
+                  RevenueAmt: 0
+              IRS990ScheduleI:
+                GrantRecordsMaintainedInd: true
+                TotalOtherOrgCnt: 4
+                Total501c3OrgCnt: 0
+                softwareId: 0
+                documentId: documentId
+                SupplementalInformationDetail:
+                  FormAndLineReferenceDesc: FormAndLineReferenceDesc
+                  ExplanationTxt: ExplanationTxt
+                softwareVersionNum: softwareVersionNum
+            xsi:schemaLocation: https://openapi-generator.tech
+            xmlns:xsi: https://openapi-generator.tech
+        - Return:
+            returnVersion: returnVersion
+            ReturnHeader:
+              TaxPeriodEndDt: 2000-01-23
+              ReturnTs: 2000-01-23T04:56:07.000+00:00
+              BuildTS: 2000-01-23T04:56:07.000+00:00
+              TaxPeriodBeginDt: 2000-01-23
+              PreparerFirmGrp:
+                PreparerFirmName:
+                  BusinessNameLine1Txt: BusinessNameLine1Txt
+                PreparerUSAddress:
+                  ZIPCd: null
+                  CityNm: CityNm
+                  StateAbbreviationCd: StateAbbreviationCd
+                  AddressLine1Txt: AddressLine1Txt
+                PreparerFirmEIN: 0
+              TaxYr: 6
+              PreparerPersonGrp:
+                SelfEmployedInd: SelfEmployedInd
+                PreparerPersonNm: PreparerPersonNm
+                PhoneNum: 1
+                PTIN: PTIN
+                PreparationDt: 2000-01-23
+              BusinessOfficerGrp:
+                PersonNm: PersonNm
+                PersonTitleTxt: PersonTitleTxt
+                DiscussWithPaidPreparerInd: true
+                PhoneNum: 5
+                SignatureDt: 2000-01-23
+              binaryAttachmentCnt: 5
+              ReturnTypeCd: 2
+              FilingSecurityInformation:
+                FederalOriginalSubmissionId: null
+                AtSubmissionCreationDeviceId: AtSubmissionCreationDeviceId
+                FederalOriginalSubmissionIdDt: 2000-01-23
+                FilingLicenseTypeCd: FilingLicenseTypeCd
+                IPAddress:
+                  IPv4AddressTxt: IPv4AddressTxt
+                AtSubmissionFilingDeviceId: AtSubmissionFilingDeviceId
+              Filer:
+                BusinessName:
+                  BusinessNameLine1Txt: BusinessNameLine1Txt
+                PhoneNum: 7
+                BusinessNameControlTxt: BusinessNameControlTxt
+                EIN: null
+                USAddress:
+                  ZIPCd: null
+                  CityNm: CityNm
+                  StateAbbreviationCd: StateAbbreviationCd
+                  AddressLine1Txt: AddressLine1Txt
+                InCareOfNm: InCareOfNm
+            xmlns: https://openapi-generator.tech
+            ReturnData:
+              IRS990ScheduleO:
+                softwareId: 9
+                documentId: documentId
+                SupplementalInformationDetail:
+                - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+                  ExplanationTxt: ExplanationTxt
+                - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+                  ExplanationTxt: ExplanationTxt
+                ContributorInformationGrp:
+                  TotalContributionsAmt: TotalContributionsAmt
+                  ContributorNum: ContributorNum
+                  ContributorBusinessName:
+                    BusinessNameLine1: BusinessNameLine1
+                  ContributorUSAddress:
+                    AddressLine2: AddressLine2
+                    AddressLine1: AddressLine1
+                    ZIPCode: ZIPCode
+                    State: State
+                    City: City
+                softwareVersionNum: softwareVersionNum
+                FundraisingEventInformationGrp:
+                  OtherDirectExpensesEvent1Amt: 3
+                  OtherDirectExpensesEvent2Amt: 2
+                  GrossReceiptsEvent2Amt: 4
+                  GrossReceiptsEvent1Amt: 7
+                  GrossRevenueTotalEventsAmt: 1
+                  NetIncomeSummaryAmt: 1
+                  OthDirectExpnssOtherEventsAmt: 1
+                  GrossReceiptsTotalAmt: 6
+                  OthDirectExpnssTotalEventsAmt: 7
+                  DirectExpenseSummaryEventsAmt: 1
+                  GrossRevenueOtherEventsAmt: 4
+                  GrossRevenueEvent1Amt: 5
+                  GrossRevenueEvent2Amt: 9
+                  Event2Nm: Event2Nm
+                  Event1Nm: Event1Nm
+                  GrossReceiptsOtherEventsAmt: 9
+                  OtherEventsTotalCnt: 6
+              IRS990ScheduleB:
+                softwareId: 9
+                documentId: documentId
+                SupplementalInformationDetail:
+                - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+                  ExplanationTxt: ExplanationTxt
+                - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+                  ExplanationTxt: ExplanationTxt
+                ContributorInformationGrp:
+                  TotalContributionsAmt: TotalContributionsAmt
+                  ContributorNum: ContributorNum
+                  ContributorBusinessName:
+                    BusinessNameLine1: BusinessNameLine1
+                  ContributorUSAddress:
+                    AddressLine2: AddressLine2
+                    AddressLine1: AddressLine1
+                    ZIPCode: ZIPCode
+                    State: State
+                    City: City
+                softwareVersionNum: softwareVersionNum
+                FundraisingEventInformationGrp:
+                  OtherDirectExpensesEvent1Amt: 3
+                  OtherDirectExpensesEvent2Amt: 2
+                  GrossReceiptsEvent2Amt: 4
+                  GrossReceiptsEvent1Amt: 7
+                  GrossRevenueTotalEventsAmt: 1
+                  NetIncomeSummaryAmt: 1
+                  OthDirectExpnssOtherEventsAmt: 1
+                  GrossReceiptsTotalAmt: 6
+                  OthDirectExpnssTotalEventsAmt: 7
+                  DirectExpenseSummaryEventsAmt: 1
+                  GrossRevenueOtherEventsAmt: 4
+                  GrossRevenueEvent1Amt: 5
+                  GrossRevenueEvent2Amt: 9
+                  Event2Nm: Event2Nm
+                  Event1Nm: Event1Nm
+                  GrossReceiptsOtherEventsAmt: 9
+                  OtherEventsTotalCnt: 6
+              IRS990ScheduleA:
+                SupportedOrgInformationGrp:
+                  GoverningDocumentListedInd: true
+                  SupportAmt: 8
+                  EIN: EIN
+                  OrganizationTypeCd: 9
+                  OtherSupportAmt: 6
+                  SupportedOrganizationName:
+                    BusinessNameLine1Txt: BusinessNameLine1Txt
+                MajorityDirTrstSupportedOrgInd: true
+                SupportingOrgType1Ind: SupportingOrgType1Ind
+                SupportedOrganizationsTotalCnt: 3
+                Form990ScheduleAPartVIGrp:
+                  FormAndLineReferenceDesc: FormAndLineReferenceDesc
+                  ExplanationTxt: ExplanationTxt
+                OtherSupportSumAmt: 6
+                SupportSumAmt: 1
+                Form990SchAType1SuprtOrgGrp:
+                  OperateBenefitNonSuprtOrgInd: true
+                  PowerAppointMajorityDirTrstInd: true
+                ChurchInd: ChurchInd
+                softwareId: 2
+                SupportedOrganizationsCnt: 6
+                SupportingOrganization509a3Ind: SupportingOrganization509a3Ind
+                Form990SchASupportingOrgGrp:
+                  key: true
+                IRSWrittenDeterminationInd: IRSWrittenDeterminationInd
+                documentId: documentId
+                softwareVersionNum: softwareVersionNum
+              IRS990ScheduleG:
+                softwareId: 9
+                documentId: documentId
+                SupplementalInformationDetail:
+                - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+                  ExplanationTxt: ExplanationTxt
+                - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+                  ExplanationTxt: ExplanationTxt
+                ContributorInformationGrp:
+                  TotalContributionsAmt: TotalContributionsAmt
+                  ContributorNum: ContributorNum
+                  ContributorBusinessName:
+                    BusinessNameLine1: BusinessNameLine1
+                  ContributorUSAddress:
+                    AddressLine2: AddressLine2
+                    AddressLine1: AddressLine1
+                    ZIPCode: ZIPCode
+                    State: State
+                    City: City
+                softwareVersionNum: softwareVersionNum
+                FundraisingEventInformationGrp:
+                  OtherDirectExpensesEvent1Amt: 3
+                  OtherDirectExpensesEvent2Amt: 2
+                  GrossReceiptsEvent2Amt: 4
+                  GrossReceiptsEvent1Amt: 7
+                  GrossRevenueTotalEventsAmt: 1
+                  NetIncomeSummaryAmt: 1
+                  OthDirectExpnssOtherEventsAmt: 1
+                  GrossReceiptsTotalAmt: 6
+                  OthDirectExpnssTotalEventsAmt: 7
+                  DirectExpenseSummaryEventsAmt: 1
+                  GrossRevenueOtherEventsAmt: 4
+                  GrossRevenueEvent1Amt: 5
+                  GrossRevenueEvent2Amt: 9
+                  Event2Nm: Event2Nm
+                  Event1Nm: Event1Nm
+                  GrossReceiptsOtherEventsAmt: 9
+                  OtherEventsTotalCnt: 6
+              documentCnt: 6
+              IRS990:
+                ChangeToOrgDocumentsInd: true
+                ExpenseAmt: 5
+                FundraisingAmt: 6
+                TotalAssetsGrp:
+                  EOYAmt: 3
+                  BOYAmt: 3
+                TotalGrossUBIAmt: 7
+                ReportLandBuildingEquipmentInd: true
+                RelatedEntityInd: true
+                RelatedOrganizationCtrlEntInd: true
+                PoliciesReferenceChaptersInd: true
+                InfoInScheduleOPartIIIInd: InfoInScheduleOPartIIIInd
+                MoreThan5000KToIndividualsInd: true
+                GrantsToOrganizationsInd: null
+                WhistleblowerPolicyInd: true
+                InvestmentInJointVentureInd: true
+                UnrelatedBusIncmOverLimitInd: true
+                PYRevenuesLessExpensesAmt: 0
+                CashNonInterestBearingGrp:
+                  EOYAmt: 3
+                  BOYAmt: 3
+                referenceDocumentId: referenceDocumentId
+                VotingMembersGoverningBodyCnt: 7
+                ReportOtherAssetsInd: true
+                FeesForServicesAccountingGrp:
+                  ProgramServicesAmt: 6
+                  TotalAmt: 0
+                CompensationProcessCEOInd: true
+                SignificantNewProgramSrvcInd: true
+                ScheduleORequiredInd: true
+                OrgDoesNotFollowFASB117Ind: OrgDoesNotFollowFASB117Ind
+                ProfessionalFundraisingInd: null
+                TotalAssetsBOYAmt: 4
+                OperateHospitalInd: true
+                NetIncmFromFundraisingEvtGrp:
+                  TotalRevenueColumnAmt: 8
+                CYProgramServiceRevenueAmt: 7
+                PYGrantsAndSimilarPaidAmt: 3
+                DisregardedEntityInd: true
+                TotalFunctionalExpensesGrp:
+                  ProgramServicesAmt: 3
+                  FundraisingAmt: 7
+                  TotalAmt: 5
+                  ManagementAndGeneralAmt: 3
+                FeesForServicesManagementGrp:
+                  TotalAmt: 3
+                  ManagementAndGeneralAmt: 2
+                TaxablePartyNotificationInd: true
+                NondeductibleContributionsInd: true
+                ForeignActivitiesInd: true
+                OfficeExpensesGrp:
+                  ProgramServicesAmt: 6
+                  TotalAmt: 0
+                TotalNetAssetsFundBalanceGrp:
+                  EOYAmt: 3
+                  BOYAmt: 3
+                AuditCommitteeInd: true
+                softwareVersionNum: softwareVersionNum
+                InfoInScheduleOPartXIIInd: InfoInScheduleOPartXIIInd
+                ForeignFinancialAccountInd: true
+                TotalContributionsAmt: 4
+                CYTotalExpensesAmt: 0
+                CYSalariesCompEmpBnftPaidAmt: 6
+                BusinessRlnWith35CtrlEntInd: true
+                GroupReturnForAffiliatesInd: true
+                CYOtherExpensesAmt: 4
+                TotalCompGreaterThan150KInd: true
+                InvestmentIncomeGrp:
+                  TotalRevenueColumnAmt: 1
+                  RelatedOrExemptFuncIncomeAmt: 4
+                ScheduleBRequiredInd: null
+                CYBenefitsPaidToMembersAmt: 7
+                TrnsfrExmptNonChrtblRltdOrgInd: true
+                PYExcessBenefitTransInd: true
+                FederalGrantAuditRequiredInd: true
+                RevenueAmt: 9
+                ProhibitedTaxShelterTransInd: true
+                ConservationEasementsInd: true
+                EngagedInExcessBenefitTransInd: true
+                ActivityOrMissionDesc: ActivityOrMissionDesc
+                GrantsToIndividualsInd: null
+                InfoInScheduleOPartXIInd: InfoInScheduleOPartXIInd
+                EmployeeCnt: 0
+                GrantsToDomesticOrgsGrp:
+                  ProgramServicesAmt: 6
+                  TotalAmt: 0
+                ProgSrvcAccomActy2Grp:
+                  ExpenseAmt: 9
+                  Desc: Desc
+                  RevenueAmt: 0
+                BusinessRlnWithFamMemInd: true
+                GrossReceiptsAmt: 7
+                ForeignOfficeInd: true
+                PYOtherExpensesAmt: 5
+                CompensationFromOtherSrcsInd: true
+                InfoInScheduleOPartIXInd: InfoInScheduleOPartIXInd
+                TypeOfOrganizationAssocInd: TypeOfOrganizationAssocInd
+                PYContributionsGrantsAmt: 4
+                FormationYr: 6
+                MaterialDiversionOrMisuseInd: true
+                AcctCompileOrReviewBasisGrp:
+                  SeparateBasisFinclStmtInd: SeparateBasisFinclStmtInd
+                PYTotalExpensesAmt: 8
+                NoDonorRestrictionNetAssetsGrp:
+                  EOYAmt: 3
+                  BOYAmt: 3
+                softwareId: 4
+                LoanOutstandingInd: true
+                DonorRstrOrQuasiEndowmentsInd: true
+                MembersOrStockholdersInd: true
+                CollectionsOfArtInd: true
+                DeductibleNonCashContriInd: true
+                InfoInScheduleOPartVIIIInd: InfoInScheduleOPartVIIIInd
+                MethodOfAccountingCashInd: MethodOfAccountingCashInd
+                VotingMembersIndependentCnt: 3
+                InfoInScheduleOPartXInd: InfoInScheduleOPartXInd
+                IRPDocumentW2GCnt: 0
+                AnnualDisclosureCoveredPrsnInd: true
+                DecisionsSubjectToApprovaInd: true
+                Form990PartVIISectionAGrp: null
+                MinutesOfGoverningBodyInd: true
+                StatesWhereCopyOfReturnIsFldCd: StatesWhereCopyOfReturnIsFldCd
+                DescribedInSection501c3Ind:
+                  referenceDocumentId: referenceDocumentId
+                  content: true
+                TotalLiabilitiesEOYAmt: 2
+                ReportOtherLiabilitiesInd: true
+                AllOtherContributionsAmt: 1
+                ReportInvestmentsOtherSecInd: true
+                MinutesOfCommitteesInd: true
+                LobbyingActivitiesInd: true
+                BusinessRlnWithOrgMemInd: true
+                IndoorTanningServicesInd: true
+                Desc: Desc
+                PYInvestmentIncomeAmt: 8
+                IndependentVotingMemberCnt: 6
+                CYRevenuesLessExpensesAmt: 4
+                SubjectToProxyTaxInd: true
+                TerminateOperationsInd: true
+                MoreThan5000KToOrgInd: true
+                ConflictOfInterestPolicyInd: true
+                CompensationProcessOtherInd: true
+                TotalAssetsEOYAmt: 8
+                FundraisingActivitiesInd: null
+                TotalRevenueGrp:
+                  TotalRevenueColumnAmt: 1
+                  RelatedOrExemptFuncIncomeAmt: 4
+                SchoolOperatingInd: true
+                OtherExpensesGrp:
+                  Desc: Desc
+                  ProgramServicesAmt: 3
+                  TotalAmt: 8
+                TypeOfOrganizationCorpInd: TypeOfOrganizationCorpInd
+                NetAssetsOrFundBalancesEOYAmt: 9
+                GrantToRelatedPersonInd: true
+                WebsiteAddressTxt: WebsiteAddressTxt
+                NetAssetsOrFundBalancesBOYAmt: 1
+                CYContributionsGrantsAmt: 3
+                AllOtherExpensesGrp:
+                  ProgramServicesAmt: 6
+                  TotalAmt: 0
+                FamilyOrBusinessRlnInd: true
+                PrincipalOfficerNm: PrincipalOfficerNm
+                CapStkTrPrinCurrentFundsGrp:
+                  EOYAmt: 3
+                  BOYAmt: 3
+                CYTotalProfFndrsngExpnsAmt: 9
+                TotLiabNetAssetsFundBalanceGrp:
+                  EOYAmt: 3
+                  BOYAmt: 3
+                RegularMonitoringEnfrcInd: true
+                LegalDomicileStateCd: LegalDomicileStateCd
+                OrganizationFollowsFASB117Ind: OrganizationFollowsFASB117Ind
+                GamingActivitiesInd: null
+                ReconcilationRevenueExpnssAmt: 8
+                TotalLiabilitiesGrp:
+                  EOYAmt: 3
+                  BOYAmt: 3
+                CYInvestmentIncomeAmt: 0
+                InfoInScheduleOPartVIInd: InfoInScheduleOPartVIInd
+                PartialLiquidationInd: true
+                GoverningBodyVotingMembersCnt: 5
+                PYTotalRevenueAmt: 5
+                SignificantChangeInd: true
+                SubjectToExcsTaxNetInvstIncInd: true
+                FormerOfcrEmployeesListedInd: true
+                CYGrantsAndSimilarPaidAmt: 8
+                MissionDesc: MissionDesc
+                DonorAdvisedFundInd: true
+                OfficerMailingAddressInd: true
+                NoListedPersonsCompensatedInd: NoListedPersonsCompensatedInd
+                FSAuditedInd: true
+                Organization501c3Ind: Organization501c3Ind
+                Form990TFiledInd: true
+                IRPDocumentCnt: 7
+                SubjToTaxRmnrtnExPrchtPymtInd: true
+                ScheduleJRequiredInd: true
+                PoliticalCampaignActyInd: true
+                DelegationOfMgmtDutiesInd: true
+                IncludeFIN48FootnoteInd: true
+                BackupWthldComplianceInd: true
+                DeductibleArtContributionInd: true
+                BooksInCareOfDetail:
+                  PersonNm: PersonNm
+                  BusinessName:
+                    BusinessNameLine1Txt: BusinessNameLine1Txt
+                  PhoneNum: 3
+                  USAddress:
+                    ZIPCd: null
+                    CityNm: CityNm
+                    StateAbbreviationCd: StateAbbreviationCd
+                    AddressLine1Txt: AddressLine1Txt
+                CYTotalRevenueAmt: 3
+                CYOtherRevenueAmt: 9
+                ReportProgramRelatedInvstInd: true
+                CreditCounselingInd: true
+                PrincipalOfcrBusinessName:
+                  BusinessNameLine1Txt: BusinessNameLine1Txt
+                IndependentAuditFinclStmtInd: true
+                TotalEmployeeCnt: 5
+                TaxExemptBondsInd: true
+                ActivitiesConductedPrtshpInd: true
+                TotalProgramServiceExpensesAmt: 7
+                AccountantCompileOrReviewInd: true
+                Form990ProvidedToGvrnBodyInd: true
+                DocumentRetentionPolicyInd: true
+                LocalChaptersInd: true
+                documentId: documentId
+                CYTotalFundraisingExpenseAmt: 0
+                ConsolidatedAuditFinclStmtInd: true
+                USAddress:
+                  ZIPCd: null
+                  CityNm: CityNm
+                  StateAbbreviationCd: StateAbbreviationCd
+                  AddressLine1Txt: AddressLine1Txt
+                ElectionOfBoardMembersInd: true
+                ProgSrvcAccomActy3Grp:
+                  ExpenseAmt: 9
+                  Desc: Desc
+                  RevenueAmt: 0
+              IRS990ScheduleI:
+                GrantRecordsMaintainedInd: true
+                TotalOtherOrgCnt: 4
+                Total501c3OrgCnt: 0
+                softwareId: 0
+                documentId: documentId
+                SupplementalInformationDetail:
+                  FormAndLineReferenceDesc: FormAndLineReferenceDesc
+                  ExplanationTxt: ExplanationTxt
+                softwareVersionNum: softwareVersionNum
+            xsi:schemaLocation: https://openapi-generator.tech
+            xmlns:xsi: https://openapi-generator.tech
+      properties:
+        Returns:
+          items:
+            $ref: '#/components/schemas/ReturnElement'
+          type: array
+      required:
+      - Returns
+      title: Welcome10
+      type: object
+    ReturnElement:
+      additionalProperties: false
+      example:
+        Return:
+          returnVersion: returnVersion
+          ReturnHeader:
+            TaxPeriodEndDt: 2000-01-23
+            ReturnTs: 2000-01-23T04:56:07.000+00:00
+            BuildTS: 2000-01-23T04:56:07.000+00:00
+            TaxPeriodBeginDt: 2000-01-23
+            PreparerFirmGrp:
+              PreparerFirmName:
+                BusinessNameLine1Txt: BusinessNameLine1Txt
+              PreparerUSAddress:
+                ZIPCd: null
+                CityNm: CityNm
+                StateAbbreviationCd: StateAbbreviationCd
+                AddressLine1Txt: AddressLine1Txt
+              PreparerFirmEIN: 0
+            TaxYr: 6
+            PreparerPersonGrp:
+              SelfEmployedInd: SelfEmployedInd
+              PreparerPersonNm: PreparerPersonNm
+              PhoneNum: 1
+              PTIN: PTIN
+              PreparationDt: 2000-01-23
+            BusinessOfficerGrp:
+              PersonNm: PersonNm
+              PersonTitleTxt: PersonTitleTxt
+              DiscussWithPaidPreparerInd: true
+              PhoneNum: 5
+              SignatureDt: 2000-01-23
+            binaryAttachmentCnt: 5
+            ReturnTypeCd: 2
+            FilingSecurityInformation:
+              FederalOriginalSubmissionId: null
+              AtSubmissionCreationDeviceId: AtSubmissionCreationDeviceId
+              FederalOriginalSubmissionIdDt: 2000-01-23
+              FilingLicenseTypeCd: FilingLicenseTypeCd
+              IPAddress:
+                IPv4AddressTxt: IPv4AddressTxt
+              AtSubmissionFilingDeviceId: AtSubmissionFilingDeviceId
+            Filer:
+              BusinessName:
+                BusinessNameLine1Txt: BusinessNameLine1Txt
+              PhoneNum: 7
+              BusinessNameControlTxt: BusinessNameControlTxt
+              EIN: null
+              USAddress:
+                ZIPCd: null
+                CityNm: CityNm
+                StateAbbreviationCd: StateAbbreviationCd
+                AddressLine1Txt: AddressLine1Txt
+              InCareOfNm: InCareOfNm
+          xmlns: https://openapi-generator.tech
+          ReturnData:
+            IRS990ScheduleO:
+              softwareId: 9
+              documentId: documentId
+              SupplementalInformationDetail:
+              - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+                ExplanationTxt: ExplanationTxt
+              - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+                ExplanationTxt: ExplanationTxt
+              ContributorInformationGrp:
+                TotalContributionsAmt: TotalContributionsAmt
+                ContributorNum: ContributorNum
+                ContributorBusinessName:
+                  BusinessNameLine1: BusinessNameLine1
+                ContributorUSAddress:
+                  AddressLine2: AddressLine2
+                  AddressLine1: AddressLine1
+                  ZIPCode: ZIPCode
+                  State: State
+                  City: City
+              softwareVersionNum: softwareVersionNum
+              FundraisingEventInformationGrp:
+                OtherDirectExpensesEvent1Amt: 3
+                OtherDirectExpensesEvent2Amt: 2
+                GrossReceiptsEvent2Amt: 4
+                GrossReceiptsEvent1Amt: 7
+                GrossRevenueTotalEventsAmt: 1
+                NetIncomeSummaryAmt: 1
+                OthDirectExpnssOtherEventsAmt: 1
+                GrossReceiptsTotalAmt: 6
+                OthDirectExpnssTotalEventsAmt: 7
+                DirectExpenseSummaryEventsAmt: 1
+                GrossRevenueOtherEventsAmt: 4
+                GrossRevenueEvent1Amt: 5
+                GrossRevenueEvent2Amt: 9
+                Event2Nm: Event2Nm
+                Event1Nm: Event1Nm
+                GrossReceiptsOtherEventsAmt: 9
+                OtherEventsTotalCnt: 6
+            IRS990ScheduleB:
+              softwareId: 9
+              documentId: documentId
+              SupplementalInformationDetail:
+              - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+                ExplanationTxt: ExplanationTxt
+              - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+                ExplanationTxt: ExplanationTxt
+              ContributorInformationGrp:
+                TotalContributionsAmt: TotalContributionsAmt
+                ContributorNum: ContributorNum
+                ContributorBusinessName:
+                  BusinessNameLine1: BusinessNameLine1
+                ContributorUSAddress:
+                  AddressLine2: AddressLine2
+                  AddressLine1: AddressLine1
+                  ZIPCode: ZIPCode
+                  State: State
+                  City: City
+              softwareVersionNum: softwareVersionNum
+              FundraisingEventInformationGrp:
+                OtherDirectExpensesEvent1Amt: 3
+                OtherDirectExpensesEvent2Amt: 2
+                GrossReceiptsEvent2Amt: 4
+                GrossReceiptsEvent1Amt: 7
+                GrossRevenueTotalEventsAmt: 1
+                NetIncomeSummaryAmt: 1
+                OthDirectExpnssOtherEventsAmt: 1
+                GrossReceiptsTotalAmt: 6
+                OthDirectExpnssTotalEventsAmt: 7
+                DirectExpenseSummaryEventsAmt: 1
+                GrossRevenueOtherEventsAmt: 4
+                GrossRevenueEvent1Amt: 5
+                GrossRevenueEvent2Amt: 9
+                Event2Nm: Event2Nm
+                Event1Nm: Event1Nm
+                GrossReceiptsOtherEventsAmt: 9
+                OtherEventsTotalCnt: 6
+            IRS990ScheduleA:
+              SupportedOrgInformationGrp:
+                GoverningDocumentListedInd: true
+                SupportAmt: 8
+                EIN: EIN
+                OrganizationTypeCd: 9
+                OtherSupportAmt: 6
+                SupportedOrganizationName:
+                  BusinessNameLine1Txt: BusinessNameLine1Txt
+              MajorityDirTrstSupportedOrgInd: true
+              SupportingOrgType1Ind: SupportingOrgType1Ind
+              SupportedOrganizationsTotalCnt: 3
+              Form990ScheduleAPartVIGrp:
+                FormAndLineReferenceDesc: FormAndLineReferenceDesc
+                ExplanationTxt: ExplanationTxt
+              OtherSupportSumAmt: 6
+              SupportSumAmt: 1
+              Form990SchAType1SuprtOrgGrp:
+                OperateBenefitNonSuprtOrgInd: true
+                PowerAppointMajorityDirTrstInd: true
+              ChurchInd: ChurchInd
+              softwareId: 2
+              SupportedOrganizationsCnt: 6
+              SupportingOrganization509a3Ind: SupportingOrganization509a3Ind
+              Form990SchASupportingOrgGrp:
+                key: true
+              IRSWrittenDeterminationInd: IRSWrittenDeterminationInd
+              documentId: documentId
+              softwareVersionNum: softwareVersionNum
+            IRS990ScheduleG:
+              softwareId: 9
+              documentId: documentId
+              SupplementalInformationDetail:
+              - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+                ExplanationTxt: ExplanationTxt
+              - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+                ExplanationTxt: ExplanationTxt
+              ContributorInformationGrp:
+                TotalContributionsAmt: TotalContributionsAmt
+                ContributorNum: ContributorNum
+                ContributorBusinessName:
+                  BusinessNameLine1: BusinessNameLine1
+                ContributorUSAddress:
+                  AddressLine2: AddressLine2
+                  AddressLine1: AddressLine1
+                  ZIPCode: ZIPCode
+                  State: State
+                  City: City
+              softwareVersionNum: softwareVersionNum
+              FundraisingEventInformationGrp:
+                OtherDirectExpensesEvent1Amt: 3
+                OtherDirectExpensesEvent2Amt: 2
+                GrossReceiptsEvent2Amt: 4
+                GrossReceiptsEvent1Amt: 7
+                GrossRevenueTotalEventsAmt: 1
+                NetIncomeSummaryAmt: 1
+                OthDirectExpnssOtherEventsAmt: 1
+                GrossReceiptsTotalAmt: 6
+                OthDirectExpnssTotalEventsAmt: 7
+                DirectExpenseSummaryEventsAmt: 1
+                GrossRevenueOtherEventsAmt: 4
+                GrossRevenueEvent1Amt: 5
+                GrossRevenueEvent2Amt: 9
+                Event2Nm: Event2Nm
+                Event1Nm: Event1Nm
+                GrossReceiptsOtherEventsAmt: 9
+                OtherEventsTotalCnt: 6
+            documentCnt: 6
+            IRS990:
+              ChangeToOrgDocumentsInd: true
+              ExpenseAmt: 5
+              FundraisingAmt: 6
+              TotalAssetsGrp:
+                EOYAmt: 3
+                BOYAmt: 3
+              TotalGrossUBIAmt: 7
+              ReportLandBuildingEquipmentInd: true
+              RelatedEntityInd: true
+              RelatedOrganizationCtrlEntInd: true
+              PoliciesReferenceChaptersInd: true
+              InfoInScheduleOPartIIIInd: InfoInScheduleOPartIIIInd
+              MoreThan5000KToIndividualsInd: true
+              GrantsToOrganizationsInd: null
+              WhistleblowerPolicyInd: true
+              InvestmentInJointVentureInd: true
+              UnrelatedBusIncmOverLimitInd: true
+              PYRevenuesLessExpensesAmt: 0
+              CashNonInterestBearingGrp:
+                EOYAmt: 3
+                BOYAmt: 3
+              referenceDocumentId: referenceDocumentId
+              VotingMembersGoverningBodyCnt: 7
+              ReportOtherAssetsInd: true
+              FeesForServicesAccountingGrp:
+                ProgramServicesAmt: 6
+                TotalAmt: 0
+              CompensationProcessCEOInd: true
+              SignificantNewProgramSrvcInd: true
+              ScheduleORequiredInd: true
+              OrgDoesNotFollowFASB117Ind: OrgDoesNotFollowFASB117Ind
+              ProfessionalFundraisingInd: null
+              TotalAssetsBOYAmt: 4
+              OperateHospitalInd: true
+              NetIncmFromFundraisingEvtGrp:
+                TotalRevenueColumnAmt: 8
+              CYProgramServiceRevenueAmt: 7
+              PYGrantsAndSimilarPaidAmt: 3
+              DisregardedEntityInd: true
+              TotalFunctionalExpensesGrp:
+                ProgramServicesAmt: 3
+                FundraisingAmt: 7
+                TotalAmt: 5
+                ManagementAndGeneralAmt: 3
+              FeesForServicesManagementGrp:
+                TotalAmt: 3
+                ManagementAndGeneralAmt: 2
+              TaxablePartyNotificationInd: true
+              NondeductibleContributionsInd: true
+              ForeignActivitiesInd: true
+              OfficeExpensesGrp:
+                ProgramServicesAmt: 6
+                TotalAmt: 0
+              TotalNetAssetsFundBalanceGrp:
+                EOYAmt: 3
+                BOYAmt: 3
+              AuditCommitteeInd: true
+              softwareVersionNum: softwareVersionNum
+              InfoInScheduleOPartXIIInd: InfoInScheduleOPartXIIInd
+              ForeignFinancialAccountInd: true
+              TotalContributionsAmt: 4
+              CYTotalExpensesAmt: 0
+              CYSalariesCompEmpBnftPaidAmt: 6
+              BusinessRlnWith35CtrlEntInd: true
+              GroupReturnForAffiliatesInd: true
+              CYOtherExpensesAmt: 4
+              TotalCompGreaterThan150KInd: true
+              InvestmentIncomeGrp:
+                TotalRevenueColumnAmt: 1
+                RelatedOrExemptFuncIncomeAmt: 4
+              ScheduleBRequiredInd: null
+              CYBenefitsPaidToMembersAmt: 7
+              TrnsfrExmptNonChrtblRltdOrgInd: true
+              PYExcessBenefitTransInd: true
+              FederalGrantAuditRequiredInd: true
+              RevenueAmt: 9
+              ProhibitedTaxShelterTransInd: true
+              ConservationEasementsInd: true
+              EngagedInExcessBenefitTransInd: true
+              ActivityOrMissionDesc: ActivityOrMissionDesc
+              GrantsToIndividualsInd: null
+              InfoInScheduleOPartXIInd: InfoInScheduleOPartXIInd
+              EmployeeCnt: 0
+              GrantsToDomesticOrgsGrp:
+                ProgramServicesAmt: 6
+                TotalAmt: 0
+              ProgSrvcAccomActy2Grp:
+                ExpenseAmt: 9
+                Desc: Desc
+                RevenueAmt: 0
+              BusinessRlnWithFamMemInd: true
+              GrossReceiptsAmt: 7
+              ForeignOfficeInd: true
+              PYOtherExpensesAmt: 5
+              CompensationFromOtherSrcsInd: true
+              InfoInScheduleOPartIXInd: InfoInScheduleOPartIXInd
+              TypeOfOrganizationAssocInd: TypeOfOrganizationAssocInd
+              PYContributionsGrantsAmt: 4
+              FormationYr: 6
+              MaterialDiversionOrMisuseInd: true
+              AcctCompileOrReviewBasisGrp:
+                SeparateBasisFinclStmtInd: SeparateBasisFinclStmtInd
+              PYTotalExpensesAmt: 8
+              NoDonorRestrictionNetAssetsGrp:
+                EOYAmt: 3
+                BOYAmt: 3
+              softwareId: 4
+              LoanOutstandingInd: true
+              DonorRstrOrQuasiEndowmentsInd: true
+              MembersOrStockholdersInd: true
+              CollectionsOfArtInd: true
+              DeductibleNonCashContriInd: true
+              InfoInScheduleOPartVIIIInd: InfoInScheduleOPartVIIIInd
+              MethodOfAccountingCashInd: MethodOfAccountingCashInd
+              VotingMembersIndependentCnt: 3
+              InfoInScheduleOPartXInd: InfoInScheduleOPartXInd
+              IRPDocumentW2GCnt: 0
+              AnnualDisclosureCoveredPrsnInd: true
+              DecisionsSubjectToApprovaInd: true
+              Form990PartVIISectionAGrp: null
+              MinutesOfGoverningBodyInd: true
+              StatesWhereCopyOfReturnIsFldCd: StatesWhereCopyOfReturnIsFldCd
+              DescribedInSection501c3Ind:
+                referenceDocumentId: referenceDocumentId
+                content: true
+              TotalLiabilitiesEOYAmt: 2
+              ReportOtherLiabilitiesInd: true
+              AllOtherContributionsAmt: 1
+              ReportInvestmentsOtherSecInd: true
+              MinutesOfCommitteesInd: true
+              LobbyingActivitiesInd: true
+              BusinessRlnWithOrgMemInd: true
+              IndoorTanningServicesInd: true
+              Desc: Desc
+              PYInvestmentIncomeAmt: 8
+              IndependentVotingMemberCnt: 6
+              CYRevenuesLessExpensesAmt: 4
+              SubjectToProxyTaxInd: true
+              TerminateOperationsInd: true
+              MoreThan5000KToOrgInd: true
+              ConflictOfInterestPolicyInd: true
+              CompensationProcessOtherInd: true
+              TotalAssetsEOYAmt: 8
+              FundraisingActivitiesInd: null
+              TotalRevenueGrp:
+                TotalRevenueColumnAmt: 1
+                RelatedOrExemptFuncIncomeAmt: 4
+              SchoolOperatingInd: true
+              OtherExpensesGrp:
+                Desc: Desc
+                ProgramServicesAmt: 3
+                TotalAmt: 8
+              TypeOfOrganizationCorpInd: TypeOfOrganizationCorpInd
+              NetAssetsOrFundBalancesEOYAmt: 9
+              GrantToRelatedPersonInd: true
+              WebsiteAddressTxt: WebsiteAddressTxt
+              NetAssetsOrFundBalancesBOYAmt: 1
+              CYContributionsGrantsAmt: 3
+              AllOtherExpensesGrp:
+                ProgramServicesAmt: 6
+                TotalAmt: 0
+              FamilyOrBusinessRlnInd: true
+              PrincipalOfficerNm: PrincipalOfficerNm
+              CapStkTrPrinCurrentFundsGrp:
+                EOYAmt: 3
+                BOYAmt: 3
+              CYTotalProfFndrsngExpnsAmt: 9
+              TotLiabNetAssetsFundBalanceGrp:
+                EOYAmt: 3
+                BOYAmt: 3
+              RegularMonitoringEnfrcInd: true
+              LegalDomicileStateCd: LegalDomicileStateCd
+              OrganizationFollowsFASB117Ind: OrganizationFollowsFASB117Ind
+              GamingActivitiesInd: null
+              ReconcilationRevenueExpnssAmt: 8
+              TotalLiabilitiesGrp:
+                EOYAmt: 3
+                BOYAmt: 3
+              CYInvestmentIncomeAmt: 0
+              InfoInScheduleOPartVIInd: InfoInScheduleOPartVIInd
+              PartialLiquidationInd: true
+              GoverningBodyVotingMembersCnt: 5
+              PYTotalRevenueAmt: 5
+              SignificantChangeInd: true
+              SubjectToExcsTaxNetInvstIncInd: true
+              FormerOfcrEmployeesListedInd: true
+              CYGrantsAndSimilarPaidAmt: 8
+              MissionDesc: MissionDesc
+              DonorAdvisedFundInd: true
+              OfficerMailingAddressInd: true
+              NoListedPersonsCompensatedInd: NoListedPersonsCompensatedInd
+              FSAuditedInd: true
+              Organization501c3Ind: Organization501c3Ind
+              Form990TFiledInd: true
+              IRPDocumentCnt: 7
+              SubjToTaxRmnrtnExPrchtPymtInd: true
+              ScheduleJRequiredInd: true
+              PoliticalCampaignActyInd: true
+              DelegationOfMgmtDutiesInd: true
+              IncludeFIN48FootnoteInd: true
+              BackupWthldComplianceInd: true
+              DeductibleArtContributionInd: true
+              BooksInCareOfDetail:
+                PersonNm: PersonNm
+                BusinessName:
+                  BusinessNameLine1Txt: BusinessNameLine1Txt
+                PhoneNum: 3
+                USAddress:
+                  ZIPCd: null
+                  CityNm: CityNm
+                  StateAbbreviationCd: StateAbbreviationCd
+                  AddressLine1Txt: AddressLine1Txt
+              CYTotalRevenueAmt: 3
+              CYOtherRevenueAmt: 9
+              ReportProgramRelatedInvstInd: true
+              CreditCounselingInd: true
+              PrincipalOfcrBusinessName:
+                BusinessNameLine1Txt: BusinessNameLine1Txt
+              IndependentAuditFinclStmtInd: true
+              TotalEmployeeCnt: 5
+              TaxExemptBondsInd: true
+              ActivitiesConductedPrtshpInd: true
+              TotalProgramServiceExpensesAmt: 7
+              AccountantCompileOrReviewInd: true
+              Form990ProvidedToGvrnBodyInd: true
+              DocumentRetentionPolicyInd: true
+              LocalChaptersInd: true
+              documentId: documentId
+              CYTotalFundraisingExpenseAmt: 0
+              ConsolidatedAuditFinclStmtInd: true
+              USAddress:
+                ZIPCd: null
+                CityNm: CityNm
+                StateAbbreviationCd: StateAbbreviationCd
+                AddressLine1Txt: AddressLine1Txt
+              ElectionOfBoardMembersInd: true
+              ProgSrvcAccomActy3Grp:
+                ExpenseAmt: 9
+                Desc: Desc
+                RevenueAmt: 0
+            IRS990ScheduleI:
+              GrantRecordsMaintainedInd: true
+              TotalOtherOrgCnt: 4
+              Total501c3OrgCnt: 0
+              softwareId: 0
+              documentId: documentId
+              SupplementalInformationDetail:
+                FormAndLineReferenceDesc: FormAndLineReferenceDesc
+                ExplanationTxt: ExplanationTxt
+              softwareVersionNum: softwareVersionNum
+          xsi:schemaLocation: https://openapi-generator.tech
+          xmlns:xsi: https://openapi-generator.tech
+      properties:
+        Return:
+          $ref: '#/components/schemas/ReturnReturn'
+      required:
+      - Return
+      title: ReturnElement
+      type: object
+    ReturnReturn:
+      additionalProperties: false
+      example:
+        returnVersion: returnVersion
+        ReturnHeader:
+          TaxPeriodEndDt: 2000-01-23
+          ReturnTs: 2000-01-23T04:56:07.000+00:00
+          BuildTS: 2000-01-23T04:56:07.000+00:00
+          TaxPeriodBeginDt: 2000-01-23
+          PreparerFirmGrp:
+            PreparerFirmName:
+              BusinessNameLine1Txt: BusinessNameLine1Txt
+            PreparerUSAddress:
+              ZIPCd: null
+              CityNm: CityNm
+              StateAbbreviationCd: StateAbbreviationCd
+              AddressLine1Txt: AddressLine1Txt
+            PreparerFirmEIN: 0
+          TaxYr: 6
+          PreparerPersonGrp:
+            SelfEmployedInd: SelfEmployedInd
+            PreparerPersonNm: PreparerPersonNm
+            PhoneNum: 1
+            PTIN: PTIN
+            PreparationDt: 2000-01-23
+          BusinessOfficerGrp:
+            PersonNm: PersonNm
+            PersonTitleTxt: PersonTitleTxt
+            DiscussWithPaidPreparerInd: true
+            PhoneNum: 5
+            SignatureDt: 2000-01-23
+          binaryAttachmentCnt: 5
+          ReturnTypeCd: 2
+          FilingSecurityInformation:
+            FederalOriginalSubmissionId: null
+            AtSubmissionCreationDeviceId: AtSubmissionCreationDeviceId
+            FederalOriginalSubmissionIdDt: 2000-01-23
+            FilingLicenseTypeCd: FilingLicenseTypeCd
+            IPAddress:
+              IPv4AddressTxt: IPv4AddressTxt
+            AtSubmissionFilingDeviceId: AtSubmissionFilingDeviceId
+          Filer:
+            BusinessName:
+              BusinessNameLine1Txt: BusinessNameLine1Txt
+            PhoneNum: 7
+            BusinessNameControlTxt: BusinessNameControlTxt
+            EIN: null
+            USAddress:
+              ZIPCd: null
+              CityNm: CityNm
+              StateAbbreviationCd: StateAbbreviationCd
+              AddressLine1Txt: AddressLine1Txt
+            InCareOfNm: InCareOfNm
+        xmlns: https://openapi-generator.tech
+        ReturnData:
+          IRS990ScheduleO:
+            softwareId: 9
+            documentId: documentId
+            SupplementalInformationDetail:
+            - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+              ExplanationTxt: ExplanationTxt
+            - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+              ExplanationTxt: ExplanationTxt
+            ContributorInformationGrp:
+              TotalContributionsAmt: TotalContributionsAmt
+              ContributorNum: ContributorNum
+              ContributorBusinessName:
+                BusinessNameLine1: BusinessNameLine1
+              ContributorUSAddress:
+                AddressLine2: AddressLine2
+                AddressLine1: AddressLine1
+                ZIPCode: ZIPCode
+                State: State
+                City: City
+            softwareVersionNum: softwareVersionNum
+            FundraisingEventInformationGrp:
+              OtherDirectExpensesEvent1Amt: 3
+              OtherDirectExpensesEvent2Amt: 2
+              GrossReceiptsEvent2Amt: 4
+              GrossReceiptsEvent1Amt: 7
+              GrossRevenueTotalEventsAmt: 1
+              NetIncomeSummaryAmt: 1
+              OthDirectExpnssOtherEventsAmt: 1
+              GrossReceiptsTotalAmt: 6
+              OthDirectExpnssTotalEventsAmt: 7
+              DirectExpenseSummaryEventsAmt: 1
+              GrossRevenueOtherEventsAmt: 4
+              GrossRevenueEvent1Amt: 5
+              GrossRevenueEvent2Amt: 9
+              Event2Nm: Event2Nm
+              Event1Nm: Event1Nm
+              GrossReceiptsOtherEventsAmt: 9
+              OtherEventsTotalCnt: 6
+          IRS990ScheduleB:
+            softwareId: 9
+            documentId: documentId
+            SupplementalInformationDetail:
+            - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+              ExplanationTxt: ExplanationTxt
+            - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+              ExplanationTxt: ExplanationTxt
+            ContributorInformationGrp:
+              TotalContributionsAmt: TotalContributionsAmt
+              ContributorNum: ContributorNum
+              ContributorBusinessName:
+                BusinessNameLine1: BusinessNameLine1
+              ContributorUSAddress:
+                AddressLine2: AddressLine2
+                AddressLine1: AddressLine1
+                ZIPCode: ZIPCode
+                State: State
+                City: City
+            softwareVersionNum: softwareVersionNum
+            FundraisingEventInformationGrp:
+              OtherDirectExpensesEvent1Amt: 3
+              OtherDirectExpensesEvent2Amt: 2
+              GrossReceiptsEvent2Amt: 4
+              GrossReceiptsEvent1Amt: 7
+              GrossRevenueTotalEventsAmt: 1
+              NetIncomeSummaryAmt: 1
+              OthDirectExpnssOtherEventsAmt: 1
+              GrossReceiptsTotalAmt: 6
+              OthDirectExpnssTotalEventsAmt: 7
+              DirectExpenseSummaryEventsAmt: 1
+              GrossRevenueOtherEventsAmt: 4
+              GrossRevenueEvent1Amt: 5
+              GrossRevenueEvent2Amt: 9
+              Event2Nm: Event2Nm
+              Event1Nm: Event1Nm
+              GrossReceiptsOtherEventsAmt: 9
+              OtherEventsTotalCnt: 6
+          IRS990ScheduleA:
+            SupportedOrgInformationGrp:
+              GoverningDocumentListedInd: true
+              SupportAmt: 8
+              EIN: EIN
+              OrganizationTypeCd: 9
+              OtherSupportAmt: 6
+              SupportedOrganizationName:
+                BusinessNameLine1Txt: BusinessNameLine1Txt
+            MajorityDirTrstSupportedOrgInd: true
+            SupportingOrgType1Ind: SupportingOrgType1Ind
+            SupportedOrganizationsTotalCnt: 3
+            Form990ScheduleAPartVIGrp:
+              FormAndLineReferenceDesc: FormAndLineReferenceDesc
+              ExplanationTxt: ExplanationTxt
+            OtherSupportSumAmt: 6
+            SupportSumAmt: 1
+            Form990SchAType1SuprtOrgGrp:
+              OperateBenefitNonSuprtOrgInd: true
+              PowerAppointMajorityDirTrstInd: true
+            ChurchInd: ChurchInd
+            softwareId: 2
+            SupportedOrganizationsCnt: 6
+            SupportingOrganization509a3Ind: SupportingOrganization509a3Ind
+            Form990SchASupportingOrgGrp:
+              key: true
+            IRSWrittenDeterminationInd: IRSWrittenDeterminationInd
+            documentId: documentId
+            softwareVersionNum: softwareVersionNum
+          IRS990ScheduleG:
+            softwareId: 9
+            documentId: documentId
+            SupplementalInformationDetail:
+            - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+              ExplanationTxt: ExplanationTxt
+            - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+              ExplanationTxt: ExplanationTxt
+            ContributorInformationGrp:
+              TotalContributionsAmt: TotalContributionsAmt
+              ContributorNum: ContributorNum
+              ContributorBusinessName:
+                BusinessNameLine1: BusinessNameLine1
+              ContributorUSAddress:
+                AddressLine2: AddressLine2
+                AddressLine1: AddressLine1
+                ZIPCode: ZIPCode
+                State: State
+                City: City
+            softwareVersionNum: softwareVersionNum
+            FundraisingEventInformationGrp:
+              OtherDirectExpensesEvent1Amt: 3
+              OtherDirectExpensesEvent2Amt: 2
+              GrossReceiptsEvent2Amt: 4
+              GrossReceiptsEvent1Amt: 7
+              GrossRevenueTotalEventsAmt: 1
+              NetIncomeSummaryAmt: 1
+              OthDirectExpnssOtherEventsAmt: 1
+              GrossReceiptsTotalAmt: 6
+              OthDirectExpnssTotalEventsAmt: 7
+              DirectExpenseSummaryEventsAmt: 1
+              GrossRevenueOtherEventsAmt: 4
+              GrossRevenueEvent1Amt: 5
+              GrossRevenueEvent2Amt: 9
+              Event2Nm: Event2Nm
+              Event1Nm: Event1Nm
+              GrossReceiptsOtherEventsAmt: 9
+              OtherEventsTotalCnt: 6
+          documentCnt: 6
+          IRS990:
+            ChangeToOrgDocumentsInd: true
+            ExpenseAmt: 5
+            FundraisingAmt: 6
+            TotalAssetsGrp:
+              EOYAmt: 3
+              BOYAmt: 3
+            TotalGrossUBIAmt: 7
+            ReportLandBuildingEquipmentInd: true
+            RelatedEntityInd: true
+            RelatedOrganizationCtrlEntInd: true
+            PoliciesReferenceChaptersInd: true
+            InfoInScheduleOPartIIIInd: InfoInScheduleOPartIIIInd
+            MoreThan5000KToIndividualsInd: true
+            GrantsToOrganizationsInd: null
+            WhistleblowerPolicyInd: true
+            InvestmentInJointVentureInd: true
+            UnrelatedBusIncmOverLimitInd: true
+            PYRevenuesLessExpensesAmt: 0
+            CashNonInterestBearingGrp:
+              EOYAmt: 3
+              BOYAmt: 3
+            referenceDocumentId: referenceDocumentId
+            VotingMembersGoverningBodyCnt: 7
+            ReportOtherAssetsInd: true
+            FeesForServicesAccountingGrp:
+              ProgramServicesAmt: 6
+              TotalAmt: 0
+            CompensationProcessCEOInd: true
+            SignificantNewProgramSrvcInd: true
+            ScheduleORequiredInd: true
+            OrgDoesNotFollowFASB117Ind: OrgDoesNotFollowFASB117Ind
+            ProfessionalFundraisingInd: null
+            TotalAssetsBOYAmt: 4
+            OperateHospitalInd: true
+            NetIncmFromFundraisingEvtGrp:
+              TotalRevenueColumnAmt: 8
+            CYProgramServiceRevenueAmt: 7
+            PYGrantsAndSimilarPaidAmt: 3
+            DisregardedEntityInd: true
+            TotalFunctionalExpensesGrp:
+              ProgramServicesAmt: 3
+              FundraisingAmt: 7
+              TotalAmt: 5
+              ManagementAndGeneralAmt: 3
+            FeesForServicesManagementGrp:
+              TotalAmt: 3
+              ManagementAndGeneralAmt: 2
+            TaxablePartyNotificationInd: true
+            NondeductibleContributionsInd: true
+            ForeignActivitiesInd: true
+            OfficeExpensesGrp:
+              ProgramServicesAmt: 6
+              TotalAmt: 0
+            TotalNetAssetsFundBalanceGrp:
+              EOYAmt: 3
+              BOYAmt: 3
+            AuditCommitteeInd: true
+            softwareVersionNum: softwareVersionNum
+            InfoInScheduleOPartXIIInd: InfoInScheduleOPartXIIInd
+            ForeignFinancialAccountInd: true
+            TotalContributionsAmt: 4
+            CYTotalExpensesAmt: 0
+            CYSalariesCompEmpBnftPaidAmt: 6
+            BusinessRlnWith35CtrlEntInd: true
+            GroupReturnForAffiliatesInd: true
+            CYOtherExpensesAmt: 4
+            TotalCompGreaterThan150KInd: true
+            InvestmentIncomeGrp:
+              TotalRevenueColumnAmt: 1
+              RelatedOrExemptFuncIncomeAmt: 4
+            ScheduleBRequiredInd: null
+            CYBenefitsPaidToMembersAmt: 7
+            TrnsfrExmptNonChrtblRltdOrgInd: true
+            PYExcessBenefitTransInd: true
+            FederalGrantAuditRequiredInd: true
+            RevenueAmt: 9
+            ProhibitedTaxShelterTransInd: true
+            ConservationEasementsInd: true
+            EngagedInExcessBenefitTransInd: true
+            ActivityOrMissionDesc: ActivityOrMissionDesc
+            GrantsToIndividualsInd: null
+            InfoInScheduleOPartXIInd: InfoInScheduleOPartXIInd
+            EmployeeCnt: 0
+            GrantsToDomesticOrgsGrp:
+              ProgramServicesAmt: 6
+              TotalAmt: 0
+            ProgSrvcAccomActy2Grp:
+              ExpenseAmt: 9
+              Desc: Desc
+              RevenueAmt: 0
+            BusinessRlnWithFamMemInd: true
+            GrossReceiptsAmt: 7
+            ForeignOfficeInd: true
+            PYOtherExpensesAmt: 5
+            CompensationFromOtherSrcsInd: true
+            InfoInScheduleOPartIXInd: InfoInScheduleOPartIXInd
+            TypeOfOrganizationAssocInd: TypeOfOrganizationAssocInd
+            PYContributionsGrantsAmt: 4
+            FormationYr: 6
+            MaterialDiversionOrMisuseInd: true
+            AcctCompileOrReviewBasisGrp:
+              SeparateBasisFinclStmtInd: SeparateBasisFinclStmtInd
+            PYTotalExpensesAmt: 8
+            NoDonorRestrictionNetAssetsGrp:
+              EOYAmt: 3
+              BOYAmt: 3
+            softwareId: 4
+            LoanOutstandingInd: true
+            DonorRstrOrQuasiEndowmentsInd: true
+            MembersOrStockholdersInd: true
+            CollectionsOfArtInd: true
+            DeductibleNonCashContriInd: true
+            InfoInScheduleOPartVIIIInd: InfoInScheduleOPartVIIIInd
+            MethodOfAccountingCashInd: MethodOfAccountingCashInd
+            VotingMembersIndependentCnt: 3
+            InfoInScheduleOPartXInd: InfoInScheduleOPartXInd
+            IRPDocumentW2GCnt: 0
+            AnnualDisclosureCoveredPrsnInd: true
+            DecisionsSubjectToApprovaInd: true
+            Form990PartVIISectionAGrp: null
+            MinutesOfGoverningBodyInd: true
+            StatesWhereCopyOfReturnIsFldCd: StatesWhereCopyOfReturnIsFldCd
+            DescribedInSection501c3Ind:
+              referenceDocumentId: referenceDocumentId
+              content: true
+            TotalLiabilitiesEOYAmt: 2
+            ReportOtherLiabilitiesInd: true
+            AllOtherContributionsAmt: 1
+            ReportInvestmentsOtherSecInd: true
+            MinutesOfCommitteesInd: true
+            LobbyingActivitiesInd: true
+            BusinessRlnWithOrgMemInd: true
+            IndoorTanningServicesInd: true
+            Desc: Desc
+            PYInvestmentIncomeAmt: 8
+            IndependentVotingMemberCnt: 6
+            CYRevenuesLessExpensesAmt: 4
+            SubjectToProxyTaxInd: true
+            TerminateOperationsInd: true
+            MoreThan5000KToOrgInd: true
+            ConflictOfInterestPolicyInd: true
+            CompensationProcessOtherInd: true
+            TotalAssetsEOYAmt: 8
+            FundraisingActivitiesInd: null
+            TotalRevenueGrp:
+              TotalRevenueColumnAmt: 1
+              RelatedOrExemptFuncIncomeAmt: 4
+            SchoolOperatingInd: true
+            OtherExpensesGrp:
+              Desc: Desc
+              ProgramServicesAmt: 3
+              TotalAmt: 8
+            TypeOfOrganizationCorpInd: TypeOfOrganizationCorpInd
+            NetAssetsOrFundBalancesEOYAmt: 9
+            GrantToRelatedPersonInd: true
+            WebsiteAddressTxt: WebsiteAddressTxt
+            NetAssetsOrFundBalancesBOYAmt: 1
+            CYContributionsGrantsAmt: 3
+            AllOtherExpensesGrp:
+              ProgramServicesAmt: 6
+              TotalAmt: 0
+            FamilyOrBusinessRlnInd: true
+            PrincipalOfficerNm: PrincipalOfficerNm
+            CapStkTrPrinCurrentFundsGrp:
+              EOYAmt: 3
+              BOYAmt: 3
+            CYTotalProfFndrsngExpnsAmt: 9
+            TotLiabNetAssetsFundBalanceGrp:
+              EOYAmt: 3
+              BOYAmt: 3
+            RegularMonitoringEnfrcInd: true
+            LegalDomicileStateCd: LegalDomicileStateCd
+            OrganizationFollowsFASB117Ind: OrganizationFollowsFASB117Ind
+            GamingActivitiesInd: null
+            ReconcilationRevenueExpnssAmt: 8
+            TotalLiabilitiesGrp:
+              EOYAmt: 3
+              BOYAmt: 3
+            CYInvestmentIncomeAmt: 0
+            InfoInScheduleOPartVIInd: InfoInScheduleOPartVIInd
+            PartialLiquidationInd: true
+            GoverningBodyVotingMembersCnt: 5
+            PYTotalRevenueAmt: 5
+            SignificantChangeInd: true
+            SubjectToExcsTaxNetInvstIncInd: true
+            FormerOfcrEmployeesListedInd: true
+            CYGrantsAndSimilarPaidAmt: 8
+            MissionDesc: MissionDesc
+            DonorAdvisedFundInd: true
+            OfficerMailingAddressInd: true
+            NoListedPersonsCompensatedInd: NoListedPersonsCompensatedInd
+            FSAuditedInd: true
+            Organization501c3Ind: Organization501c3Ind
+            Form990TFiledInd: true
+            IRPDocumentCnt: 7
+            SubjToTaxRmnrtnExPrchtPymtInd: true
+            ScheduleJRequiredInd: true
+            PoliticalCampaignActyInd: true
+            DelegationOfMgmtDutiesInd: true
+            IncludeFIN48FootnoteInd: true
+            BackupWthldComplianceInd: true
+            DeductibleArtContributionInd: true
+            BooksInCareOfDetail:
+              PersonNm: PersonNm
+              BusinessName:
+                BusinessNameLine1Txt: BusinessNameLine1Txt
+              PhoneNum: 3
+              USAddress:
+                ZIPCd: null
+                CityNm: CityNm
+                StateAbbreviationCd: StateAbbreviationCd
+                AddressLine1Txt: AddressLine1Txt
+            CYTotalRevenueAmt: 3
+            CYOtherRevenueAmt: 9
+            ReportProgramRelatedInvstInd: true
+            CreditCounselingInd: true
+            PrincipalOfcrBusinessName:
+              BusinessNameLine1Txt: BusinessNameLine1Txt
+            IndependentAuditFinclStmtInd: true
+            TotalEmployeeCnt: 5
+            TaxExemptBondsInd: true
+            ActivitiesConductedPrtshpInd: true
+            TotalProgramServiceExpensesAmt: 7
+            AccountantCompileOrReviewInd: true
+            Form990ProvidedToGvrnBodyInd: true
+            DocumentRetentionPolicyInd: true
+            LocalChaptersInd: true
+            documentId: documentId
+            CYTotalFundraisingExpenseAmt: 0
+            ConsolidatedAuditFinclStmtInd: true
+            USAddress:
+              ZIPCd: null
+              CityNm: CityNm
+              StateAbbreviationCd: StateAbbreviationCd
+              AddressLine1Txt: AddressLine1Txt
+            ElectionOfBoardMembersInd: true
+            ProgSrvcAccomActy3Grp:
+              ExpenseAmt: 9
+              Desc: Desc
+              RevenueAmt: 0
+          IRS990ScheduleI:
+            GrantRecordsMaintainedInd: true
+            TotalOtherOrgCnt: 4
+            Total501c3OrgCnt: 0
+            softwareId: 0
+            documentId: documentId
+            SupplementalInformationDetail:
+              FormAndLineReferenceDesc: FormAndLineReferenceDesc
+              ExplanationTxt: ExplanationTxt
+            softwareVersionNum: softwareVersionNum
+        xsi:schemaLocation: https://openapi-generator.tech
+        xmlns:xsi: https://openapi-generator.tech
+      properties:
+        returnVersion:
+          type: string
+        ReturnHeader:
+          $ref: '#/components/schemas/ReturnHeader'
+        xmlns:
+          format: uri
+          type: string
+        ReturnData:
+          $ref: '#/components/schemas/ReturnData'
+        xsi:schemaLocation:
+          format: uri
+          type: string
+        xmlns:xsi:
+          format: uri
+          type: string
+      required:
+      - ReturnData
+      - ReturnHeader
+      - returnVersion
+      - xmlns
+      - xmlns:xsi
+      - xsi:schemaLocation
+      title: ReturnReturn
+      type: object
+    ReturnData:
+      additionalProperties: false
+      example:
+        IRS990ScheduleO:
+          softwareId: 9
+          documentId: documentId
+          SupplementalInformationDetail:
+          - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+            ExplanationTxt: ExplanationTxt
+          - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+            ExplanationTxt: ExplanationTxt
+          ContributorInformationGrp:
+            TotalContributionsAmt: TotalContributionsAmt
+            ContributorNum: ContributorNum
+            ContributorBusinessName:
+              BusinessNameLine1: BusinessNameLine1
+            ContributorUSAddress:
+              AddressLine2: AddressLine2
+              AddressLine1: AddressLine1
+              ZIPCode: ZIPCode
+              State: State
+              City: City
+          softwareVersionNum: softwareVersionNum
+          FundraisingEventInformationGrp:
+            OtherDirectExpensesEvent1Amt: 3
+            OtherDirectExpensesEvent2Amt: 2
+            GrossReceiptsEvent2Amt: 4
+            GrossReceiptsEvent1Amt: 7
+            GrossRevenueTotalEventsAmt: 1
+            NetIncomeSummaryAmt: 1
+            OthDirectExpnssOtherEventsAmt: 1
+            GrossReceiptsTotalAmt: 6
+            OthDirectExpnssTotalEventsAmt: 7
+            DirectExpenseSummaryEventsAmt: 1
+            GrossRevenueOtherEventsAmt: 4
+            GrossRevenueEvent1Amt: 5
+            GrossRevenueEvent2Amt: 9
+            Event2Nm: Event2Nm
+            Event1Nm: Event1Nm
+            GrossReceiptsOtherEventsAmt: 9
+            OtherEventsTotalCnt: 6
+        IRS990ScheduleB:
+          softwareId: 9
+          documentId: documentId
+          SupplementalInformationDetail:
+          - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+            ExplanationTxt: ExplanationTxt
+          - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+            ExplanationTxt: ExplanationTxt
+          ContributorInformationGrp:
+            TotalContributionsAmt: TotalContributionsAmt
+            ContributorNum: ContributorNum
+            ContributorBusinessName:
+              BusinessNameLine1: BusinessNameLine1
+            ContributorUSAddress:
+              AddressLine2: AddressLine2
+              AddressLine1: AddressLine1
+              ZIPCode: ZIPCode
+              State: State
+              City: City
+          softwareVersionNum: softwareVersionNum
+          FundraisingEventInformationGrp:
+            OtherDirectExpensesEvent1Amt: 3
+            OtherDirectExpensesEvent2Amt: 2
+            GrossReceiptsEvent2Amt: 4
+            GrossReceiptsEvent1Amt: 7
+            GrossRevenueTotalEventsAmt: 1
+            NetIncomeSummaryAmt: 1
+            OthDirectExpnssOtherEventsAmt: 1
+            GrossReceiptsTotalAmt: 6
+            OthDirectExpnssTotalEventsAmt: 7
+            DirectExpenseSummaryEventsAmt: 1
+            GrossRevenueOtherEventsAmt: 4
+            GrossRevenueEvent1Amt: 5
+            GrossRevenueEvent2Amt: 9
+            Event2Nm: Event2Nm
+            Event1Nm: Event1Nm
+            GrossReceiptsOtherEventsAmt: 9
+            OtherEventsTotalCnt: 6
+        IRS990ScheduleA:
+          SupportedOrgInformationGrp:
+            GoverningDocumentListedInd: true
+            SupportAmt: 8
+            EIN: EIN
+            OrganizationTypeCd: 9
+            OtherSupportAmt: 6
+            SupportedOrganizationName:
+              BusinessNameLine1Txt: BusinessNameLine1Txt
+          MajorityDirTrstSupportedOrgInd: true
+          SupportingOrgType1Ind: SupportingOrgType1Ind
+          SupportedOrganizationsTotalCnt: 3
+          Form990ScheduleAPartVIGrp:
+            FormAndLineReferenceDesc: FormAndLineReferenceDesc
+            ExplanationTxt: ExplanationTxt
+          OtherSupportSumAmt: 6
+          SupportSumAmt: 1
+          Form990SchAType1SuprtOrgGrp:
+            OperateBenefitNonSuprtOrgInd: true
+            PowerAppointMajorityDirTrstInd: true
+          ChurchInd: ChurchInd
+          softwareId: 2
+          SupportedOrganizationsCnt: 6
+          SupportingOrganization509a3Ind: SupportingOrganization509a3Ind
+          Form990SchASupportingOrgGrp:
+            key: true
+          IRSWrittenDeterminationInd: IRSWrittenDeterminationInd
+          documentId: documentId
+          softwareVersionNum: softwareVersionNum
+        IRS990ScheduleG:
+          softwareId: 9
+          documentId: documentId
+          SupplementalInformationDetail:
+          - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+            ExplanationTxt: ExplanationTxt
+          - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+            ExplanationTxt: ExplanationTxt
+          ContributorInformationGrp:
+            TotalContributionsAmt: TotalContributionsAmt
+            ContributorNum: ContributorNum
+            ContributorBusinessName:
+              BusinessNameLine1: BusinessNameLine1
+            ContributorUSAddress:
+              AddressLine2: AddressLine2
+              AddressLine1: AddressLine1
+              ZIPCode: ZIPCode
+              State: State
+              City: City
+          softwareVersionNum: softwareVersionNum
+          FundraisingEventInformationGrp:
+            OtherDirectExpensesEvent1Amt: 3
+            OtherDirectExpensesEvent2Amt: 2
+            GrossReceiptsEvent2Amt: 4
+            GrossReceiptsEvent1Amt: 7
+            GrossRevenueTotalEventsAmt: 1
+            NetIncomeSummaryAmt: 1
+            OthDirectExpnssOtherEventsAmt: 1
+            GrossReceiptsTotalAmt: 6
+            OthDirectExpnssTotalEventsAmt: 7
+            DirectExpenseSummaryEventsAmt: 1
+            GrossRevenueOtherEventsAmt: 4
+            GrossRevenueEvent1Amt: 5
+            GrossRevenueEvent2Amt: 9
+            Event2Nm: Event2Nm
+            Event1Nm: Event1Nm
+            GrossReceiptsOtherEventsAmt: 9
+            OtherEventsTotalCnt: 6
+        documentCnt: 6
+        IRS990:
+          ChangeToOrgDocumentsInd: true
+          ExpenseAmt: 5
+          FundraisingAmt: 6
+          TotalAssetsGrp:
+            EOYAmt: 3
+            BOYAmt: 3
+          TotalGrossUBIAmt: 7
+          ReportLandBuildingEquipmentInd: true
+          RelatedEntityInd: true
+          RelatedOrganizationCtrlEntInd: true
+          PoliciesReferenceChaptersInd: true
+          InfoInScheduleOPartIIIInd: InfoInScheduleOPartIIIInd
+          MoreThan5000KToIndividualsInd: true
+          GrantsToOrganizationsInd: null
+          WhistleblowerPolicyInd: true
+          InvestmentInJointVentureInd: true
+          UnrelatedBusIncmOverLimitInd: true
+          PYRevenuesLessExpensesAmt: 0
+          CashNonInterestBearingGrp:
+            EOYAmt: 3
+            BOYAmt: 3
+          referenceDocumentId: referenceDocumentId
+          VotingMembersGoverningBodyCnt: 7
+          ReportOtherAssetsInd: true
+          FeesForServicesAccountingGrp:
+            ProgramServicesAmt: 6
+            TotalAmt: 0
+          CompensationProcessCEOInd: true
+          SignificantNewProgramSrvcInd: true
+          ScheduleORequiredInd: true
+          OrgDoesNotFollowFASB117Ind: OrgDoesNotFollowFASB117Ind
+          ProfessionalFundraisingInd: null
+          TotalAssetsBOYAmt: 4
+          OperateHospitalInd: true
+          NetIncmFromFundraisingEvtGrp:
+            TotalRevenueColumnAmt: 8
+          CYProgramServiceRevenueAmt: 7
+          PYGrantsAndSimilarPaidAmt: 3
+          DisregardedEntityInd: true
+          TotalFunctionalExpensesGrp:
+            ProgramServicesAmt: 3
+            FundraisingAmt: 7
+            TotalAmt: 5
+            ManagementAndGeneralAmt: 3
+          FeesForServicesManagementGrp:
+            TotalAmt: 3
+            ManagementAndGeneralAmt: 2
+          TaxablePartyNotificationInd: true
+          NondeductibleContributionsInd: true
+          ForeignActivitiesInd: true
+          OfficeExpensesGrp:
+            ProgramServicesAmt: 6
+            TotalAmt: 0
+          TotalNetAssetsFundBalanceGrp:
+            EOYAmt: 3
+            BOYAmt: 3
+          AuditCommitteeInd: true
+          softwareVersionNum: softwareVersionNum
+          InfoInScheduleOPartXIIInd: InfoInScheduleOPartXIIInd
+          ForeignFinancialAccountInd: true
+          TotalContributionsAmt: 4
+          CYTotalExpensesAmt: 0
+          CYSalariesCompEmpBnftPaidAmt: 6
+          BusinessRlnWith35CtrlEntInd: true
+          GroupReturnForAffiliatesInd: true
+          CYOtherExpensesAmt: 4
+          TotalCompGreaterThan150KInd: true
+          InvestmentIncomeGrp:
+            TotalRevenueColumnAmt: 1
+            RelatedOrExemptFuncIncomeAmt: 4
+          ScheduleBRequiredInd: null
+          CYBenefitsPaidToMembersAmt: 7
+          TrnsfrExmptNonChrtblRltdOrgInd: true
+          PYExcessBenefitTransInd: true
+          FederalGrantAuditRequiredInd: true
+          RevenueAmt: 9
+          ProhibitedTaxShelterTransInd: true
+          ConservationEasementsInd: true
+          EngagedInExcessBenefitTransInd: true
+          ActivityOrMissionDesc: ActivityOrMissionDesc
+          GrantsToIndividualsInd: null
+          InfoInScheduleOPartXIInd: InfoInScheduleOPartXIInd
+          EmployeeCnt: 0
+          GrantsToDomesticOrgsGrp:
+            ProgramServicesAmt: 6
+            TotalAmt: 0
+          ProgSrvcAccomActy2Grp:
+            ExpenseAmt: 9
+            Desc: Desc
+            RevenueAmt: 0
+          BusinessRlnWithFamMemInd: true
+          GrossReceiptsAmt: 7
+          ForeignOfficeInd: true
+          PYOtherExpensesAmt: 5
+          CompensationFromOtherSrcsInd: true
+          InfoInScheduleOPartIXInd: InfoInScheduleOPartIXInd
+          TypeOfOrganizationAssocInd: TypeOfOrganizationAssocInd
+          PYContributionsGrantsAmt: 4
+          FormationYr: 6
+          MaterialDiversionOrMisuseInd: true
+          AcctCompileOrReviewBasisGrp:
+            SeparateBasisFinclStmtInd: SeparateBasisFinclStmtInd
+          PYTotalExpensesAmt: 8
+          NoDonorRestrictionNetAssetsGrp:
+            EOYAmt: 3
+            BOYAmt: 3
+          softwareId: 4
+          LoanOutstandingInd: true
+          DonorRstrOrQuasiEndowmentsInd: true
+          MembersOrStockholdersInd: true
+          CollectionsOfArtInd: true
+          DeductibleNonCashContriInd: true
+          InfoInScheduleOPartVIIIInd: InfoInScheduleOPartVIIIInd
+          MethodOfAccountingCashInd: MethodOfAccountingCashInd
+          VotingMembersIndependentCnt: 3
+          InfoInScheduleOPartXInd: InfoInScheduleOPartXInd
+          IRPDocumentW2GCnt: 0
+          AnnualDisclosureCoveredPrsnInd: true
+          DecisionsSubjectToApprovaInd: true
+          Form990PartVIISectionAGrp: null
+          MinutesOfGoverningBodyInd: true
+          StatesWhereCopyOfReturnIsFldCd: StatesWhereCopyOfReturnIsFldCd
+          DescribedInSection501c3Ind:
+            referenceDocumentId: referenceDocumentId
+            content: true
+          TotalLiabilitiesEOYAmt: 2
+          ReportOtherLiabilitiesInd: true
+          AllOtherContributionsAmt: 1
+          ReportInvestmentsOtherSecInd: true
+          MinutesOfCommitteesInd: true
+          LobbyingActivitiesInd: true
+          BusinessRlnWithOrgMemInd: true
+          IndoorTanningServicesInd: true
+          Desc: Desc
+          PYInvestmentIncomeAmt: 8
+          IndependentVotingMemberCnt: 6
+          CYRevenuesLessExpensesAmt: 4
+          SubjectToProxyTaxInd: true
+          TerminateOperationsInd: true
+          MoreThan5000KToOrgInd: true
+          ConflictOfInterestPolicyInd: true
+          CompensationProcessOtherInd: true
+          TotalAssetsEOYAmt: 8
+          FundraisingActivitiesInd: null
+          TotalRevenueGrp:
+            TotalRevenueColumnAmt: 1
+            RelatedOrExemptFuncIncomeAmt: 4
+          SchoolOperatingInd: true
+          OtherExpensesGrp:
+            Desc: Desc
+            ProgramServicesAmt: 3
+            TotalAmt: 8
+          TypeOfOrganizationCorpInd: TypeOfOrganizationCorpInd
+          NetAssetsOrFundBalancesEOYAmt: 9
+          GrantToRelatedPersonInd: true
+          WebsiteAddressTxt: WebsiteAddressTxt
+          NetAssetsOrFundBalancesBOYAmt: 1
+          CYContributionsGrantsAmt: 3
+          AllOtherExpensesGrp:
+            ProgramServicesAmt: 6
+            TotalAmt: 0
+          FamilyOrBusinessRlnInd: true
+          PrincipalOfficerNm: PrincipalOfficerNm
+          CapStkTrPrinCurrentFundsGrp:
+            EOYAmt: 3
+            BOYAmt: 3
+          CYTotalProfFndrsngExpnsAmt: 9
+          TotLiabNetAssetsFundBalanceGrp:
+            EOYAmt: 3
+            BOYAmt: 3
+          RegularMonitoringEnfrcInd: true
+          LegalDomicileStateCd: LegalDomicileStateCd
+          OrganizationFollowsFASB117Ind: OrganizationFollowsFASB117Ind
+          GamingActivitiesInd: null
+          ReconcilationRevenueExpnssAmt: 8
+          TotalLiabilitiesGrp:
+            EOYAmt: 3
+            BOYAmt: 3
+          CYInvestmentIncomeAmt: 0
+          InfoInScheduleOPartVIInd: InfoInScheduleOPartVIInd
+          PartialLiquidationInd: true
+          GoverningBodyVotingMembersCnt: 5
+          PYTotalRevenueAmt: 5
+          SignificantChangeInd: true
+          SubjectToExcsTaxNetInvstIncInd: true
+          FormerOfcrEmployeesListedInd: true
+          CYGrantsAndSimilarPaidAmt: 8
+          MissionDesc: MissionDesc
+          DonorAdvisedFundInd: true
+          OfficerMailingAddressInd: true
+          NoListedPersonsCompensatedInd: NoListedPersonsCompensatedInd
+          FSAuditedInd: true
+          Organization501c3Ind: Organization501c3Ind
+          Form990TFiledInd: true
+          IRPDocumentCnt: 7
+          SubjToTaxRmnrtnExPrchtPymtInd: true
+          ScheduleJRequiredInd: true
+          PoliticalCampaignActyInd: true
+          DelegationOfMgmtDutiesInd: true
+          IncludeFIN48FootnoteInd: true
+          BackupWthldComplianceInd: true
+          DeductibleArtContributionInd: true
+          BooksInCareOfDetail:
+            PersonNm: PersonNm
+            BusinessName:
+              BusinessNameLine1Txt: BusinessNameLine1Txt
+            PhoneNum: 3
+            USAddress:
+              ZIPCd: null
+              CityNm: CityNm
+              StateAbbreviationCd: StateAbbreviationCd
+              AddressLine1Txt: AddressLine1Txt
+          CYTotalRevenueAmt: 3
+          CYOtherRevenueAmt: 9
+          ReportProgramRelatedInvstInd: true
+          CreditCounselingInd: true
+          PrincipalOfcrBusinessName:
+            BusinessNameLine1Txt: BusinessNameLine1Txt
+          IndependentAuditFinclStmtInd: true
+          TotalEmployeeCnt: 5
+          TaxExemptBondsInd: true
+          ActivitiesConductedPrtshpInd: true
+          TotalProgramServiceExpensesAmt: 7
+          AccountantCompileOrReviewInd: true
+          Form990ProvidedToGvrnBodyInd: true
+          DocumentRetentionPolicyInd: true
+          LocalChaptersInd: true
+          documentId: documentId
+          CYTotalFundraisingExpenseAmt: 0
+          ConsolidatedAuditFinclStmtInd: true
+          USAddress:
+            ZIPCd: null
+            CityNm: CityNm
+            StateAbbreviationCd: StateAbbreviationCd
+            AddressLine1Txt: AddressLine1Txt
+          ElectionOfBoardMembersInd: true
+          ProgSrvcAccomActy3Grp:
+            ExpenseAmt: 9
+            Desc: Desc
+            RevenueAmt: 0
+        IRS990ScheduleI:
+          GrantRecordsMaintainedInd: true
+          TotalOtherOrgCnt: 4
+          Total501c3OrgCnt: 0
+          softwareId: 0
+          documentId: documentId
+          SupplementalInformationDetail:
+            FormAndLineReferenceDesc: FormAndLineReferenceDesc
+            ExplanationTxt: ExplanationTxt
+          softwareVersionNum: softwareVersionNum
+      properties:
+        IRS990ScheduleO:
+          $ref: '#/components/schemas/Irs990Schedule'
+        IRS990ScheduleA:
+          $ref: '#/components/schemas/IRS990ScheduleA'
+        IRS990ScheduleG:
+          $ref: '#/components/schemas/Irs990Schedule'
+        documentCnt:
+          type: integer
+        IRS990:
+          $ref: '#/components/schemas/Irs990'
+        IRS990ScheduleI:
+          $ref: '#/components/schemas/IRS990ScheduleI'
+        IRS990ScheduleB:
+          $ref: '#/components/schemas/Irs990Schedule'
+      required:
+      - IRS990
+      - IRS990ScheduleA
+      - IRS990ScheduleO
+      - documentCnt
+      title: ReturnData
+      type: object
+    Irs990:
+      additionalProperties: false
+      example:
+        ChangeToOrgDocumentsInd: true
+        ExpenseAmt: 5
+        FundraisingAmt: 6
+        TotalAssetsGrp:
+          EOYAmt: 3
+          BOYAmt: 3
+        TotalGrossUBIAmt: 7
+        ReportLandBuildingEquipmentInd: true
+        RelatedEntityInd: true
+        RelatedOrganizationCtrlEntInd: true
+        PoliciesReferenceChaptersInd: true
+        InfoInScheduleOPartIIIInd: InfoInScheduleOPartIIIInd
+        MoreThan5000KToIndividualsInd: true
+        GrantsToOrganizationsInd: null
+        WhistleblowerPolicyInd: true
+        InvestmentInJointVentureInd: true
+        UnrelatedBusIncmOverLimitInd: true
+        PYRevenuesLessExpensesAmt: 0
+        CashNonInterestBearingGrp:
+          EOYAmt: 3
+          BOYAmt: 3
+        referenceDocumentId: referenceDocumentId
+        VotingMembersGoverningBodyCnt: 7
+        ReportOtherAssetsInd: true
+        FeesForServicesAccountingGrp:
+          ProgramServicesAmt: 6
+          TotalAmt: 0
+        CompensationProcessCEOInd: true
+        SignificantNewProgramSrvcInd: true
+        ScheduleORequiredInd: true
+        OrgDoesNotFollowFASB117Ind: OrgDoesNotFollowFASB117Ind
+        ProfessionalFundraisingInd: null
+        TotalAssetsBOYAmt: 4
+        OperateHospitalInd: true
+        NetIncmFromFundraisingEvtGrp:
+          TotalRevenueColumnAmt: 8
+        CYProgramServiceRevenueAmt: 7
+        PYGrantsAndSimilarPaidAmt: 3
+        DisregardedEntityInd: true
+        TotalFunctionalExpensesGrp:
+          ProgramServicesAmt: 3
+          FundraisingAmt: 7
+          TotalAmt: 5
+          ManagementAndGeneralAmt: 3
+        FeesForServicesManagementGrp:
+          TotalAmt: 3
+          ManagementAndGeneralAmt: 2
+        TaxablePartyNotificationInd: true
+        NondeductibleContributionsInd: true
+        ForeignActivitiesInd: true
+        OfficeExpensesGrp:
+          ProgramServicesAmt: 6
+          TotalAmt: 0
+        TotalNetAssetsFundBalanceGrp:
+          EOYAmt: 3
+          BOYAmt: 3
+        AuditCommitteeInd: true
+        softwareVersionNum: softwareVersionNum
+        InfoInScheduleOPartXIIInd: InfoInScheduleOPartXIIInd
+        ForeignFinancialAccountInd: true
+        TotalContributionsAmt: 4
+        CYTotalExpensesAmt: 0
+        CYSalariesCompEmpBnftPaidAmt: 6
+        BusinessRlnWith35CtrlEntInd: true
+        GroupReturnForAffiliatesInd: true
+        CYOtherExpensesAmt: 4
+        TotalCompGreaterThan150KInd: true
+        InvestmentIncomeGrp:
+          TotalRevenueColumnAmt: 1
+          RelatedOrExemptFuncIncomeAmt: 4
+        ScheduleBRequiredInd: null
+        CYBenefitsPaidToMembersAmt: 7
+        TrnsfrExmptNonChrtblRltdOrgInd: true
+        PYExcessBenefitTransInd: true
+        FederalGrantAuditRequiredInd: true
+        RevenueAmt: 9
+        ProhibitedTaxShelterTransInd: true
+        ConservationEasementsInd: true
+        EngagedInExcessBenefitTransInd: true
+        ActivityOrMissionDesc: ActivityOrMissionDesc
+        GrantsToIndividualsInd: null
+        InfoInScheduleOPartXIInd: InfoInScheduleOPartXIInd
+        EmployeeCnt: 0
+        GrantsToDomesticOrgsGrp:
+          ProgramServicesAmt: 6
+          TotalAmt: 0
+        ProgSrvcAccomActy2Grp:
+          ExpenseAmt: 9
+          Desc: Desc
+          RevenueAmt: 0
+        BusinessRlnWithFamMemInd: true
+        GrossReceiptsAmt: 7
+        ForeignOfficeInd: true
+        PYOtherExpensesAmt: 5
+        CompensationFromOtherSrcsInd: true
+        InfoInScheduleOPartIXInd: InfoInScheduleOPartIXInd
+        TypeOfOrganizationAssocInd: TypeOfOrganizationAssocInd
+        PYContributionsGrantsAmt: 4
+        FormationYr: 6
+        MaterialDiversionOrMisuseInd: true
+        AcctCompileOrReviewBasisGrp:
+          SeparateBasisFinclStmtInd: SeparateBasisFinclStmtInd
+        PYTotalExpensesAmt: 8
+        NoDonorRestrictionNetAssetsGrp:
+          EOYAmt: 3
+          BOYAmt: 3
+        softwareId: 4
+        LoanOutstandingInd: true
+        DonorRstrOrQuasiEndowmentsInd: true
+        MembersOrStockholdersInd: true
+        CollectionsOfArtInd: true
+        DeductibleNonCashContriInd: true
+        InfoInScheduleOPartVIIIInd: InfoInScheduleOPartVIIIInd
+        MethodOfAccountingCashInd: MethodOfAccountingCashInd
+        VotingMembersIndependentCnt: 3
+        InfoInScheduleOPartXInd: InfoInScheduleOPartXInd
+        IRPDocumentW2GCnt: 0
+        AnnualDisclosureCoveredPrsnInd: true
+        DecisionsSubjectToApprovaInd: true
+        Form990PartVIISectionAGrp: null
+        MinutesOfGoverningBodyInd: true
+        StatesWhereCopyOfReturnIsFldCd: StatesWhereCopyOfReturnIsFldCd
+        DescribedInSection501c3Ind:
+          referenceDocumentId: referenceDocumentId
+          content: true
+        TotalLiabilitiesEOYAmt: 2
+        ReportOtherLiabilitiesInd: true
+        AllOtherContributionsAmt: 1
+        ReportInvestmentsOtherSecInd: true
+        MinutesOfCommitteesInd: true
+        LobbyingActivitiesInd: true
+        BusinessRlnWithOrgMemInd: true
+        IndoorTanningServicesInd: true
+        Desc: Desc
+        PYInvestmentIncomeAmt: 8
+        IndependentVotingMemberCnt: 6
+        CYRevenuesLessExpensesAmt: 4
+        SubjectToProxyTaxInd: true
+        TerminateOperationsInd: true
+        MoreThan5000KToOrgInd: true
+        ConflictOfInterestPolicyInd: true
+        CompensationProcessOtherInd: true
+        TotalAssetsEOYAmt: 8
+        FundraisingActivitiesInd: null
+        TotalRevenueGrp:
+          TotalRevenueColumnAmt: 1
+          RelatedOrExemptFuncIncomeAmt: 4
+        SchoolOperatingInd: true
+        OtherExpensesGrp:
+          Desc: Desc
+          ProgramServicesAmt: 3
+          TotalAmt: 8
+        TypeOfOrganizationCorpInd: TypeOfOrganizationCorpInd
+        NetAssetsOrFundBalancesEOYAmt: 9
+        GrantToRelatedPersonInd: true
+        WebsiteAddressTxt: WebsiteAddressTxt
+        NetAssetsOrFundBalancesBOYAmt: 1
+        CYContributionsGrantsAmt: 3
+        AllOtherExpensesGrp:
+          ProgramServicesAmt: 6
+          TotalAmt: 0
+        FamilyOrBusinessRlnInd: true
+        PrincipalOfficerNm: PrincipalOfficerNm
+        CapStkTrPrinCurrentFundsGrp:
+          EOYAmt: 3
+          BOYAmt: 3
+        CYTotalProfFndrsngExpnsAmt: 9
+        TotLiabNetAssetsFundBalanceGrp:
+          EOYAmt: 3
+          BOYAmt: 3
+        RegularMonitoringEnfrcInd: true
+        LegalDomicileStateCd: LegalDomicileStateCd
+        OrganizationFollowsFASB117Ind: OrganizationFollowsFASB117Ind
+        GamingActivitiesInd: null
+        ReconcilationRevenueExpnssAmt: 8
+        TotalLiabilitiesGrp:
+          EOYAmt: 3
+          BOYAmt: 3
+        CYInvestmentIncomeAmt: 0
+        InfoInScheduleOPartVIInd: InfoInScheduleOPartVIInd
+        PartialLiquidationInd: true
+        GoverningBodyVotingMembersCnt: 5
+        PYTotalRevenueAmt: 5
+        SignificantChangeInd: true
+        SubjectToExcsTaxNetInvstIncInd: true
+        FormerOfcrEmployeesListedInd: true
+        CYGrantsAndSimilarPaidAmt: 8
+        MissionDesc: MissionDesc
+        DonorAdvisedFundInd: true
+        OfficerMailingAddressInd: true
+        NoListedPersonsCompensatedInd: NoListedPersonsCompensatedInd
+        FSAuditedInd: true
+        Organization501c3Ind: Organization501c3Ind
+        Form990TFiledInd: true
+        IRPDocumentCnt: 7
+        SubjToTaxRmnrtnExPrchtPymtInd: true
+        ScheduleJRequiredInd: true
+        PoliticalCampaignActyInd: true
+        DelegationOfMgmtDutiesInd: true
+        IncludeFIN48FootnoteInd: true
+        BackupWthldComplianceInd: true
+        DeductibleArtContributionInd: true
+        BooksInCareOfDetail:
+          PersonNm: PersonNm
+          BusinessName:
+            BusinessNameLine1Txt: BusinessNameLine1Txt
+          PhoneNum: 3
+          USAddress:
+            ZIPCd: null
+            CityNm: CityNm
+            StateAbbreviationCd: StateAbbreviationCd
+            AddressLine1Txt: AddressLine1Txt
+        CYTotalRevenueAmt: 3
+        CYOtherRevenueAmt: 9
+        ReportProgramRelatedInvstInd: true
+        CreditCounselingInd: true
+        PrincipalOfcrBusinessName:
+          BusinessNameLine1Txt: BusinessNameLine1Txt
+        IndependentAuditFinclStmtInd: true
+        TotalEmployeeCnt: 5
+        TaxExemptBondsInd: true
+        ActivitiesConductedPrtshpInd: true
+        TotalProgramServiceExpensesAmt: 7
+        AccountantCompileOrReviewInd: true
+        Form990ProvidedToGvrnBodyInd: true
+        DocumentRetentionPolicyInd: true
+        LocalChaptersInd: true
+        documentId: documentId
+        CYTotalFundraisingExpenseAmt: 0
+        ConsolidatedAuditFinclStmtInd: true
+        USAddress:
+          ZIPCd: null
+          CityNm: CityNm
+          StateAbbreviationCd: StateAbbreviationCd
+          AddressLine1Txt: AddressLine1Txt
+        ElectionOfBoardMembersInd: true
+        ProgSrvcAccomActy3Grp:
+          ExpenseAmt: 9
+          Desc: Desc
+          RevenueAmt: 0
+      properties:
+        ChangeToOrgDocumentsInd:
+          type: boolean
+        ExpenseAmt:
+          type: integer
+        FundraisingAmt:
+          type: integer
+        TotalAssetsGrp:
+          $ref: '#/components/schemas/CapStkTrPrinCurrentFundsGrpClass'
+        TotalGrossUBIAmt:
+          type: integer
+        ReportLandBuildingEquipmentInd:
+          type: boolean
+        RelatedEntityInd:
+          type: boolean
+        RelatedOrganizationCtrlEntInd:
+          type: boolean
+        MoreThan5000KToIndividualsInd:
+          type: boolean
+        GrantsToOrganizationsInd:
+          $ref: '#/components/schemas/FundraisingActivitiesIndUnion'
+        WhistleblowerPolicyInd:
+          type: boolean
+        InvestmentInJointVentureInd:
+          type: boolean
+        UnrelatedBusIncmOverLimitInd:
+          type: boolean
+        PYRevenuesLessExpensesAmt:
+          type: integer
+        CashNonInterestBearingGrp:
+          $ref: '#/components/schemas/CapStkTrPrinCurrentFundsGrpClass'
+        referenceDocumentId:
+          type: string
+        VotingMembersGoverningBodyCnt:
+          type: integer
+        ReportOtherAssetsInd:
+          type: boolean
+        FeesForServicesAccountingGrp:
+          $ref: '#/components/schemas/AllOtherExpensesGrpClass'
+        CompensationProcessCEOInd:
+          type: boolean
+        SignificantNewProgramSrvcInd:
+          type: boolean
+        ScheduleORequiredInd:
+          type: boolean
+        OrgDoesNotFollowFASB117Ind:
+          type: string
+        ProfessionalFundraisingInd:
+          $ref: '#/components/schemas/FundraisingActivitiesIndUnion'
+        TotalAssetsBOYAmt:
+          type: integer
+        OperateHospitalInd:
+          type: boolean
+        NetIncmFromFundraisingEvtGrp:
+          $ref: '#/components/schemas/NetIncmFromFundraisingEvtGrp'
+        CYProgramServiceRevenueAmt:
+          type: integer
+        PYGrantsAndSimilarPaidAmt:
+          type: integer
+        DisregardedEntityInd:
+          type: boolean
+        TotalFunctionalExpensesGrp:
+          $ref: '#/components/schemas/TotalFunctionalExpensesGrp'
+        TaxablePartyNotificationInd:
+          type: boolean
+        NondeductibleContributionsInd:
+          type: boolean
+        ForeignActivitiesInd:
+          type: boolean
+        OfficeExpensesGrp:
+          $ref: '#/components/schemas/AllOtherExpensesGrpClass'
+        TotalNetAssetsFundBalanceGrp:
+          $ref: '#/components/schemas/CapStkTrPrinCurrentFundsGrpClass'
+        AuditCommitteeInd:
+          type: boolean
+        softwareVersionNum:
+          type: string
+        ForeignFinancialAccountInd:
+          type: boolean
+        TotalContributionsAmt:
+          type: integer
+        CYTotalExpensesAmt:
+          type: integer
+        CYSalariesCompEmpBnftPaidAmt:
+          type: integer
+        BusinessRlnWith35CtrlEntInd:
+          type: boolean
+        GroupReturnForAffiliatesInd:
+          type: boolean
+        CYOtherExpensesAmt:
+          type: integer
+        TotalCompGreaterThan150KInd:
+          type: boolean
+        InvestmentIncomeGrp:
+          $ref: '#/components/schemas/EGrp'
+        ScheduleBRequiredInd:
+          $ref: '#/components/schemas/FundraisingActivitiesIndUnion'
+        CYBenefitsPaidToMembersAmt:
+          type: integer
+        TrnsfrExmptNonChrtblRltdOrgInd:
+          type: boolean
+        PYExcessBenefitTransInd:
+          type: boolean
+        FederalGrantAuditRequiredInd:
+          type: boolean
+        RevenueAmt:
+          type: integer
+        ProhibitedTaxShelterTransInd:
+          type: boolean
+        ConservationEasementsInd:
+          type: boolean
+        EngagedInExcessBenefitTransInd:
+          type: boolean
+        ActivityOrMissionDesc:
+          type: string
+        GrantsToIndividualsInd:
+          $ref: '#/components/schemas/FundraisingActivitiesIndUnion'
+        EmployeeCnt:
+          type: integer
+        GrantsToDomesticOrgsGrp:
+          $ref: '#/components/schemas/AllOtherExpensesGrpClass'
+        ProgSrvcAccomActy2Grp:
+          $ref: '#/components/schemas/ProgSrvcAccomActyGrp'
+        BusinessRlnWithFamMemInd:
+          type: boolean
+        GrossReceiptsAmt:
+          type: integer
+        ForeignOfficeInd:
+          type: boolean
+        PYOtherExpensesAmt:
+          type: integer
+        CompensationFromOtherSrcsInd:
+          type: boolean
+        InfoInScheduleOPartIXInd:
+          type: string
+        TypeOfOrganizationAssocInd:
+          type: string
+        PYContributionsGrantsAmt:
+          type: integer
+        FormationYr:
+          type: integer
+        MaterialDiversionOrMisuseInd:
+          type: boolean
+        AcctCompileOrReviewBasisGrp:
+          $ref: '#/components/schemas/AcctCompileOrReviewBasisGrp'
+        PYTotalExpensesAmt:
+          type: integer
+        softwareId:
+          type: integer
+        LoanOutstandingInd:
+          type: boolean
+        DonorRstrOrQuasiEndowmentsInd:
+          type: boolean
+        MembersOrStockholdersInd:
+          type: boolean
+        CollectionsOfArtInd:
+          type: boolean
+        DeductibleNonCashContriInd:
+          type: boolean
+        MethodOfAccountingCashInd:
+          type: string
+        VotingMembersIndependentCnt:
+          type: integer
+        IRPDocumentW2GCnt:
+          type: integer
+        DecisionsSubjectToApprovaInd:
+          type: boolean
+        Form990PartVIISectionAGrp:
+          $ref: '#/components/schemas/Form990PartVIISectionAGrpUnion'
+        MinutesOfGoverningBodyInd:
+          type: boolean
+        StatesWhereCopyOfReturnIsFldCd:
+          type: string
+        DescribedInSection501c3Ind:
+          $ref: '#/components/schemas/DescribedInSection501C3IndClass'
+        TotalLiabilitiesEOYAmt:
+          type: integer
+        ReportOtherLiabilitiesInd:
+          type: boolean
+        AllOtherContributionsAmt:
+          type: integer
+        ReportInvestmentsOtherSecInd:
+          type: boolean
+        MinutesOfCommitteesInd:
+          type: boolean
+        LobbyingActivitiesInd:
+          type: boolean
+        BusinessRlnWithOrgMemInd:
+          type: boolean
+        IndoorTanningServicesInd:
+          type: boolean
+        Desc:
+          type: string
+        PYInvestmentIncomeAmt:
+          type: integer
+        IndependentVotingMemberCnt:
+          type: integer
+        CYRevenuesLessExpensesAmt:
+          type: integer
+        SubjectToProxyTaxInd:
+          type: boolean
+        TerminateOperationsInd:
+          type: boolean
+        MoreThan5000KToOrgInd:
+          type: boolean
+        ConflictOfInterestPolicyInd:
+          type: boolean
+        CompensationProcessOtherInd:
+          type: boolean
+        TotalAssetsEOYAmt:
+          type: integer
+        FundraisingActivitiesInd:
+          $ref: '#/components/schemas/FundraisingActivitiesIndUnion'
+        TotalRevenueGrp:
+          $ref: '#/components/schemas/EGrp'
+        SchoolOperatingInd:
+          type: boolean
+        NetAssetsOrFundBalancesEOYAmt:
+          type: integer
+        GrantToRelatedPersonInd:
+          type: boolean
+        WebsiteAddressTxt:
+          type: string
+        NetAssetsOrFundBalancesBOYAmt:
+          type: integer
+        CYContributionsGrantsAmt:
+          type: integer
+        AllOtherExpensesGrp:
+          $ref: '#/components/schemas/AllOtherExpensesGrpClass'
+        FamilyOrBusinessRlnInd:
+          type: boolean
+        PrincipalOfficerNm:
+          type: string
+        CapStkTrPrinCurrentFundsGrp:
+          $ref: '#/components/schemas/CapStkTrPrinCurrentFundsGrpClass'
+        CYTotalProfFndrsngExpnsAmt:
+          type: integer
+        TotLiabNetAssetsFundBalanceGrp:
+          $ref: '#/components/schemas/CapStkTrPrinCurrentFundsGrpClass'
+        LegalDomicileStateCd:
+          type: string
+        GamingActivitiesInd:
+          $ref: '#/components/schemas/FundraisingActivitiesIndUnion'
+        ReconcilationRevenueExpnssAmt:
+          type: integer
+        TotalLiabilitiesGrp:
+          $ref: '#/components/schemas/CapStkTrPrinCurrentFundsGrpClass'
+        CYInvestmentIncomeAmt:
+          type: integer
+        InfoInScheduleOPartVIInd:
+          type: string
+        PartialLiquidationInd:
+          type: boolean
+        GoverningBodyVotingMembersCnt:
+          type: integer
+        PYTotalRevenueAmt:
+          type: integer
+        SignificantChangeInd:
+          type: boolean
+        SubjectToExcsTaxNetInvstIncInd:
+          type: boolean
+        FormerOfcrEmployeesListedInd:
+          type: boolean
+        CYGrantsAndSimilarPaidAmt:
+          type: integer
+        MissionDesc:
+          type: string
+        DonorAdvisedFundInd:
+          type: boolean
+        OfficerMailingAddressInd:
+          type: boolean
+        NoListedPersonsCompensatedInd:
+          type: string
+        FSAuditedInd:
+          type: boolean
+        Organization501c3Ind:
+          type: string
+        Form990TFiledInd:
+          type: boolean
+        IRPDocumentCnt:
+          type: integer
+        SubjToTaxRmnrtnExPrchtPymtInd:
+          type: boolean
+        ScheduleJRequiredInd:
+          type: boolean
+        PoliticalCampaignActyInd:
+          type: boolean
+        DelegationOfMgmtDutiesInd:
+          type: boolean
+        IncludeFIN48FootnoteInd:
+          type: boolean
+        BackupWthldComplianceInd:
+          type: boolean
+        DeductibleArtContributionInd:
+          type: boolean
+        BooksInCareOfDetail:
+          $ref: '#/components/schemas/BooksInCareOfDetail'
+        CYTotalRevenueAmt:
+          type: integer
+        CYOtherRevenueAmt:
+          type: integer
+        ReportProgramRelatedInvstInd:
+          type: boolean
+        CreditCounselingInd:
+          type: boolean
+        IndependentAuditFinclStmtInd:
+          type: boolean
+        TotalEmployeeCnt:
+          type: integer
+        TaxExemptBondsInd:
+          type: boolean
+        ActivitiesConductedPrtshpInd:
+          type: boolean
+        TotalProgramServiceExpensesAmt:
+          type: integer
+        AccountantCompileOrReviewInd:
+          type: boolean
+        Form990ProvidedToGvrnBodyInd:
+          type: boolean
+        DocumentRetentionPolicyInd:
+          type: boolean
+        LocalChaptersInd:
+          type: boolean
+        documentId:
+          type: string
+        CYTotalFundraisingExpenseAmt:
+          type: integer
+        ConsolidatedAuditFinclStmtInd:
+          type: boolean
+        USAddress:
+          $ref: '#/components/schemas/UsAddress'
+        ElectionOfBoardMembersInd:
+          type: boolean
+        ProgSrvcAccomActy3Grp:
+          $ref: '#/components/schemas/ProgSrvcAccomActyGrp'
+        PoliciesReferenceChaptersInd:
+          type: boolean
+        InfoInScheduleOPartIIIInd:
+          type: string
+        FeesForServicesManagementGrp:
+          $ref: '#/components/schemas/FeesForServicesManagementGrp'
+        InfoInScheduleOPartXIIInd:
+          type: string
+        InfoInScheduleOPartXIInd:
+          type: string
+        NoDonorRestrictionNetAssetsGrp:
+          $ref: '#/components/schemas/CapStkTrPrinCurrentFundsGrpClass'
+        InfoInScheduleOPartVIIIInd:
+          type: string
+        InfoInScheduleOPartXInd:
+          type: string
+        AnnualDisclosureCoveredPrsnInd:
+          type: boolean
+        OtherExpensesGrp:
+          $ref: '#/components/schemas/OtherExpensesGrp'
+        TypeOfOrganizationCorpInd:
+          type: string
+        RegularMonitoringEnfrcInd:
+          type: boolean
+        OrganizationFollowsFASB117Ind:
+          type: string
+        PrincipalOfcrBusinessName:
+          $ref: '#/components/schemas/Name'
+      required:
+      - AccountantCompileOrReviewInd
+      - ActivitiesConductedPrtshpInd
+      - ActivityOrMissionDesc
+      - AllOtherContributionsAmt
+      - BackupWthldComplianceInd
+      - BooksInCareOfDetail
+      - BusinessRlnWith35CtrlEntInd
+      - BusinessRlnWithFamMemInd
+      - BusinessRlnWithOrgMemInd
+      - CYBenefitsPaidToMembersAmt
+      - CYContributionsGrantsAmt
+      - CYGrantsAndSimilarPaidAmt
+      - CYInvestmentIncomeAmt
+      - CYOtherExpensesAmt
+      - CYOtherRevenueAmt
+      - CYProgramServiceRevenueAmt
+      - CYRevenuesLessExpensesAmt
+      - CYSalariesCompEmpBnftPaidAmt
+      - CYTotalExpensesAmt
+      - CYTotalFundraisingExpenseAmt
+      - CYTotalProfFndrsngExpnsAmt
+      - CYTotalRevenueAmt
+      - CashNonInterestBearingGrp
+      - ChangeToOrgDocumentsInd
+      - CollectionsOfArtInd
+      - CompensationFromOtherSrcsInd
+      - CompensationProcessCEOInd
+      - CompensationProcessOtherInd
+      - ConflictOfInterestPolicyInd
+      - ConservationEasementsInd
+      - ConsolidatedAuditFinclStmtInd
+      - CreditCounselingInd
+      - DecisionsSubjectToApprovaInd
+      - DeductibleArtContributionInd
+      - DeductibleNonCashContriInd
+      - DelegationOfMgmtDutiesInd
+      - Desc
+      - DescribedInSection501c3Ind
+      - DisregardedEntityInd
+      - DocumentRetentionPolicyInd
+      - DonorAdvisedFundInd
+      - DonorRstrOrQuasiEndowmentsInd
+      - ElectionOfBoardMembersInd
+      - EmployeeCnt
+      - EngagedInExcessBenefitTransInd
+      - ExpenseAmt
+      - FSAuditedInd
+      - FamilyOrBusinessRlnInd
+      - FederalGrantAuditRequiredInd
+      - ForeignActivitiesInd
+      - ForeignFinancialAccountInd
+      - ForeignOfficeInd
+      - Form990PartVIISectionAGrp
+      - Form990ProvidedToGvrnBodyInd
+      - Form990TFiledInd
+      - FormationYr
+      - FormerOfcrEmployeesListedInd
+      - FundraisingActivitiesInd
+      - GamingActivitiesInd
+      - GoverningBodyVotingMembersCnt
+      - GrantToRelatedPersonInd
+      - GrantsToIndividualsInd
+      - GrantsToOrganizationsInd
+      - GrossReceiptsAmt
+      - GroupReturnForAffiliatesInd
+      - IRPDocumentCnt
+      - IRPDocumentW2GCnt
+      - IncludeFIN48FootnoteInd
+      - IndependentAuditFinclStmtInd
+      - IndependentVotingMemberCnt
+      - IndoorTanningServicesInd
+      - InfoInScheduleOPartIXInd
+      - InfoInScheduleOPartVIInd
+      - InvestmentInJointVentureInd
+      - LegalDomicileStateCd
+      - LoanOutstandingInd
+      - LobbyingActivitiesInd
+      - LocalChaptersInd
+      - MaterialDiversionOrMisuseInd
+      - MembersOrStockholdersInd
+      - MethodOfAccountingCashInd
+      - MinutesOfCommitteesInd
+      - MinutesOfGoverningBodyInd
+      - MissionDesc
+      - MoreThan5000KToIndividualsInd
+      - MoreThan5000KToOrgInd
+      - NetAssetsOrFundBalancesBOYAmt
+      - NetAssetsOrFundBalancesEOYAmt
+      - NetIncmFromFundraisingEvtGrp
+      - NoListedPersonsCompensatedInd
+      - NondeductibleContributionsInd
+      - OfficerMailingAddressInd
+      - OperateHospitalInd
+      - Organization501c3Ind
+      - PYContributionsGrantsAmt
+      - PYExcessBenefitTransInd
+      - PYOtherExpensesAmt
+      - PYRevenuesLessExpensesAmt
+      - PYTotalExpensesAmt
+      - PYTotalRevenueAmt
+      - PartialLiquidationInd
+      - PoliticalCampaignActyInd
+      - ProfessionalFundraisingInd
+      - ProhibitedTaxShelterTransInd
+      - ReconcilationRevenueExpnssAmt
+      - RelatedEntityInd
+      - RelatedOrganizationCtrlEntInd
+      - ReportInvestmentsOtherSecInd
+      - ReportLandBuildingEquipmentInd
+      - ReportOtherAssetsInd
+      - ReportOtherLiabilitiesInd
+      - ReportProgramRelatedInvstInd
+      - ScheduleBRequiredInd
+      - ScheduleJRequiredInd
+      - ScheduleORequiredInd
+      - SchoolOperatingInd
+      - SignificantChangeInd
+      - SignificantNewProgramSrvcInd
+      - StatesWhereCopyOfReturnIsFldCd
+      - SubjToTaxRmnrtnExPrchtPymtInd
+      - SubjectToExcsTaxNetInvstIncInd
+      - SubjectToProxyTaxInd
+      - TaxExemptBondsInd
+      - TaxablePartyNotificationInd
+      - TerminateOperationsInd
+      - TotLiabNetAssetsFundBalanceGrp
+      - TotalAssetsBOYAmt
+      - TotalAssetsEOYAmt
+      - TotalAssetsGrp
+      - TotalCompGreaterThan150KInd
+      - TotalContributionsAmt
+      - TotalEmployeeCnt
+      - TotalFunctionalExpensesGrp
+      - TotalGrossUBIAmt
+      - TotalLiabilitiesEOYAmt
+      - TotalLiabilitiesGrp
+      - TotalNetAssetsFundBalanceGrp
+      - TotalProgramServiceExpensesAmt
+      - TotalRevenueGrp
+      - TrnsfrExmptNonChrtblRltdOrgInd
+      - USAddress
+      - UnrelatedBusIncmOverLimitInd
+      - VotingMembersGoverningBodyCnt
+      - VotingMembersIndependentCnt
+      - WebsiteAddressTxt
+      - WhistleblowerPolicyInd
+      - documentId
+      - referenceDocumentId
+      - softwareId
+      - softwareVersionNum
+      title: Irs990
+      type: object
+    AcctCompileOrReviewBasisGrp:
+      additionalProperties: false
+      example:
+        SeparateBasisFinclStmtInd: SeparateBasisFinclStmtInd
+      properties:
+        SeparateBasisFinclStmtInd:
+          type: string
+      required:
+      - SeparateBasisFinclStmtInd
+      title: AcctCompileOrReviewBasisGrp
+      type: object
+    AllOtherExpensesGrpClass:
+      additionalProperties: false
+      example:
+        ProgramServicesAmt: 6
+        TotalAmt: 0
+      properties:
+        ProgramServicesAmt:
+          type: integer
+        TotalAmt:
+          type: integer
+      required:
+      - ProgramServicesAmt
+      - TotalAmt
+      title: AllOtherExpensesGrpClass
+      type: object
+    BooksInCareOfDetail:
+      additionalProperties: false
+      example:
+        PersonNm: PersonNm
+        BusinessName:
+          BusinessNameLine1Txt: BusinessNameLine1Txt
+        PhoneNum: 3
+        USAddress:
+          ZIPCd: null
+          CityNm: CityNm
+          StateAbbreviationCd: StateAbbreviationCd
+          AddressLine1Txt: AddressLine1Txt
+      properties:
+        PersonNm:
+          type: string
+        PhoneNum:
+          type: integer
+        USAddress:
+          $ref: '#/components/schemas/UsAddress'
+        BusinessName:
+          $ref: '#/components/schemas/Name'
+      required:
+      - PhoneNum
+      - USAddress
+      title: BooksInCareOfDetail
+      type: object
+    Name:
+      additionalProperties: false
+      example:
+        BusinessNameLine1Txt: BusinessNameLine1Txt
+      properties:
+        BusinessNameLine1Txt:
+          type: string
+      required:
+      - BusinessNameLine1Txt
+      title: Name
+      type: object
+    UsAddress:
+      additionalProperties: false
+      example:
+        ZIPCd: null
+        CityNm: CityNm
+        StateAbbreviationCd: StateAbbreviationCd
+        AddressLine1Txt: AddressLine1Txt
+      properties:
+        ZIPCd:
+          $ref: '#/components/schemas/Ein'
+        CityNm:
+          type: string
+        StateAbbreviationCd:
+          type: string
+        AddressLine1Txt:
+          type: string
+      required:
+      - AddressLine1Txt
+      - CityNm
+      - StateAbbreviationCd
+      - ZIPCd
+      title: UsAddress
+      type: object
+    CapStkTrPrinCurrentFundsGrpClass:
+      additionalProperties: false
+      example:
+        EOYAmt: 3
+        BOYAmt: 3
+      properties:
+        EOYAmt:
+          type: integer
+        BOYAmt:
+          type: integer
+      required:
+      - BOYAmt
+      - EOYAmt
+      title: CapStkTrPrinCurrentFundsGrpClass
+      type: object
+    FeesForServicesManagementGrp:
+      additionalProperties: false
+      example:
+        TotalAmt: 3
+        ManagementAndGeneralAmt: 2
+      properties:
+        TotalAmt:
+          type: integer
+        ManagementAndGeneralAmt:
+          type: integer
+      required:
+      - ManagementAndGeneralAmt
+      - TotalAmt
+      title: FeesForServicesManagementGrp
+      type: object
+    Form990PartVIISectionAGrpElement:
+      additionalProperties: false
+      properties:
+        PersonNm:
+          type: string
+        OfficerInd:
+          type: string
+        AverageHoursPerWeekRt:
+          type: integer
+        ReportableCompFromOrgAmt:
+          type: integer
+        ReportableCompFromRltdOrgAmt:
+          type: integer
+        TitleTxt:
+          type: string
+        OtherCompensationAmt:
+          type: integer
+      required:
+      - AverageHoursPerWeekRt
+      - OfficerInd
+      - OtherCompensationAmt
+      - PersonNm
+      - ReportableCompFromOrgAmt
+      - ReportableCompFromRltdOrgAmt
+      - TitleTxt
+      title: Form990PartVIISectionAGrpElement
+      type: object
+    DescribedInSection501C3IndClass:
+      additionalProperties: false
+      example:
+        referenceDocumentId: referenceDocumentId
+        content: true
+      properties:
+        referenceDocumentId:
+          type: string
+        content:
+          type: boolean
+      required:
+      - content
+      - referenceDocumentId
+      title: DescribedInSection501C3IndClass
+      type: object
+    EGrp:
+      additionalProperties: false
+      example:
+        TotalRevenueColumnAmt: 1
+        RelatedOrExemptFuncIncomeAmt: 4
+      properties:
+        TotalRevenueColumnAmt:
+          type: integer
+        RelatedOrExemptFuncIncomeAmt:
+          type: integer
+      required:
+      - TotalRevenueColumnAmt
+      title: EGrp
+      type: object
+    NetIncmFromFundraisingEvtGrp:
+      additionalProperties: false
+      example:
+        TotalRevenueColumnAmt: 8
+      properties:
+        TotalRevenueColumnAmt:
+          type: integer
+      required:
+      - TotalRevenueColumnAmt
+      title: NetIncmFromFundraisingEvtGrp
+      type: object
+    OtherExpensesGrp:
+      additionalProperties: false
+      example:
+        Desc: Desc
+        ProgramServicesAmt: 3
+        TotalAmt: 8
+      properties:
+        Desc:
+          type: string
+        ProgramServicesAmt:
+          type: integer
+        TotalAmt:
+          type: integer
+      required:
+      - Desc
+      - ProgramServicesAmt
+      - TotalAmt
+      title: OtherExpensesGrp
+      type: object
+    ProgSrvcAccomActyGrp:
+      additionalProperties: false
+      example:
+        ExpenseAmt: 9
+        Desc: Desc
+        RevenueAmt: 0
+      properties:
+        ExpenseAmt:
+          type: integer
+        Desc:
+          type: string
+        RevenueAmt:
+          type: integer
+      required:
+      - Desc
+      - ExpenseAmt
+      - RevenueAmt
+      title: ProgSrvcAccomActyGrp
+      type: object
+    TotalFunctionalExpensesGrp:
+      additionalProperties: false
+      example:
+        ProgramServicesAmt: 3
+        FundraisingAmt: 7
+        TotalAmt: 5
+        ManagementAndGeneralAmt: 3
+      properties:
+        ProgramServicesAmt:
+          type: integer
+        FundraisingAmt:
+          type: integer
+        TotalAmt:
+          type: integer
+        ManagementAndGeneralAmt:
+          type: integer
+      required:
+      - FundraisingAmt
+      - ManagementAndGeneralAmt
+      - ProgramServicesAmt
+      - TotalAmt
+      title: TotalFunctionalExpensesGrp
+      type: object
+    IRS990ScheduleA:
+      additionalProperties: false
+      example:
+        SupportedOrgInformationGrp:
+          GoverningDocumentListedInd: true
+          SupportAmt: 8
+          EIN: EIN
+          OrganizationTypeCd: 9
+          OtherSupportAmt: 6
+          SupportedOrganizationName:
+            BusinessNameLine1Txt: BusinessNameLine1Txt
+        MajorityDirTrstSupportedOrgInd: true
+        SupportingOrgType1Ind: SupportingOrgType1Ind
+        SupportedOrganizationsTotalCnt: 3
+        Form990ScheduleAPartVIGrp:
+          FormAndLineReferenceDesc: FormAndLineReferenceDesc
+          ExplanationTxt: ExplanationTxt
+        OtherSupportSumAmt: 6
+        SupportSumAmt: 1
+        Form990SchAType1SuprtOrgGrp:
+          OperateBenefitNonSuprtOrgInd: true
+          PowerAppointMajorityDirTrstInd: true
+        ChurchInd: ChurchInd
+        softwareId: 2
+        SupportedOrganizationsCnt: 6
+        SupportingOrganization509a3Ind: SupportingOrganization509a3Ind
+        Form990SchASupportingOrgGrp:
+          key: true
+        IRSWrittenDeterminationInd: IRSWrittenDeterminationInd
+        documentId: documentId
+        softwareVersionNum: softwareVersionNum
+      properties:
+        SupportedOrgInformationGrp:
+          $ref: '#/components/schemas/SupportedOrgInformationGrp'
+        MajorityDirTrstSupportedOrgInd:
+          type: boolean
+        SupportingOrgType1Ind:
+          type: string
+        SupportedOrganizationsTotalCnt:
+          type: integer
+        Form990ScheduleAPartVIGrp:
+          $ref: '#/components/schemas/Form990ScheduleAPartViGrp'
+        OtherSupportSumAmt:
+          type: integer
+        SupportSumAmt:
+          type: integer
+        Form990SchAType1SuprtOrgGrp:
+          $ref: '#/components/schemas/Form990SchAType1SuprtOrgGrp'
+        softwareId:
+          type: integer
+        SupportedOrganizationsCnt:
+          type: integer
+        SupportingOrganization509a3Ind:
+          type: string
+        Form990SchASupportingOrgGrp:
+          additionalProperties:
+            type: boolean
+          type: object
+        IRSWrittenDeterminationInd:
+          type: string
+        documentId:
+          type: string
+        softwareVersionNum:
+          type: string
+        ChurchInd:
+          type: string
+      required:
+      - documentId
+      - softwareId
+      - softwareVersionNum
+      title: IRS990ScheduleA
+      type: object
+    Form990SchAType1SuprtOrgGrp:
+      additionalProperties: false
+      example:
+        OperateBenefitNonSuprtOrgInd: true
+        PowerAppointMajorityDirTrstInd: true
+      properties:
+        OperateBenefitNonSuprtOrgInd:
+          type: boolean
+        PowerAppointMajorityDirTrstInd:
+          type: boolean
+      required:
+      - OperateBenefitNonSuprtOrgInd
+      - PowerAppointMajorityDirTrstInd
+      title: Form990SchAType1SuprtOrgGrp
+      type: object
+    SupportedOrgInformationGrp:
+      additionalProperties: false
+      example:
+        GoverningDocumentListedInd: true
+        SupportAmt: 8
+        EIN: EIN
+        OrganizationTypeCd: 9
+        OtherSupportAmt: 6
+        SupportedOrganizationName:
+          BusinessNameLine1Txt: BusinessNameLine1Txt
+      properties:
+        GoverningDocumentListedInd:
+          type: boolean
+        SupportAmt:
+          type: integer
+        EIN:
+          type: string
+        OrganizationTypeCd:
+          type: integer
+        OtherSupportAmt:
+          type: integer
+        SupportedOrganizationName:
+          $ref: '#/components/schemas/Name'
+      required:
+      - EIN
+      - GoverningDocumentListedInd
+      - OrganizationTypeCd
+      - OtherSupportAmt
+      - SupportAmt
+      - SupportedOrganizationName
+      title: SupportedOrgInformationGrp
+      type: object
+    Irs990Schedule:
+      additionalProperties: false
+      example:
+        softwareId: 9
+        documentId: documentId
+        SupplementalInformationDetail:
+        - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+          ExplanationTxt: ExplanationTxt
+        - FormAndLineReferenceDesc: FormAndLineReferenceDesc
+          ExplanationTxt: ExplanationTxt
+        ContributorInformationGrp:
+          TotalContributionsAmt: TotalContributionsAmt
+          ContributorNum: ContributorNum
+          ContributorBusinessName:
+            BusinessNameLine1: BusinessNameLine1
+          ContributorUSAddress:
+            AddressLine2: AddressLine2
+            AddressLine1: AddressLine1
+            ZIPCode: ZIPCode
+            State: State
+            City: City
+        softwareVersionNum: softwareVersionNum
+        FundraisingEventInformationGrp:
+          OtherDirectExpensesEvent1Amt: 3
+          OtherDirectExpensesEvent2Amt: 2
+          GrossReceiptsEvent2Amt: 4
+          GrossReceiptsEvent1Amt: 7
+          GrossRevenueTotalEventsAmt: 1
+          NetIncomeSummaryAmt: 1
+          OthDirectExpnssOtherEventsAmt: 1
+          GrossReceiptsTotalAmt: 6
+          OthDirectExpnssTotalEventsAmt: 7
+          DirectExpenseSummaryEventsAmt: 1
+          GrossRevenueOtherEventsAmt: 4
+          GrossRevenueEvent1Amt: 5
+          GrossRevenueEvent2Amt: 9
+          Event2Nm: Event2Nm
+          Event1Nm: Event1Nm
+          GrossReceiptsOtherEventsAmt: 9
+          OtherEventsTotalCnt: 6
+      properties:
+        softwareId:
+          type: integer
+        documentId:
+          type: string
+        ContributorInformationGrp:
+          $ref: '#/components/schemas/ContributorInformationGrp'
+        softwareVersionNum:
+          type: string
+        FundraisingEventInformationGrp:
+          $ref: '#/components/schemas/FundraisingEventInformationGrp'
+        SupplementalInformationDetail:
+          items:
+            $ref: '#/components/schemas/Form990ScheduleAPartViGrp'
+          type: array
+      required:
+      - documentId
+      - softwareId
+      - softwareVersionNum
+      title: Irs990Schedule
+      type: object
+    ContributorInformationGrp:
+      additionalProperties: false
+      example:
+        TotalContributionsAmt: TotalContributionsAmt
+        ContributorNum: ContributorNum
+        ContributorBusinessName:
+          BusinessNameLine1: BusinessNameLine1
+        ContributorUSAddress:
+          AddressLine2: AddressLine2
+          AddressLine1: AddressLine1
+          ZIPCode: ZIPCode
+          State: State
+          City: City
+      properties:
+        TotalContributionsAmt:
+          type: string
+        ContributorNum:
+          type: string
+        ContributorBusinessName:
+          $ref: '#/components/schemas/ContributorBusinessName'
+        ContributorUSAddress:
+          $ref: '#/components/schemas/ContributorUSAddress'
+      required:
+      - ContributorBusinessName
+      - ContributorNum
+      - ContributorUSAddress
+      - TotalContributionsAmt
+      title: ContributorInformationGrp
+      type: object
+    ContributorBusinessName:
+      additionalProperties: false
+      example:
+        BusinessNameLine1: BusinessNameLine1
+      properties:
+        BusinessNameLine1:
+          type: string
+      required:
+      - BusinessNameLine1
+      title: ContributorBusinessName
+      type: object
+    ContributorUSAddress:
+      additionalProperties: false
+      example:
+        AddressLine2: AddressLine2
+        AddressLine1: AddressLine1
+        ZIPCode: ZIPCode
+        State: State
+        City: City
+      properties:
+        AddressLine2:
+          type: string
+        AddressLine1:
+          type: string
+        ZIPCode:
+          type: string
+        State:
+          type: string
+        City:
+          type: string
+      required:
+      - AddressLine1
+      - AddressLine2
+      - City
+      - State
+      - ZIPCode
+      title: ContributorUSAddress
+      type: object
+    FundraisingEventInformationGrp:
+      additionalProperties: false
+      example:
+        OtherDirectExpensesEvent1Amt: 3
+        OtherDirectExpensesEvent2Amt: 2
+        GrossReceiptsEvent2Amt: 4
+        GrossReceiptsEvent1Amt: 7
+        GrossRevenueTotalEventsAmt: 1
+        NetIncomeSummaryAmt: 1
+        OthDirectExpnssOtherEventsAmt: 1
+        GrossReceiptsTotalAmt: 6
+        OthDirectExpnssTotalEventsAmt: 7
+        DirectExpenseSummaryEventsAmt: 1
+        GrossRevenueOtherEventsAmt: 4
+        GrossRevenueEvent1Amt: 5
+        GrossRevenueEvent2Amt: 9
+        Event2Nm: Event2Nm
+        Event1Nm: Event1Nm
+        GrossReceiptsOtherEventsAmt: 9
+        OtherEventsTotalCnt: 6
+      properties:
+        OtherDirectExpensesEvent1Amt:
+          type: integer
+        OtherDirectExpensesEvent2Amt:
+          type: integer
+        GrossReceiptsEvent2Amt:
+          type: integer
+        GrossReceiptsEvent1Amt:
+          type: integer
+        GrossRevenueTotalEventsAmt:
+          type: integer
+        NetIncomeSummaryAmt:
+          type: integer
+        OthDirectExpnssOtherEventsAmt:
+          type: integer
+        GrossReceiptsTotalAmt:
+          type: integer
+        OthDirectExpnssTotalEventsAmt:
+          type: integer
+        DirectExpenseSummaryEventsAmt:
+          type: integer
+        GrossRevenueOtherEventsAmt:
+          type: integer
+        GrossRevenueEvent1Amt:
+          type: integer
+        GrossRevenueEvent2Amt:
+          type: integer
+        Event2Nm:
+          type: string
+        Event1Nm:
+          type: string
+        GrossReceiptsOtherEventsAmt:
+          type: integer
+        OtherEventsTotalCnt:
+          type: integer
+      required:
+      - DirectExpenseSummaryEventsAmt
+      - Event1Nm
+      - Event2Nm
+      - GrossReceiptsEvent1Amt
+      - GrossReceiptsEvent2Amt
+      - GrossReceiptsOtherEventsAmt
+      - GrossReceiptsTotalAmt
+      - GrossRevenueEvent1Amt
+      - GrossRevenueEvent2Amt
+      - GrossRevenueOtherEventsAmt
+      - GrossRevenueTotalEventsAmt
+      - NetIncomeSummaryAmt
+      - OthDirectExpnssOtherEventsAmt
+      - OthDirectExpnssTotalEventsAmt
+      - OtherDirectExpensesEvent1Amt
+      - OtherDirectExpensesEvent2Amt
+      - OtherEventsTotalCnt
+      title: FundraisingEventInformationGrp
+      type: object
+    Form990ScheduleAPartViGrp:
+      additionalProperties: false
+      example:
+        FormAndLineReferenceDesc: FormAndLineReferenceDesc
+        ExplanationTxt: ExplanationTxt
+      properties:
+        FormAndLineReferenceDesc:
+          type: string
+        ExplanationTxt:
+          type: string
+      required:
+      - ExplanationTxt
+      - FormAndLineReferenceDesc
+      title: Form990ScheduleAPartViGrp
+      type: object
+    IRS990ScheduleI:
+      additionalProperties: false
+      example:
+        GrantRecordsMaintainedInd: true
+        TotalOtherOrgCnt: 4
+        Total501c3OrgCnt: 0
+        softwareId: 0
+        documentId: documentId
+        SupplementalInformationDetail:
+          FormAndLineReferenceDesc: FormAndLineReferenceDesc
+          ExplanationTxt: ExplanationTxt
+        softwareVersionNum: softwareVersionNum
+      properties:
+        GrantRecordsMaintainedInd:
+          type: boolean
+        TotalOtherOrgCnt:
+          type: integer
+        Total501c3OrgCnt:
+          type: integer
+        softwareId:
+          type: integer
+        documentId:
+          type: string
+        SupplementalInformationDetail:
+          $ref: '#/components/schemas/Form990ScheduleAPartViGrp'
+        softwareVersionNum:
+          type: string
+      required:
+      - GrantRecordsMaintainedInd
+      - SupplementalInformationDetail
+      - Total501c3OrgCnt
+      - TotalOtherOrgCnt
+      - documentId
+      - softwareId
+      - softwareVersionNum
+      title: IRS990ScheduleI
+      type: object
+    ReturnHeader:
+      additionalProperties: false
+      example:
+        TaxPeriodEndDt: 2000-01-23
+        ReturnTs: 2000-01-23T04:56:07.000+00:00
+        BuildTS: 2000-01-23T04:56:07.000+00:00
+        TaxPeriodBeginDt: 2000-01-23
+        PreparerFirmGrp:
+          PreparerFirmName:
+            BusinessNameLine1Txt: BusinessNameLine1Txt
+          PreparerUSAddress:
+            ZIPCd: null
+            CityNm: CityNm
+            StateAbbreviationCd: StateAbbreviationCd
+            AddressLine1Txt: AddressLine1Txt
+          PreparerFirmEIN: 0
+        TaxYr: 6
+        PreparerPersonGrp:
+          SelfEmployedInd: SelfEmployedInd
+          PreparerPersonNm: PreparerPersonNm
+          PhoneNum: 1
+          PTIN: PTIN
+          PreparationDt: 2000-01-23
+        BusinessOfficerGrp:
+          PersonNm: PersonNm
+          PersonTitleTxt: PersonTitleTxt
+          DiscussWithPaidPreparerInd: true
+          PhoneNum: 5
+          SignatureDt: 2000-01-23
+        binaryAttachmentCnt: 5
+        ReturnTypeCd: 2
+        FilingSecurityInformation:
+          FederalOriginalSubmissionId: null
+          AtSubmissionCreationDeviceId: AtSubmissionCreationDeviceId
+          FederalOriginalSubmissionIdDt: 2000-01-23
+          FilingLicenseTypeCd: FilingLicenseTypeCd
+          IPAddress:
+            IPv4AddressTxt: IPv4AddressTxt
+          AtSubmissionFilingDeviceId: AtSubmissionFilingDeviceId
+        Filer:
+          BusinessName:
+            BusinessNameLine1Txt: BusinessNameLine1Txt
+          PhoneNum: 7
+          BusinessNameControlTxt: BusinessNameControlTxt
+          EIN: null
+          USAddress:
+            ZIPCd: null
+            CityNm: CityNm
+            StateAbbreviationCd: StateAbbreviationCd
+            AddressLine1Txt: AddressLine1Txt
+          InCareOfNm: InCareOfNm
+      properties:
+        TaxPeriodEndDt:
+          format: date
+          type: string
+        ReturnTs:
+          format: date-time
+          type: string
+        BuildTS:
+          format: date-time
+          type: string
+        TaxPeriodBeginDt:
+          format: date
+          type: string
+        PreparerFirmGrp:
+          $ref: '#/components/schemas/PreparerFirmGrp'
+        TaxYr:
+          type: integer
+        PreparerPersonGrp:
+          $ref: '#/components/schemas/PreparerPersonGrp'
+        BusinessOfficerGrp:
+          $ref: '#/components/schemas/BusinessOfficerGrp'
+        binaryAttachmentCnt:
+          type: integer
+        ReturnTypeCd:
+          type: integer
+        FilingSecurityInformation:
+          $ref: '#/components/schemas/FilingSecurityInformation'
+        Filer:
+          $ref: '#/components/schemas/Filer'
+      required:
+      - BuildTS
+      - BusinessOfficerGrp
+      - Filer
+      - FilingSecurityInformation
+      - PreparerFirmGrp
+      - PreparerPersonGrp
+      - ReturnTs
+      - ReturnTypeCd
+      - TaxPeriodBeginDt
+      - TaxPeriodEndDt
+      - TaxYr
+      - binaryAttachmentCnt
+      title: ReturnHeader
+      type: object
+    BusinessOfficerGrp:
+      additionalProperties: false
+      example:
+        PersonNm: PersonNm
+        PersonTitleTxt: PersonTitleTxt
+        DiscussWithPaidPreparerInd: true
+        PhoneNum: 5
+        SignatureDt: 2000-01-23
+      properties:
+        PersonNm:
+          type: string
+        PersonTitleTxt:
+          type: string
+        DiscussWithPaidPreparerInd:
+          type: boolean
+        PhoneNum:
+          type: integer
+        SignatureDt:
+          format: date
+          type: string
+      required:
+      - DiscussWithPaidPreparerInd
+      - PersonNm
+      - PersonTitleTxt
+      - PhoneNum
+      - SignatureDt
+      title: BusinessOfficerGrp
+      type: object
+    Filer:
+      additionalProperties: false
+      example:
+        BusinessName:
+          BusinessNameLine1Txt: BusinessNameLine1Txt
+        PhoneNum: 7
+        BusinessNameControlTxt: BusinessNameControlTxt
+        EIN: null
+        USAddress:
+          ZIPCd: null
+          CityNm: CityNm
+          StateAbbreviationCd: StateAbbreviationCd
+          AddressLine1Txt: AddressLine1Txt
+        InCareOfNm: InCareOfNm
+      properties:
+        BusinessName:
+          $ref: '#/components/schemas/Name'
+        PhoneNum:
+          type: integer
+        BusinessNameControlTxt:
+          type: string
+        EIN:
+          $ref: '#/components/schemas/Ein'
+        USAddress:
+          $ref: '#/components/schemas/UsAddress'
+        InCareOfNm:
+          type: string
+      required:
+      - BusinessName
+      - BusinessNameControlTxt
+      - EIN
+      - InCareOfNm
+      - PhoneNum
+      - USAddress
+      title: Filer
+      type: object
+    FilingSecurityInformation:
+      additionalProperties: false
+      example:
+        FederalOriginalSubmissionId: null
+        AtSubmissionCreationDeviceId: AtSubmissionCreationDeviceId
+        FederalOriginalSubmissionIdDt: 2000-01-23
+        FilingLicenseTypeCd: FilingLicenseTypeCd
+        IPAddress:
+          IPv4AddressTxt: IPv4AddressTxt
+        AtSubmissionFilingDeviceId: AtSubmissionFilingDeviceId
+      properties:
+        FederalOriginalSubmissionId:
+          $ref: '#/components/schemas/Ein'
+        AtSubmissionCreationDeviceId:
+          type: string
+        FederalOriginalSubmissionIdDt:
+          format: date
+          type: string
+        FilingLicenseTypeCd:
+          type: string
+        IPAddress:
+          $ref: '#/components/schemas/IPAddress'
+        AtSubmissionFilingDeviceId:
+          type: string
+      required:
+      - AtSubmissionCreationDeviceId
+      - AtSubmissionFilingDeviceId
+      - FederalOriginalSubmissionId
+      - FederalOriginalSubmissionIdDt
+      - FilingLicenseTypeCd
+      - IPAddress
+      title: FilingSecurityInformation
+      type: object
+    IPAddress:
+      additionalProperties: false
+      example:
+        IPv4AddressTxt: IPv4AddressTxt
+      properties:
+        IPv4AddressTxt:
+          type: string
+      required:
+      - IPv4AddressTxt
+      title: IPAddress
+      type: object
+    PreparerFirmGrp:
+      additionalProperties: false
+      example:
+        PreparerFirmName:
+          BusinessNameLine1Txt: BusinessNameLine1Txt
+        PreparerUSAddress:
+          ZIPCd: null
+          CityNm: CityNm
+          StateAbbreviationCd: StateAbbreviationCd
+          AddressLine1Txt: AddressLine1Txt
+        PreparerFirmEIN: 0
+      properties:
+        PreparerFirmName:
+          $ref: '#/components/schemas/Name'
+        PreparerUSAddress:
+          $ref: '#/components/schemas/UsAddress'
+        PreparerFirmEIN:
+          type: integer
+      required:
+      - PreparerFirmEIN
+      - PreparerFirmName
+      - PreparerUSAddress
+      title: PreparerFirmGrp
+      type: object
+    PreparerPersonGrp:
+      additionalProperties: false
+      example:
+        SelfEmployedInd: SelfEmployedInd
+        PreparerPersonNm: PreparerPersonNm
+        PhoneNum: 1
+        PTIN: PTIN
+        PreparationDt: 2000-01-23
+      properties:
+        SelfEmployedInd:
+          type: string
+        PreparerPersonNm:
+          type: string
+        PhoneNum:
+          type: integer
+        PTIN:
+          type: string
+        PreparationDt:
+          format: date
+          type: string
+      required:
+      - PTIN
+      - PhoneNum
+      - PreparationDt
+      - PreparerPersonNm
+      - SelfEmployedInd
+      title: PreparerPersonGrp
+      type: object
+    Ein:
+      anyOf:
+      - type: integer
+      - type: string
+      title: Ein
+    Form990PartVIISectionAGrpUnion:
+      anyOf:
+      - items:
+          $ref: '#/components/schemas/Form990PartVIISectionAGrpElement'
+        type: array
+      - $ref: '#/components/schemas/Form990PartVIISectionAGrpElement'
+      title: Form990PartVIISectionAGrpUnion
+    FundraisingActivitiesIndUnion:
+      anyOf:
+      - type: boolean
+      - $ref: '#/components/schemas/DescribedInSection501C3IndClass'
+      title: FundraisingActivitiesIndUnion
+    _evaluate_post_200_response:
+      example:
+        filter_name: filter_name
+        filter_score: 0
+        filter_type: filter_type
+      properties:
+        filter_name:
+          type: string
+        filter_type:
+          type: string
+        filter_score:
+          type: integer
+      type: object
+    _evaluate_post_400_response:
+      properties:
+        message:
+          type: string
+      type: object
+  securitySchemes:
+    BasicAuth:
+      scheme: basic
+      type: http

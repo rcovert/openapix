@@ -1,0 +1,1696 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome10",
+    "definitions": {
+        "Welcome3": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Returns": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ReturnElement"
+                    }
+                }
+            },
+            "required": [
+                "Returns"
+            ],
+            "title": "Welcome10"
+        },
+        "ReturnElement": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Return": {
+                    "$ref": "#/definitions/ReturnReturn"
+                }
+            },
+            "required": [
+                "Return"
+            ],
+            "title": "ReturnElement"
+        },
+        "ReturnReturn": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "returnVersion": {
+                    "type": "string"
+                },
+                "ReturnHeader": {
+                    "$ref": "#/definitions/ReturnHeader"
+                },
+                "xmlns": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "http"
+                    ]
+                },
+                "ReturnData": {
+                    "$ref": "#/definitions/ReturnData"
+                },
+                "xsi:schemaLocation": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "http"
+                    ]
+                },
+                "xmlns:xsi": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "http"
+                    ]
+                }
+            },
+            "required": [
+                "ReturnData",
+                "ReturnHeader",
+                "returnVersion",
+                "xmlns",
+                "xmlns:xsi",
+                "xsi:schemaLocation"
+            ],
+            "title": "ReturnReturn"
+        },
+        "ReturnData": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "IRS990ScheduleO": {
+                    "$ref": "#/definitions/Irs990Schedule"
+                },
+                "IRS990ScheduleA": {
+                    "$ref": "#/definitions/IRS990ScheduleA"
+                },
+                "IRS990ScheduleG": {
+                    "$ref": "#/definitions/Irs990Schedule"
+                },
+                "documentCnt": {
+                    "type": "integer"
+                },
+                "IRS990": {
+                    "$ref": "#/definitions/Irs990"
+                },
+                "IRS990ScheduleI": {
+                    "$ref": "#/definitions/IRS990ScheduleI"
+                },
+                "IRS990ScheduleB": {
+                    "$ref": "#/definitions/Irs990Schedule"
+                }
+            },
+            "required": [
+                "IRS990",
+                "IRS990ScheduleA",
+                "IRS990ScheduleO",
+                "documentCnt"
+            ],
+            "title": "ReturnData"
+        },
+        "Irs990": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "ChangeToOrgDocumentsInd": {
+                    "type": "boolean"
+                },
+                "ExpenseAmt": {
+                    "type": "integer"
+                },
+                "FundraisingAmt": {
+                    "type": "integer"
+                },
+                "TotalAssetsGrp": {
+                    "$ref": "#/definitions/CapStkTrPrinCurrentFundsGrpClass"
+                },
+                "TotalGrossUBIAmt": {
+                    "type": "integer"
+                },
+                "ReportLandBuildingEquipmentInd": {
+                    "type": "boolean"
+                },
+                "RelatedEntityInd": {
+                    "type": "boolean"
+                },
+                "RelatedOrganizationCtrlEntInd": {
+                    "type": "boolean"
+                },
+                "MoreThan5000KToIndividualsInd": {
+                    "type": "boolean"
+                },
+                "GrantsToOrganizationsInd": {
+                    "$ref": "#/definitions/FundraisingActivitiesIndUnion"
+                },
+                "WhistleblowerPolicyInd": {
+                    "type": "boolean"
+                },
+                "InvestmentInJointVentureInd": {
+                    "type": "boolean"
+                },
+                "UnrelatedBusIncmOverLimitInd": {
+                    "type": "boolean"
+                },
+                "PYRevenuesLessExpensesAmt": {
+                    "type": "integer"
+                },
+                "CashNonInterestBearingGrp": {
+                    "$ref": "#/definitions/CapStkTrPrinCurrentFundsGrpClass"
+                },
+                "referenceDocumentId": {
+                    "type": "string"
+                },
+                "VotingMembersGoverningBodyCnt": {
+                    "type": "integer"
+                },
+                "ReportOtherAssetsInd": {
+                    "type": "boolean"
+                },
+                "FeesForServicesAccountingGrp": {
+                    "$ref": "#/definitions/AllOtherExpensesGrpClass"
+                },
+                "CompensationProcessCEOInd": {
+                    "type": "boolean"
+                },
+                "SignificantNewProgramSrvcInd": {
+                    "type": "boolean"
+                },
+                "ScheduleORequiredInd": {
+                    "type": "boolean"
+                },
+                "OrgDoesNotFollowFASB117Ind": {
+                    "type": "string"
+                },
+                "ProfessionalFundraisingInd": {
+                    "$ref": "#/definitions/FundraisingActivitiesIndUnion"
+                },
+                "TotalAssetsBOYAmt": {
+                    "type": "integer"
+                },
+                "OperateHospitalInd": {
+                    "type": "boolean"
+                },
+                "NetIncmFromFundraisingEvtGrp": {
+                    "$ref": "#/definitions/NetIncmFromFundraisingEvtGrp"
+                },
+                "CYProgramServiceRevenueAmt": {
+                    "type": "integer"
+                },
+                "PYGrantsAndSimilarPaidAmt": {
+                    "type": "integer"
+                },
+                "DisregardedEntityInd": {
+                    "type": "boolean"
+                },
+                "TotalFunctionalExpensesGrp": {
+                    "$ref": "#/definitions/TotalFunctionalExpensesGrp"
+                },
+                "TaxablePartyNotificationInd": {
+                    "type": "boolean"
+                },
+                "NondeductibleContributionsInd": {
+                    "type": "boolean"
+                },
+                "ForeignActivitiesInd": {
+                    "type": "boolean"
+                },
+                "OfficeExpensesGrp": {
+                    "$ref": "#/definitions/AllOtherExpensesGrpClass"
+                },
+                "TotalNetAssetsFundBalanceGrp": {
+                    "$ref": "#/definitions/CapStkTrPrinCurrentFundsGrpClass"
+                },
+                "AuditCommitteeInd": {
+                    "type": "boolean"
+                },
+                "softwareVersionNum": {
+                    "type": "string"
+                },
+                "ForeignFinancialAccountInd": {
+                    "type": "boolean"
+                },
+                "TotalContributionsAmt": {
+                    "type": "integer"
+                },
+                "CYTotalExpensesAmt": {
+                    "type": "integer"
+                },
+                "CYSalariesCompEmpBnftPaidAmt": {
+                    "type": "integer"
+                },
+                "BusinessRlnWith35CtrlEntInd": {
+                    "type": "boolean"
+                },
+                "GroupReturnForAffiliatesInd": {
+                    "type": "boolean"
+                },
+                "CYOtherExpensesAmt": {
+                    "type": "integer"
+                },
+                "TotalCompGreaterThan150KInd": {
+                    "type": "boolean"
+                },
+                "InvestmentIncomeGrp": {
+                    "$ref": "#/definitions/EGrp"
+                },
+                "ScheduleBRequiredInd": {
+                    "$ref": "#/definitions/FundraisingActivitiesIndUnion"
+                },
+                "CYBenefitsPaidToMembersAmt": {
+                    "type": "integer"
+                },
+                "TrnsfrExmptNonChrtblRltdOrgInd": {
+                    "type": "boolean"
+                },
+                "PYExcessBenefitTransInd": {
+                    "type": "boolean"
+                },
+                "FederalGrantAuditRequiredInd": {
+                    "type": "boolean"
+                },
+                "RevenueAmt": {
+                    "type": "integer"
+                },
+                "ProhibitedTaxShelterTransInd": {
+                    "type": "boolean"
+                },
+                "ConservationEasementsInd": {
+                    "type": "boolean"
+                },
+                "EngagedInExcessBenefitTransInd": {
+                    "type": "boolean"
+                },
+                "ActivityOrMissionDesc": {
+                    "type": "string"
+                },
+                "GrantsToIndividualsInd": {
+                    "$ref": "#/definitions/FundraisingActivitiesIndUnion"
+                },
+                "EmployeeCnt": {
+                    "type": "integer"
+                },
+                "GrantsToDomesticOrgsGrp": {
+                    "$ref": "#/definitions/AllOtherExpensesGrpClass"
+                },
+                "ProgSrvcAccomActy2Grp": {
+                    "$ref": "#/definitions/ProgSrvcAccomActyGrp"
+                },
+                "BusinessRlnWithFamMemInd": {
+                    "type": "boolean"
+                },
+                "GrossReceiptsAmt": {
+                    "type": "integer"
+                },
+                "ForeignOfficeInd": {
+                    "type": "boolean"
+                },
+                "PYOtherExpensesAmt": {
+                    "type": "integer"
+                },
+                "CompensationFromOtherSrcsInd": {
+                    "type": "boolean"
+                },
+                "InfoInScheduleOPartIXInd": {
+                    "type": "string"
+                },
+                "TypeOfOrganizationAssocInd": {
+                    "type": "string"
+                },
+                "PYContributionsGrantsAmt": {
+                    "type": "integer"
+                },
+                "FormationYr": {
+                    "type": "integer"
+                },
+                "MaterialDiversionOrMisuseInd": {
+                    "type": "boolean"
+                },
+                "AcctCompileOrReviewBasisGrp": {
+                    "$ref": "#/definitions/AcctCompileOrReviewBasisGrp"
+                },
+                "PYTotalExpensesAmt": {
+                    "type": "integer"
+                },
+                "softwareId": {
+                    "type": "integer"
+                },
+                "LoanOutstandingInd": {
+                    "type": "boolean"
+                },
+                "DonorRstrOrQuasiEndowmentsInd": {
+                    "type": "boolean"
+                },
+                "MembersOrStockholdersInd": {
+                    "type": "boolean"
+                },
+                "CollectionsOfArtInd": {
+                    "type": "boolean"
+                },
+                "DeductibleNonCashContriInd": {
+                    "type": "boolean"
+                },
+                "MethodOfAccountingCashInd": {
+                    "type": "string"
+                },
+                "VotingMembersIndependentCnt": {
+                    "type": "integer"
+                },
+                "IRPDocumentW2GCnt": {
+                    "type": "integer"
+                },
+                "DecisionsSubjectToApprovaInd": {
+                    "type": "boolean"
+                },
+                "Form990PartVIISectionAGrp": {
+                    "$ref": "#/definitions/Form990PartVIISectionAGrpUnion"
+                },
+                "MinutesOfGoverningBodyInd": {
+                    "type": "boolean"
+                },
+                "StatesWhereCopyOfReturnIsFldCd": {
+                    "type": "string"
+                },
+                "DescribedInSection501c3Ind": {
+                    "$ref": "#/definitions/DescribedInSection501C3IndClass"
+                },
+                "TotalLiabilitiesEOYAmt": {
+                    "type": "integer"
+                },
+                "ReportOtherLiabilitiesInd": {
+                    "type": "boolean"
+                },
+                "AllOtherContributionsAmt": {
+                    "type": "integer"
+                },
+                "ReportInvestmentsOtherSecInd": {
+                    "type": "boolean"
+                },
+                "MinutesOfCommitteesInd": {
+                    "type": "boolean"
+                },
+                "LobbyingActivitiesInd": {
+                    "type": "boolean"
+                },
+                "BusinessRlnWithOrgMemInd": {
+                    "type": "boolean"
+                },
+                "IndoorTanningServicesInd": {
+                    "type": "boolean"
+                },
+                "Desc": {
+                    "type": "string"
+                },
+                "PYInvestmentIncomeAmt": {
+                    "type": "integer"
+                },
+                "IndependentVotingMemberCnt": {
+                    "type": "integer"
+                },
+                "CYRevenuesLessExpensesAmt": {
+                    "type": "integer"
+                },
+                "SubjectToProxyTaxInd": {
+                    "type": "boolean"
+                },
+                "TerminateOperationsInd": {
+                    "type": "boolean"
+                },
+                "MoreThan5000KToOrgInd": {
+                    "type": "boolean"
+                },
+                "ConflictOfInterestPolicyInd": {
+                    "type": "boolean"
+                },
+                "CompensationProcessOtherInd": {
+                    "type": "boolean"
+                },
+                "TotalAssetsEOYAmt": {
+                    "type": "integer"
+                },
+                "FundraisingActivitiesInd": {
+                    "$ref": "#/definitions/FundraisingActivitiesIndUnion"
+                },
+                "TotalRevenueGrp": {
+                    "$ref": "#/definitions/EGrp"
+                },
+                "SchoolOperatingInd": {
+                    "type": "boolean"
+                },
+                "NetAssetsOrFundBalancesEOYAmt": {
+                    "type": "integer"
+                },
+                "GrantToRelatedPersonInd": {
+                    "type": "boolean"
+                },
+                "WebsiteAddressTxt": {
+                    "type": "string",
+                    "qt-uri-protocols": [
+                        "http"
+                    ]
+                },
+                "NetAssetsOrFundBalancesBOYAmt": {
+                    "type": "integer"
+                },
+                "CYContributionsGrantsAmt": {
+                    "type": "integer"
+                },
+                "AllOtherExpensesGrp": {
+                    "$ref": "#/definitions/AllOtherExpensesGrpClass"
+                },
+                "FamilyOrBusinessRlnInd": {
+                    "type": "boolean"
+                },
+                "PrincipalOfficerNm": {
+                    "type": "string"
+                },
+                "CapStkTrPrinCurrentFundsGrp": {
+                    "$ref": "#/definitions/CapStkTrPrinCurrentFundsGrpClass"
+                },
+                "CYTotalProfFndrsngExpnsAmt": {
+                    "type": "integer"
+                },
+                "TotLiabNetAssetsFundBalanceGrp": {
+                    "$ref": "#/definitions/CapStkTrPrinCurrentFundsGrpClass"
+                },
+                "LegalDomicileStateCd": {
+                    "type": "string"
+                },
+                "GamingActivitiesInd": {
+                    "$ref": "#/definitions/FundraisingActivitiesIndUnion"
+                },
+                "ReconcilationRevenueExpnssAmt": {
+                    "type": "integer"
+                },
+                "TotalLiabilitiesGrp": {
+                    "$ref": "#/definitions/CapStkTrPrinCurrentFundsGrpClass"
+                },
+                "CYInvestmentIncomeAmt": {
+                    "type": "integer"
+                },
+                "InfoInScheduleOPartVIInd": {
+                    "type": "string"
+                },
+                "PartialLiquidationInd": {
+                    "type": "boolean"
+                },
+                "GoverningBodyVotingMembersCnt": {
+                    "type": "integer"
+                },
+                "PYTotalRevenueAmt": {
+                    "type": "integer"
+                },
+                "SignificantChangeInd": {
+                    "type": "boolean"
+                },
+                "SubjectToExcsTaxNetInvstIncInd": {
+                    "type": "boolean"
+                },
+                "FormerOfcrEmployeesListedInd": {
+                    "type": "boolean"
+                },
+                "CYGrantsAndSimilarPaidAmt": {
+                    "type": "integer"
+                },
+                "MissionDesc": {
+                    "type": "string"
+                },
+                "DonorAdvisedFundInd": {
+                    "type": "boolean"
+                },
+                "OfficerMailingAddressInd": {
+                    "type": "boolean"
+                },
+                "NoListedPersonsCompensatedInd": {
+                    "type": "string"
+                },
+                "FSAuditedInd": {
+                    "type": "boolean"
+                },
+                "Organization501c3Ind": {
+                    "type": "string"
+                },
+                "Form990TFiledInd": {
+                    "type": "boolean"
+                },
+                "IRPDocumentCnt": {
+                    "type": "integer"
+                },
+                "SubjToTaxRmnrtnExPrchtPymtInd": {
+                    "type": "boolean"
+                },
+                "ScheduleJRequiredInd": {
+                    "type": "boolean"
+                },
+                "PoliticalCampaignActyInd": {
+                    "type": "boolean"
+                },
+                "DelegationOfMgmtDutiesInd": {
+                    "type": "boolean"
+                },
+                "IncludeFIN48FootnoteInd": {
+                    "type": "boolean"
+                },
+                "BackupWthldComplianceInd": {
+                    "type": "boolean"
+                },
+                "DeductibleArtContributionInd": {
+                    "type": "boolean"
+                },
+                "BooksInCareOfDetail": {
+                    "$ref": "#/definitions/BooksInCareOfDetail"
+                },
+                "CYTotalRevenueAmt": {
+                    "type": "integer"
+                },
+                "CYOtherRevenueAmt": {
+                    "type": "integer"
+                },
+                "ReportProgramRelatedInvstInd": {
+                    "type": "boolean"
+                },
+                "CreditCounselingInd": {
+                    "type": "boolean"
+                },
+                "IndependentAuditFinclStmtInd": {
+                    "type": "boolean"
+                },
+                "TotalEmployeeCnt": {
+                    "type": "integer"
+                },
+                "TaxExemptBondsInd": {
+                    "type": "boolean"
+                },
+                "ActivitiesConductedPrtshpInd": {
+                    "type": "boolean"
+                },
+                "TotalProgramServiceExpensesAmt": {
+                    "type": "integer"
+                },
+                "AccountantCompileOrReviewInd": {
+                    "type": "boolean"
+                },
+                "Form990ProvidedToGvrnBodyInd": {
+                    "type": "boolean"
+                },
+                "DocumentRetentionPolicyInd": {
+                    "type": "boolean"
+                },
+                "LocalChaptersInd": {
+                    "type": "boolean"
+                },
+                "documentId": {
+                    "type": "string"
+                },
+                "CYTotalFundraisingExpenseAmt": {
+                    "type": "integer"
+                },
+                "ConsolidatedAuditFinclStmtInd": {
+                    "type": "boolean"
+                },
+                "USAddress": {
+                    "$ref": "#/definitions/UsAddress"
+                },
+                "ElectionOfBoardMembersInd": {
+                    "type": "boolean"
+                },
+                "ProgSrvcAccomActy3Grp": {
+                    "$ref": "#/definitions/ProgSrvcAccomActyGrp"
+                },
+                "PoliciesReferenceChaptersInd": {
+                    "type": "boolean"
+                },
+                "InfoInScheduleOPartIIIInd": {
+                    "type": "string"
+                },
+                "FeesForServicesManagementGrp": {
+                    "$ref": "#/definitions/FeesForServicesManagementGrp"
+                },
+                "InfoInScheduleOPartXIIInd": {
+                    "type": "string"
+                },
+                "InfoInScheduleOPartXIInd": {
+                    "type": "string"
+                },
+                "NoDonorRestrictionNetAssetsGrp": {
+                    "$ref": "#/definitions/CapStkTrPrinCurrentFundsGrpClass"
+                },
+                "InfoInScheduleOPartVIIIInd": {
+                    "type": "string"
+                },
+                "InfoInScheduleOPartXInd": {
+                    "type": "string"
+                },
+                "AnnualDisclosureCoveredPrsnInd": {
+                    "type": "boolean"
+                },
+                "OtherExpensesGrp": {
+                    "$ref": "#/definitions/OtherExpensesGrp"
+                },
+                "TypeOfOrganizationCorpInd": {
+                    "type": "string"
+                },
+                "RegularMonitoringEnfrcInd": {
+                    "type": "boolean"
+                },
+                "OrganizationFollowsFASB117Ind": {
+                    "type": "string"
+                },
+                "PrincipalOfcrBusinessName": {
+                    "$ref": "#/definitions/Name"
+                }
+            },
+            "required": [
+                "AccountantCompileOrReviewInd",
+                "ActivitiesConductedPrtshpInd",
+                "ActivityOrMissionDesc",
+                "AllOtherContributionsAmt",
+                "BackupWthldComplianceInd",
+                "BooksInCareOfDetail",
+                "BusinessRlnWith35CtrlEntInd",
+                "BusinessRlnWithFamMemInd",
+                "BusinessRlnWithOrgMemInd",
+                "CYBenefitsPaidToMembersAmt",
+                "CYContributionsGrantsAmt",
+                "CYGrantsAndSimilarPaidAmt",
+                "CYInvestmentIncomeAmt",
+                "CYOtherExpensesAmt",
+                "CYOtherRevenueAmt",
+                "CYProgramServiceRevenueAmt",
+                "CYRevenuesLessExpensesAmt",
+                "CYSalariesCompEmpBnftPaidAmt",
+                "CYTotalExpensesAmt",
+                "CYTotalFundraisingExpenseAmt",
+                "CYTotalProfFndrsngExpnsAmt",
+                "CYTotalRevenueAmt",
+                "CashNonInterestBearingGrp",
+                "ChangeToOrgDocumentsInd",
+                "CollectionsOfArtInd",
+                "CompensationFromOtherSrcsInd",
+                "CompensationProcessCEOInd",
+                "CompensationProcessOtherInd",
+                "ConflictOfInterestPolicyInd",
+                "ConservationEasementsInd",
+                "ConsolidatedAuditFinclStmtInd",
+                "CreditCounselingInd",
+                "DecisionsSubjectToApprovaInd",
+                "DeductibleArtContributionInd",
+                "DeductibleNonCashContriInd",
+                "DelegationOfMgmtDutiesInd",
+                "Desc",
+                "DescribedInSection501c3Ind",
+                "DisregardedEntityInd",
+                "DocumentRetentionPolicyInd",
+                "DonorAdvisedFundInd",
+                "DonorRstrOrQuasiEndowmentsInd",
+                "ElectionOfBoardMembersInd",
+                "EmployeeCnt",
+                "EngagedInExcessBenefitTransInd",
+                "ExpenseAmt",
+                "FSAuditedInd",
+                "FamilyOrBusinessRlnInd",
+                "FederalGrantAuditRequiredInd",
+                "ForeignActivitiesInd",
+                "ForeignFinancialAccountInd",
+                "ForeignOfficeInd",
+                "Form990PartVIISectionAGrp",
+                "Form990ProvidedToGvrnBodyInd",
+                "Form990TFiledInd",
+                "FormationYr",
+                "FormerOfcrEmployeesListedInd",
+                "FundraisingActivitiesInd",
+                "GamingActivitiesInd",
+                "GoverningBodyVotingMembersCnt",
+                "GrantToRelatedPersonInd",
+                "GrantsToIndividualsInd",
+                "GrantsToOrganizationsInd",
+                "GrossReceiptsAmt",
+                "GroupReturnForAffiliatesInd",
+                "IRPDocumentCnt",
+                "IRPDocumentW2GCnt",
+                "IncludeFIN48FootnoteInd",
+                "IndependentAuditFinclStmtInd",
+                "IndependentVotingMemberCnt",
+                "IndoorTanningServicesInd",
+                "InfoInScheduleOPartIXInd",
+                "InfoInScheduleOPartVIInd",
+                "InvestmentInJointVentureInd",
+                "LegalDomicileStateCd",
+                "LoanOutstandingInd",
+                "LobbyingActivitiesInd",
+                "LocalChaptersInd",
+                "MaterialDiversionOrMisuseInd",
+                "MembersOrStockholdersInd",
+                "MethodOfAccountingCashInd",
+                "MinutesOfCommitteesInd",
+                "MinutesOfGoverningBodyInd",
+                "MissionDesc",
+                "MoreThan5000KToIndividualsInd",
+                "MoreThan5000KToOrgInd",
+                "NetAssetsOrFundBalancesBOYAmt",
+                "NetAssetsOrFundBalancesEOYAmt",
+                "NetIncmFromFundraisingEvtGrp",
+                "NoListedPersonsCompensatedInd",
+                "NondeductibleContributionsInd",
+                "OfficerMailingAddressInd",
+                "OperateHospitalInd",
+                "Organization501c3Ind",
+                "PYContributionsGrantsAmt",
+                "PYExcessBenefitTransInd",
+                "PYOtherExpensesAmt",
+                "PYRevenuesLessExpensesAmt",
+                "PYTotalExpensesAmt",
+                "PYTotalRevenueAmt",
+                "PartialLiquidationInd",
+                "PoliticalCampaignActyInd",
+                "ProfessionalFundraisingInd",
+                "ProhibitedTaxShelterTransInd",
+                "ReconcilationRevenueExpnssAmt",
+                "RelatedEntityInd",
+                "RelatedOrganizationCtrlEntInd",
+                "ReportInvestmentsOtherSecInd",
+                "ReportLandBuildingEquipmentInd",
+                "ReportOtherAssetsInd",
+                "ReportOtherLiabilitiesInd",
+                "ReportProgramRelatedInvstInd",
+                "ScheduleBRequiredInd",
+                "ScheduleJRequiredInd",
+                "ScheduleORequiredInd",
+                "SchoolOperatingInd",
+                "SignificantChangeInd",
+                "SignificantNewProgramSrvcInd",
+                "StatesWhereCopyOfReturnIsFldCd",
+                "SubjToTaxRmnrtnExPrchtPymtInd",
+                "SubjectToExcsTaxNetInvstIncInd",
+                "SubjectToProxyTaxInd",
+                "TaxExemptBondsInd",
+                "TaxablePartyNotificationInd",
+                "TerminateOperationsInd",
+                "TotLiabNetAssetsFundBalanceGrp",
+                "TotalAssetsBOYAmt",
+                "TotalAssetsEOYAmt",
+                "TotalAssetsGrp",
+                "TotalCompGreaterThan150KInd",
+                "TotalContributionsAmt",
+                "TotalEmployeeCnt",
+                "TotalFunctionalExpensesGrp",
+                "TotalGrossUBIAmt",
+                "TotalLiabilitiesEOYAmt",
+                "TotalLiabilitiesGrp",
+                "TotalNetAssetsFundBalanceGrp",
+                "TotalProgramServiceExpensesAmt",
+                "TotalRevenueGrp",
+                "TrnsfrExmptNonChrtblRltdOrgInd",
+                "USAddress",
+                "UnrelatedBusIncmOverLimitInd",
+                "VotingMembersGoverningBodyCnt",
+                "VotingMembersIndependentCnt",
+                "WebsiteAddressTxt",
+                "WhistleblowerPolicyInd",
+                "documentId",
+                "referenceDocumentId",
+                "softwareId",
+                "softwareVersionNum"
+            ],
+            "title": "Irs990"
+        },
+        "AcctCompileOrReviewBasisGrp": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "SeparateBasisFinclStmtInd": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "SeparateBasisFinclStmtInd"
+            ],
+            "title": "AcctCompileOrReviewBasisGrp"
+        },
+        "AllOtherExpensesGrpClass": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "ProgramServicesAmt": {
+                    "type": "integer"
+                },
+                "TotalAmt": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "ProgramServicesAmt",
+                "TotalAmt"
+            ],
+            "title": "AllOtherExpensesGrpClass"
+        },
+        "BooksInCareOfDetail": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "PersonNm": {
+                    "type": "string"
+                },
+                "PhoneNum": {
+                    "type": "integer"
+                },
+                "USAddress": {
+                    "$ref": "#/definitions/UsAddress"
+                },
+                "BusinessName": {
+                    "$ref": "#/definitions/Name"
+                }
+            },
+            "required": [
+                "PhoneNum",
+                "USAddress"
+            ],
+            "title": "BooksInCareOfDetail"
+        },
+        "Name": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "BusinessNameLine1Txt": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "BusinessNameLine1Txt"
+            ],
+            "title": "Name"
+        },
+        "UsAddress": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "ZIPCd": {
+                    "$ref": "#/definitions/Ein"
+                },
+                "CityNm": {
+                    "type": "string"
+                },
+                "StateAbbreviationCd": {
+                    "type": "string"
+                },
+                "AddressLine1Txt": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "AddressLine1Txt",
+                "CityNm",
+                "StateAbbreviationCd",
+                "ZIPCd"
+            ],
+            "title": "UsAddress"
+        },
+        "CapStkTrPrinCurrentFundsGrpClass": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "EOYAmt": {
+                    "type": "integer"
+                },
+                "BOYAmt": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "BOYAmt",
+                "EOYAmt"
+            ],
+            "title": "CapStkTrPrinCurrentFundsGrpClass"
+        },
+        "FeesForServicesManagementGrp": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "TotalAmt": {
+                    "type": "integer"
+                },
+                "ManagementAndGeneralAmt": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "ManagementAndGeneralAmt",
+                "TotalAmt"
+            ],
+            "title": "FeesForServicesManagementGrp"
+        },
+        "Form990PartVIISectionAGrpElement": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "PersonNm": {
+                    "type": "string"
+                },
+                "OfficerInd": {
+                    "type": "string"
+                },
+                "AverageHoursPerWeekRt": {
+                    "type": "integer"
+                },
+                "ReportableCompFromOrgAmt": {
+                    "type": "integer"
+                },
+                "ReportableCompFromRltdOrgAmt": {
+                    "type": "integer"
+                },
+                "TitleTxt": {
+                    "type": "string"
+                },
+                "OtherCompensationAmt": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "AverageHoursPerWeekRt",
+                "OfficerInd",
+                "OtherCompensationAmt",
+                "PersonNm",
+                "ReportableCompFromOrgAmt",
+                "ReportableCompFromRltdOrgAmt",
+                "TitleTxt"
+            ],
+            "title": "Form990PartVIISectionAGrpElement"
+        },
+        "DescribedInSection501C3IndClass": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "referenceDocumentId": {
+                    "type": "string"
+                },
+                "content": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "content",
+                "referenceDocumentId"
+            ],
+            "title": "DescribedInSection501C3IndClass"
+        },
+        "EGrp": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "TotalRevenueColumnAmt": {
+                    "type": "integer"
+                },
+                "RelatedOrExemptFuncIncomeAmt": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "TotalRevenueColumnAmt"
+            ],
+            "title": "EGrp"
+        },
+        "NetIncmFromFundraisingEvtGrp": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "TotalRevenueColumnAmt": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "TotalRevenueColumnAmt"
+            ],
+            "title": "NetIncmFromFundraisingEvtGrp"
+        },
+        "OtherExpensesGrp": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Desc": {
+                    "type": "string"
+                },
+                "ProgramServicesAmt": {
+                    "type": "integer"
+                },
+                "TotalAmt": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "Desc",
+                "ProgramServicesAmt",
+                "TotalAmt"
+            ],
+            "title": "OtherExpensesGrp"
+        },
+        "ProgSrvcAccomActyGrp": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "ExpenseAmt": {
+                    "type": "integer"
+                },
+                "Desc": {
+                    "type": "string"
+                },
+                "RevenueAmt": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "Desc",
+                "ExpenseAmt",
+                "RevenueAmt"
+            ],
+            "title": "ProgSrvcAccomActyGrp"
+        },
+        "TotalFunctionalExpensesGrp": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "ProgramServicesAmt": {
+                    "type": "integer"
+                },
+                "FundraisingAmt": {
+                    "type": "integer"
+                },
+                "TotalAmt": {
+                    "type": "integer"
+                },
+                "ManagementAndGeneralAmt": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "FundraisingAmt",
+                "ManagementAndGeneralAmt",
+                "ProgramServicesAmt",
+                "TotalAmt"
+            ],
+            "title": "TotalFunctionalExpensesGrp"
+        },
+        "IRS990ScheduleA": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "SupportedOrgInformationGrp": {
+                    "$ref": "#/definitions/SupportedOrgInformationGrp"
+                },
+                "MajorityDirTrstSupportedOrgInd": {
+                    "type": "boolean"
+                },
+                "SupportingOrgType1Ind": {
+                    "type": "string"
+                },
+                "SupportedOrganizationsTotalCnt": {
+                    "type": "integer"
+                },
+                "Form990ScheduleAPartVIGrp": {
+                    "$ref": "#/definitions/Form990ScheduleAPartViGrp"
+                },
+                "OtherSupportSumAmt": {
+                    "type": "integer"
+                },
+                "SupportSumAmt": {
+                    "type": "integer"
+                },
+                "Form990SchAType1SuprtOrgGrp": {
+                    "$ref": "#/definitions/Form990SchAType1SuprtOrgGrp"
+                },
+                "softwareId": {
+                    "type": "integer"
+                },
+                "SupportedOrganizationsCnt": {
+                    "type": "integer"
+                },
+                "SupportingOrganization509a3Ind": {
+                    "type": "string"
+                },
+                "Form990SchASupportingOrgGrp": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "boolean"
+                    }
+                },
+                "IRSWrittenDeterminationInd": {
+                    "type": "string"
+                },
+                "documentId": {
+                    "type": "string"
+                },
+                "softwareVersionNum": {
+                    "type": "string"
+                },
+                "ChurchInd": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "documentId",
+                "softwareId",
+                "softwareVersionNum"
+            ],
+            "title": "IRS990ScheduleA"
+        },
+        "Form990SchAType1SuprtOrgGrp": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "OperateBenefitNonSuprtOrgInd": {
+                    "type": "boolean"
+                },
+                "PowerAppointMajorityDirTrstInd": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "OperateBenefitNonSuprtOrgInd",
+                "PowerAppointMajorityDirTrstInd"
+            ],
+            "title": "Form990SchAType1SuprtOrgGrp"
+        },
+        "SupportedOrgInformationGrp": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "GoverningDocumentListedInd": {
+                    "type": "boolean"
+                },
+                "SupportAmt": {
+                    "type": "integer"
+                },
+                "EIN": {
+                    "type": "string"
+                },
+                "OrganizationTypeCd": {
+                    "type": "integer"
+                },
+                "OtherSupportAmt": {
+                    "type": "integer"
+                },
+                "SupportedOrganizationName": {
+                    "$ref": "#/definitions/Name"
+                }
+            },
+            "required": [
+                "EIN",
+                "GoverningDocumentListedInd",
+                "OrganizationTypeCd",
+                "OtherSupportAmt",
+                "SupportAmt",
+                "SupportedOrganizationName"
+            ],
+            "title": "SupportedOrgInformationGrp"
+        },
+        "Irs990Schedule": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "softwareId": {
+                    "type": "integer"
+                },
+                "documentId": {
+                    "type": "string"
+                },
+                "ContributorInformationGrp": {
+                    "$ref": "#/definitions/ContributorInformationGrp"
+                },
+                "softwareVersionNum": {
+                    "type": "string"
+                },
+                "FundraisingEventInformationGrp": {
+                    "$ref": "#/definitions/FundraisingEventInformationGrp"
+                },
+                "SupplementalInformationDetail": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Form990ScheduleAPartViGrp"
+                    }
+                }
+            },
+            "required": [
+                "documentId",
+                "softwareId",
+                "softwareVersionNum"
+            ],
+            "title": "Irs990Schedule"
+        },
+        "ContributorInformationGrp": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "TotalContributionsAmt": {
+                    "type": "string"
+                },
+                "ContributorNum": {
+                    "type": "string"
+                },
+                "ContributorBusinessName": {
+                    "$ref": "#/definitions/ContributorBusinessName"
+                },
+                "ContributorUSAddress": {
+                    "$ref": "#/definitions/ContributorUSAddress"
+                }
+            },
+            "required": [
+                "ContributorBusinessName",
+                "ContributorNum",
+                "ContributorUSAddress",
+                "TotalContributionsAmt"
+            ],
+            "title": "ContributorInformationGrp"
+        },
+        "ContributorBusinessName": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "BusinessNameLine1": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "BusinessNameLine1"
+            ],
+            "title": "ContributorBusinessName"
+        },
+        "ContributorUSAddress": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "AddressLine2": {
+                    "type": "string"
+                },
+                "AddressLine1": {
+                    "type": "string"
+                },
+                "ZIPCode": {
+                    "type": "string"
+                },
+                "State": {
+                    "type": "string"
+                },
+                "City": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "AddressLine1",
+                "AddressLine2",
+                "City",
+                "State",
+                "ZIPCode"
+            ],
+            "title": "ContributorUSAddress"
+        },
+        "FundraisingEventInformationGrp": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "OtherDirectExpensesEvent1Amt": {
+                    "type": "integer"
+                },
+                "OtherDirectExpensesEvent2Amt": {
+                    "type": "integer"
+                },
+                "GrossReceiptsEvent2Amt": {
+                    "type": "integer"
+                },
+                "GrossReceiptsEvent1Amt": {
+                    "type": "integer"
+                },
+                "GrossRevenueTotalEventsAmt": {
+                    "type": "integer"
+                },
+                "NetIncomeSummaryAmt": {
+                    "type": "integer"
+                },
+                "OthDirectExpnssOtherEventsAmt": {
+                    "type": "integer"
+                },
+                "GrossReceiptsTotalAmt": {
+                    "type": "integer"
+                },
+                "OthDirectExpnssTotalEventsAmt": {
+                    "type": "integer"
+                },
+                "DirectExpenseSummaryEventsAmt": {
+                    "type": "integer"
+                },
+                "GrossRevenueOtherEventsAmt": {
+                    "type": "integer"
+                },
+                "GrossRevenueEvent1Amt": {
+                    "type": "integer"
+                },
+                "GrossRevenueEvent2Amt": {
+                    "type": "integer"
+                },
+                "Event2Nm": {
+                    "type": "string"
+                },
+                "Event1Nm": {
+                    "type": "string"
+                },
+                "GrossReceiptsOtherEventsAmt": {
+                    "type": "integer"
+                },
+                "OtherEventsTotalCnt": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "DirectExpenseSummaryEventsAmt",
+                "Event1Nm",
+                "Event2Nm",
+                "GrossReceiptsEvent1Amt",
+                "GrossReceiptsEvent2Amt",
+                "GrossReceiptsOtherEventsAmt",
+                "GrossReceiptsTotalAmt",
+                "GrossRevenueEvent1Amt",
+                "GrossRevenueEvent2Amt",
+                "GrossRevenueOtherEventsAmt",
+                "GrossRevenueTotalEventsAmt",
+                "NetIncomeSummaryAmt",
+                "OthDirectExpnssOtherEventsAmt",
+                "OthDirectExpnssTotalEventsAmt",
+                "OtherDirectExpensesEvent1Amt",
+                "OtherDirectExpensesEvent2Amt",
+                "OtherEventsTotalCnt"
+            ],
+            "title": "FundraisingEventInformationGrp"
+        },
+        "Form990ScheduleAPartViGrp": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "FormAndLineReferenceDesc": {
+                    "type": "string"
+                },
+                "ExplanationTxt": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "ExplanationTxt",
+                "FormAndLineReferenceDesc"
+            ],
+            "title": "Form990ScheduleAPartViGrp"
+        },
+        "IRS990ScheduleI": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "GrantRecordsMaintainedInd": {
+                    "type": "boolean"
+                },
+                "TotalOtherOrgCnt": {
+                    "type": "integer"
+                },
+                "Total501c3OrgCnt": {
+                    "type": "integer"
+                },
+                "softwareId": {
+                    "type": "integer"
+                },
+                "documentId": {
+                    "type": "string"
+                },
+                "SupplementalInformationDetail": {
+                    "$ref": "#/definitions/Form990ScheduleAPartViGrp"
+                },
+                "softwareVersionNum": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "GrantRecordsMaintainedInd",
+                "SupplementalInformationDetail",
+                "Total501c3OrgCnt",
+                "TotalOtherOrgCnt",
+                "documentId",
+                "softwareId",
+                "softwareVersionNum"
+            ],
+            "title": "IRS990ScheduleI"
+        },
+        "ReturnHeader": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "TaxPeriodEndDt": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "ReturnTs": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "BuildTS": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "TaxPeriodBeginDt": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "PreparerFirmGrp": {
+                    "$ref": "#/definitions/PreparerFirmGrp"
+                },
+                "TaxYr": {
+                    "type": "integer"
+                },
+                "PreparerPersonGrp": {
+                    "$ref": "#/definitions/PreparerPersonGrp"
+                },
+                "BusinessOfficerGrp": {
+                    "$ref": "#/definitions/BusinessOfficerGrp"
+                },
+                "binaryAttachmentCnt": {
+                    "type": "integer"
+                },
+                "ReturnTypeCd": {
+                    "type": "integer"
+                },
+                "FilingSecurityInformation": {
+                    "$ref": "#/definitions/FilingSecurityInformation"
+                },
+                "Filer": {
+                    "$ref": "#/definitions/Filer"
+                }
+            },
+            "required": [
+                "BuildTS",
+                "BusinessOfficerGrp",
+                "Filer",
+                "FilingSecurityInformation",
+                "PreparerFirmGrp",
+                "PreparerPersonGrp",
+                "ReturnTs",
+                "ReturnTypeCd",
+                "TaxPeriodBeginDt",
+                "TaxPeriodEndDt",
+                "TaxYr",
+                "binaryAttachmentCnt"
+            ],
+            "title": "ReturnHeader"
+        },
+        "BusinessOfficerGrp": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "PersonNm": {
+                    "type": "string"
+                },
+                "PersonTitleTxt": {
+                    "type": "string"
+                },
+                "DiscussWithPaidPreparerInd": {
+                    "type": "boolean"
+                },
+                "PhoneNum": {
+                    "type": "integer"
+                },
+                "SignatureDt": {
+                    "type": "string",
+                    "format": "date"
+                }
+            },
+            "required": [
+                "DiscussWithPaidPreparerInd",
+                "PersonNm",
+                "PersonTitleTxt",
+                "PhoneNum",
+                "SignatureDt"
+            ],
+            "title": "BusinessOfficerGrp"
+        },
+        "Filer": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "BusinessName": {
+                    "$ref": "#/definitions/Name"
+                },
+                "PhoneNum": {
+                    "type": "integer"
+                },
+                "BusinessNameControlTxt": {
+                    "type": "string"
+                },
+                "EIN": {
+                    "$ref": "#/definitions/Ein"
+                },
+                "USAddress": {
+                    "$ref": "#/definitions/UsAddress"
+                },
+                "InCareOfNm": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "BusinessName",
+                "BusinessNameControlTxt",
+                "EIN",
+                "InCareOfNm",
+                "PhoneNum",
+                "USAddress"
+            ],
+            "title": "Filer"
+        },
+        "FilingSecurityInformation": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "FederalOriginalSubmissionId": {
+                    "$ref": "#/definitions/Ein"
+                },
+                "AtSubmissionCreationDeviceId": {
+                    "type": "string"
+                },
+                "FederalOriginalSubmissionIdDt": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "FilingLicenseTypeCd": {
+                    "type": "string"
+                },
+                "IPAddress": {
+                    "$ref": "#/definitions/IPAddress"
+                },
+                "AtSubmissionFilingDeviceId": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "AtSubmissionCreationDeviceId",
+                "AtSubmissionFilingDeviceId",
+                "FederalOriginalSubmissionId",
+                "FederalOriginalSubmissionIdDt",
+                "FilingLicenseTypeCd",
+                "IPAddress"
+            ],
+            "title": "FilingSecurityInformation"
+        },
+        "IPAddress": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "IPv4AddressTxt": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "IPv4AddressTxt"
+            ],
+            "title": "IPAddress"
+        },
+        "PreparerFirmGrp": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "PreparerFirmName": {
+                    "$ref": "#/definitions/Name"
+                },
+                "PreparerUSAddress": {
+                    "$ref": "#/definitions/UsAddress"
+                },
+                "PreparerFirmEIN": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "PreparerFirmEIN",
+                "PreparerFirmName",
+                "PreparerUSAddress"
+            ],
+            "title": "PreparerFirmGrp"
+        },
+        "PreparerPersonGrp": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "SelfEmployedInd": {
+                    "type": "string"
+                },
+                "PreparerPersonNm": {
+                    "type": "string"
+                },
+                "PhoneNum": {
+                    "type": "integer"
+                },
+                "PTIN": {
+                    "type": "string"
+                },
+                "PreparationDt": {
+                    "type": "string",
+                    "format": "date"
+                }
+            },
+            "required": [
+                "PTIN",
+                "PhoneNum",
+                "PreparationDt",
+                "PreparerPersonNm",
+                "SelfEmployedInd"
+            ],
+            "title": "PreparerPersonGrp"
+        },
+        "Ein": {
+            "anyOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "Ein"
+        },
+        "Form990PartVIISectionAGrpUnion": {
+            "anyOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Form990PartVIISectionAGrpElement"
+                    }
+                },
+                {
+                    "$ref": "#/definitions/Form990PartVIISectionAGrpElement"
+                }
+            ],
+            "title": "Form990PartVIISectionAGrpUnion"
+        },
+        "FundraisingActivitiesIndUnion": {
+            "anyOf": [
+                {
+                    "type": "boolean"
+                },
+                {
+                    "$ref": "#/definitions/DescribedInSection501C3IndClass"
+                }
+            ],
+            "title": "FundraisingActivitiesIndUnion"
+        }
+    }
+}
