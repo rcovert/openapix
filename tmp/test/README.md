@@ -1,5 +1,8 @@
 # OpenAPI generated server
 
+Generate with
+openapi-generator-cli generate -i openapispec.json -g spring -o ./tmp/test/
+
 Spring Boot Server
 
 ## Overview
