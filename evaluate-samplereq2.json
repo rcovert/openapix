@@ -1,0 +1,303 @@
+{
+  "Returns": [
+   {
+  "Return": {
+    "returnVersion": "2018v3.1",
+    "ReturnHeader": {
+      "TaxPeriodEndDt": "2019-06-30",
+      "ReturnTs": "2020-01-05T14:01:50-05:00",
+      "BuildTS": "2020-09-23 17:36:50Z",
+      "TaxPeriodBeginDt": "2018-07-01",
+      "PreparerFirmGrp": {
+        "PreparerFirmName": {
+          "BusinessNameLine1Txt": "Mary-Claire Corcoran CPA"
+        },
+        "PreparerUSAddress": {
+          "ZIPCd": 19038,
+          "CityNm": "Glenside",
+          "StateAbbreviationCd": "PA",
+          "AddressLine1Txt": "27 Chelfield Road"
+        }
+      },
+      "TaxYr": 2018,
+      "PreparerPersonGrp": {
+        "SelfEmployedInd": "X",
+        "PreparerPersonNm": "Mary-Claire Corcoran",
+        "PhoneNum": 2158851006,
+        "PTIN": "P00233747",
+        "PreparationDt": "2020-01-05"
+      },
+      "BusinessOfficerGrp": {
+        "PersonNm": "Sharon Lewis-Gregg",
+        "PersonTitleTxt": "Treasurer",
+        "DiscussWithPaidPreparerInd": true,
+        "PhoneNum": 2156283875,
+        "SignatureDt": "2019-12-18"
+      },
+      "binaryAttachmentCnt": 0,
+      "ReturnTypeCd": "990EZ",
+      "FilingSecurityInformation": {
+        "IPTm": "09:28:56",
+        "FederalOriginalSubmissionId": "2394932020006qq3vze5",
+        "AtSubmissionCreationDeviceId": "7FF9B1065311E8059C3AAF57C259E89C093F9A7C",
+        "FederalOriginalSubmissionIdDt": "2020-01-06",
+        "IPDt": "2020-01-06",
+        "FilingLicenseTypeCd": "P",
+        "IPAddress": {
+          "IPv4AddressTxt": "71.185.204.211"
+        },
+        "AtSubmissionFilingDeviceId": "7FF9B1065311E8059C3AAF57C259E89C093F9A7C"
+      },
+      "Filer": {
+        "BusinessName": {
+          "BusinessNameLine1Txt": "NATL ASSOC OF WOMEN BUSINESS OWNER"
+        },
+        "BusinessNameControlTxt": "NATL",
+        "EIN": 232655257,
+        "USAddress": {
+          "ZIPCd": 19034,
+          "CityNm": "FORT WASHINGTON",
+          "StateAbbreviationCd": "PA",
+          "AddressLine1Txt": "1231 HIGHLAND AVENUE"
+        }
+      }
+    },
+    "xmlns": "http://www.irs.gov/efile",
+    "ReturnData": {
+      "IRS990ScheduleO": {
+        "documentId": "990O",
+        "SupplementalInformationDetail": [
+          {
+            "FormAndLineReferenceDesc": "General explanation attachment",
+            "ExplanationTxt": "Part III, Statement of Program Service Accomplishments, Organizations Primary Exempt PurposeTo foster leadership and economic stability of businesses owned by women and to encourage, support and educate women who own and operate businesses."
+          },
+          {
+            "FormAndLineReferenceDesc": "Description of other expenses Part I line 16",
+            "ExplanationTxt": "Description AmountManagement Fee 18,600Marketing and Public Relations 2,705Technology 763Board Expenses 3,914Program Expenses 18,062Credit Card Fees 1,176Constant Contact 991"
+          },
+          {
+            "FormAndLineReferenceDesc": "Description of other assets Part II line 24",
+            "ExplanationTxt": "Category Beginning of Year End of YearAccounts Receivable 0 210Loan to PCAE 15,000 15,000"
+          },
+          {
+            "FormAndLineReferenceDesc": "Description of total liabilities Part II line 26",
+            "ExplanationTxt": "Category Beginning of Year End of YearAccounts Payable and Accrued E 2,278 0"
+          }
+        ]
+      },
+      "documentCnt": 2,
+      "IRS990EZ": {
+        "Form990TotalAssetsGrp": {
+          "EOYAmt": 106173,
+          "BOYAmt": 108810
+        },
+        "TransactionWithControlEntInd": false,
+        "PrimaryExemptPurposeTxt": "See Attached Statement",
+        "ForeignFinancialAccountInd": false,
+        "StatesWhereCopyOfReturnIsFldCd": "PA",
+        "ChgMadeToOrgnzngDocNotRptInd": false,
+        "RelatedOrganizationCtrlEntInd": false,
+        "Form1120PolFiledInd": false,
+        "MembershipDuesAmt": 14691,
+        "MethodOfAccountingAccrualInd": "X",
+        "SumOfTotalLiabilitiesGrp": {
+          "EOYAmt": 0,
+          "BOYAmt": 2278
+        },
+        "ProgramServiceRevenueAmt": 28710,
+        "CashSavingsAndInvestmentsGrp": {
+          "EOYAmt": 90963,
+          "BOYAmt": 93810
+        },
+        "OfficerDirectorTrusteeEmplGrp": [
+          {
+            "PersonNm": "Angela Megasko",
+            "ExpenseAccountOtherAllwncAmt": 0,
+            "EmployeeBenefitProgramAmt": 0,
+            "AverageHrsPerWkDevotedToPosRt": 3,
+            "TitleTxt": "President Elect & Membership Co-Cha",
+            "CompensationAmt": 0
+          },
+          {
+            "PersonNm": "Julie Smith",
+            "ExpenseAccountOtherAllwncAmt": 0,
+            "EmployeeBenefitProgramAmt": 0,
+            "AverageHrsPerWkDevotedToPosRt": 1,
+            "TitleTxt": "Governance Chair",
+            "CompensationAmt": 0
+          },
+          {
+            "PersonNm": "Sharon Lewis-Gregg",
+            "ExpenseAccountOtherAllwncAmt": 0,
+            "EmployeeBenefitProgramAmt": 0,
+            "AverageHrsPerWkDevotedToPosRt": 3,
+            "TitleTxt": "Treasurer",
+            "CompensationAmt": 0
+          },
+          {
+            "PersonNm": "Archima Majors",
+            "ExpenseAccountOtherAllwncAmt": 0,
+            "EmployeeBenefitProgramAmt": 0,
+            "AverageHrsPerWkDevotedToPosRt": 1,
+            "TitleTxt": "Advocacy Co-Chair",
+            "CompensationAmt": 0
+          },
+          {
+            "PersonNm": "Ana Fernandez-Parmet",
+            "ExpenseAccountOtherAllwncAmt": 0,
+            "EmployeeBenefitProgramAmt": 0,
+            "AverageHrsPerWkDevotedToPosRt": 5,
+            "TitleTxt": "President",
+            "CompensationAmt": 0
+          },
+          {
+            "PersonNm": "Renee Brandon",
+            "ExpenseAccountOtherAllwncAmt": 0,
+            "EmployeeBenefitProgramAmt": 0,
+            "AverageHrsPerWkDevotedToPosRt": 1,
+            "TitleTxt": "Marketing Chair",
+            "CompensationAmt": 0
+          },
+          {
+            "PersonNm": "Mazda Miles",
+            "ExpenseAccountOtherAllwncAmt": 0,
+            "EmployeeBenefitProgramAmt": 0,
+            "AverageHrsPerWkDevotedToPosRt": 1,
+            "TitleTxt": "Immediate Past President",
+            "CompensationAmt": 0
+          },
+          {
+            "PersonNm": "Abbe Kligerman",
+            "ExpenseAccountOtherAllwncAmt": 0,
+            "EmployeeBenefitProgramAmt": 0,
+            "AverageHrsPerWkDevotedToPosRt": 1,
+            "TitleTxt": "Power Friday Meeting Chair",
+            "CompensationAmt": 0
+          },
+          {
+            "PersonNm": "Mary Ann Murtha",
+            "ExpenseAccountOtherAllwncAmt": 0,
+            "EmployeeBenefitProgramAmt": 0,
+            "AverageHrsPerWkDevotedToPosRt": 1,
+            "TitleTxt": "Membership Co-Chair",
+            "CompensationAmt": 0
+          },
+          {
+            "PersonNm": "Christina M Reger",
+            "ExpenseAccountOtherAllwncAmt": 0,
+            "EmployeeBenefitProgramAmt": 0,
+            "AverageHrsPerWkDevotedToPosRt": 1,
+            "TitleTxt": "Vice President & Membership Co-Chai",
+            "CompensationAmt": 0
+          },
+          {
+            "PersonNm": "Kristyn Aldrich",
+            "ExpenseAccountOtherAllwncAmt": 0,
+            "EmployeeBenefitProgramAmt": 0,
+            "AverageHrsPerWkDevotedToPosRt": 1,
+            "TitleTxt": "Program Chair",
+            "CompensationAmt": 0
+          },
+          {
+            "PersonNm": "Lynette Phillips",
+            "ExpenseAccountOtherAllwncAmt": 0,
+            "EmployeeBenefitProgramAmt": 0,
+            "AverageHrsPerWkDevotedToPosRt": 1,
+            "TitleTxt": "Education Chair",
+            "CompensationAmt": 0
+          },
+          {
+            "PersonNm": "Julia Prymak",
+            "ExpenseAccountOtherAllwncAmt": 0,
+            "EmployeeBenefitProgramAmt": 0,
+            "AverageHrsPerWkDevotedToPosRt": 1,
+            "TitleTxt": "Secretary",
+            "CompensationAmt": 0
+          },
+          {
+            "PersonNm": "Jennifer Bravo",
+            "ExpenseAccountOtherAllwncAmt": 0,
+            "EmployeeBenefitProgramAmt": 0,
+            "AverageHrsPerWkDevotedToPosRt": 1,
+            "TitleTxt": "Advocacy Co-Chair",
+            "CompensationAmt": 0
+          },
+          {
+            "PersonNm": "Tonya Ladipo",
+            "ExpenseAccountOtherAllwncAmt": 0,
+            "EmployeeBenefitProgramAmt": 0,
+            "AverageHrsPerWkDevotedToPosRt": 1,
+            "TitleTxt": "Alliance Chair",
+            "CompensationAmt": 0
+          }
+        ],
+        "OrganizationHadUBIInd": false,
+        "FiledScheduleAInd": false,
+        "SubjectToProxyTaxInd": false,
+        "ProhibitedTaxShelterTransInd": false,
+        "FeesAndOtherPymtToIndCntrctAmt": 150,
+        "InfoInScheduleOPartIInd": "X",
+        "ActivitiesNotPreviouslyRptInd": false,
+        "NetAssetsOrFundBalancesGrp": {
+          "EOYAmt": 106173,
+          "BOYAmt": 106532
+        },
+        "MadeLoansToFromOfficersInd": false,
+        "LandAndBuildingsGrp": {
+          "EOYAmt": 0,
+          "BOYAmt": 0
+        },
+        "PoliticalCampaignActyInd": false,
+        "TotalRevenueAmt": 47851,
+        "ExcessOrDeficitForYearAmt": -359,
+        "GrossReceiptsAmt": 47851,
+        "BooksInCareOfDetail": {
+          "PersonNm": "The Organization",
+          "PhoneNum": 2156283875,
+          "USAddress": {
+            "ZIPCd": 19034,
+            "CityNm": "Fort Washington",
+            "StateAbbreviationCd": "PA",
+            "AddressLine1Txt": "1231 Highland Avenue"
+          }
+        },
+        "TanningServicesProvidedInd": false,
+        "ForeignOfficeInd": false,
+        "DonorAdvisedFndsInd": false,
+        "NetAssetsOrFundBalancesEOYAmt": 106173,
+        "WebsiteAddressTxt": "WWW.NAWBOPHILADELPHIA.ORG",
+        "NetAssetsOrFundBalancesBOYAmt": 106532,
+        "OperateHospitalInd": false,
+        "InvestmentIncomeAmt": 450,
+        "OtherAssetsTotalDetail": {
+          "EOYAmt": 15210,
+          "BOYAmt": 15000
+        },
+        "InfoInScheduleOPartIIInd": "X",
+        "PrintingPublicationsPostageAmt": 60,
+        "ProgramSrvcAccomplishmentGrp": [
+          {
+            "DescriptionProgramSrvcAccomTxt": "Programs are for the purpose of providing experienced speakers from the business world to educate the members"
+          },
+          {
+            "DescriptionProgramSrvcAccomTxt": "Meetings foster an exchange of ideas and experience between the members"
+          },
+          {
+            "DescriptionProgramSrvcAccomTxt": "Business Plan Competition supports and empowers female entrepreneurs showcasing their emerging businesses and allowing them to compete for a chance to advance their businesses"
+          }
+        ],
+        "OrganizationDissolvedEtcInd": false,
+        "Organization501cInd": {
+          "organization501cTypeTxt": 6,
+          "content": "X"
+        },
+        "TotalExpensesAmt": 48210,
+        "OccupancyRentUtltsAndMaintAmt": 1789,
+        "documentId": "IRS990EZ",
+        "ContributionsGiftsGrantsEtcAmt": 4000,
+        "OtherExpensesTotalAmt": 46211
+      }
+    }
+  }
+}
+}
